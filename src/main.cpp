@@ -2,7 +2,7 @@
 #include <iostream>
 //#include <sstream>
 //#include <stdexcept>
-#include <stdexcept>
+// #include <stdexcept>
 #include <threads.h>
 #include <vector>
 #include <chrono>
@@ -77,7 +77,12 @@ int main() {
     clGetDeviceIDs(chosenPlat, CL_DEVICE_TYPE_CPU, numDevices, devs.data(), nullptr);
     auto dev = devs[0];
 
-    auto clContext = clCreateContext(nullptr, 1, &dev, nullptr, nullptr, &err);
+    auto clContext = clCreateContext(nullptr,
+                                                1,
+                                                &dev,
+                                                nullptr,
+                                                nullptr,
+                                                &err);
     checkCLError(err, "clCreateContext");
 
     auto clQueue = clCreateCommandQueueWithProperties(clContext, dev, nullptr, &err);
@@ -118,7 +123,7 @@ int main() {
         size_t gsz = N;
         clEnqueueNDRangeKernel(clQueue,
                                clKernel, 
-                               1, 
+                               1,
                                nullptr,
                                &gsz,
                                nullptr,
