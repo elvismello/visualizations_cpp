@@ -1,0 +1,3 @@
+/home/elvis/programas/visualizations_cpp/build/CMakeFiles/visProject.dir
+/home/elvis/programas/visualizations_cpp/build/CMakeFiles/edit_cache.dir
+/home/elvis/programas/visualizations_cpp/build/CMakeFiles/rebuild_cache.dir

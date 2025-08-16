@@ -1,0 +1,3603 @@
+
+---
+events:
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/snap/cmake/1479/share/cmake-4.1/Modules/CMakeDetermineSystem.cmake:12 (find_program)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_UNAME"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "uname"
+    candidate_directories:
+      - "/home/elvis/.local/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+    searched_directories:
+      - "/home/elvis/.local/bin/uname"
+      - "/usr/local/sbin/uname"
+      - "/usr/local/bin/uname"
+      - "/usr/sbin/uname"
+    found: "/usr/bin/uname"
+    search_context:
+      ENV{PATH}:
+        - "/home/elvis/.local/bin"
+        - "/home/elvis/.local/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/snap/cmake/1479/share/cmake-4.1/Modules/CMakeDetermineSystem.cmake:212 (message)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      The system is: Linux - 5.15.0-139-generic - x86_64
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/snap/cmake/1479/share/cmake-4.1/Modules/CMakeUnixFindMake.cmake:5 (find_program)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_MAKE_PROGRAM"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "gmake"
+      - "make"
+      - "smake"
+    candidate_directories:
+      - "/home/elvis/.local/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+    searched_directories:
+      - "/home/elvis/.local/bin/gmake"
+      - "/usr/local/sbin/gmake"
+      - "/usr/local/bin/gmake"
+      - "/usr/sbin/gmake"
+      - "/usr/bin/gmake"
+      - "/sbin/gmake"
+      - "/bin/gmake"
+      - "/usr/games/gmake"
+      - "/usr/local/games/gmake"
+      - "/snap/bin/gmake"
+      - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/gmake"
+      - "/home/elvis/.local/bin/make"
+      - "/usr/local/sbin/make"
+      - "/usr/local/bin/make"
+      - "/usr/sbin/make"
+    found: "/usr/bin/make"
+    search_context:
+      ENV{PATH}:
+        - "/home/elvis/.local/bin"
+        - "/home/elvis/.local/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/snap/cmake/1479/share/cmake-4.1/Modules/CMakeDetermineCompiler.cmake:115 (find_program)"
+      - "/snap/cmake/1479/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:71 (_cmake_find_compiler_path)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_CXX_COMPILER_WITH_PATH"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "g++-14"
+    candidate_directories:
+      - "/home/elvis/.local/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+    searched_directories:
+      - "/home/elvis/.local/bin/g++-14"
+      - "/usr/local/sbin/g++-14"
+      - "/usr/local/bin/g++-14"
+      - "/usr/sbin/g++-14"
+    found: "/usr/bin/g++-14"
+    search_context:
+      ENV{PATH}:
+        - "/home/elvis/.local/bin"
+        - "/home/elvis/.local/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/snap/cmake/1479/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:462 (find_file)"
+      - "/snap/cmake/1479/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:500 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "/snap/cmake/1479/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "/snap/cmake/1479/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/snap/cmake/1479/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCXXCompilerId.cpp.in"
+    candidate_directories:
+      - "/snap/cmake/1479/share/cmake-4.1/Modules/"
+    found: "/snap/cmake/1479/share/cmake-4.1/Modules/CMakeCXXCompilerId.cpp.in"
+    search_context:
+      ENV{PATH}:
+        - "/home/elvis/.local/bin"
+        - "/home/elvis/.local/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/snap/cmake/1479/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/snap/cmake/1479/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/snap/cmake/1479/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /usr/bin/g++-14 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+      
+      The CXX compiler identification is GNU, found in:
+        /home/elvis/programas/visualizations_cpp/build/CMakeFiles/4.1.0/CompilerIdCXX/a.out
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/snap/cmake/1479/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
+      - "/snap/cmake/1479/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_AR"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "ar-14"
+      - "ar"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/home/elvis/.local/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+    searched_directories:
+      - "/usr/bin/ar-14"
+      - "/home/elvis/.local/bin/ar-14"
+      - "/usr/local/sbin/ar-14"
+      - "/usr/local/bin/ar-14"
+      - "/usr/sbin/ar-14"
+      - "/sbin/ar-14"
+      - "/bin/ar-14"
+      - "/usr/games/ar-14"
+      - "/usr/local/games/ar-14"
+      - "/snap/bin/ar-14"
+      - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/ar-14"
+    found: "/usr/bin/ar"
+    search_context:
+      ENV{PATH}:
+        - "/home/elvis/.local/bin"
+        - "/home/elvis/.local/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/snap/cmake/1479/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
+      - "/snap/cmake/1479/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_RANLIB"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "ranlib-14"
+      - "ranlib"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/home/elvis/.local/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+    searched_directories:
+      - "/usr/bin/ranlib-14"
+      - "/home/elvis/.local/bin/ranlib-14"
+      - "/usr/local/sbin/ranlib-14"
+      - "/usr/local/bin/ranlib-14"
+      - "/usr/sbin/ranlib-14"
+      - "/sbin/ranlib-14"
+      - "/bin/ranlib-14"
+      - "/usr/games/ranlib-14"
+      - "/usr/local/games/ranlib-14"
+      - "/snap/bin/ranlib-14"
+      - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/ranlib-14"
+    found: "/usr/bin/ranlib"
+    search_context:
+      ENV{PATH}:
+        - "/home/elvis/.local/bin"
+        - "/home/elvis/.local/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/snap/cmake/1479/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
+      - "/snap/cmake/1479/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_STRIP"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "strip-14"
+      - "strip"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/home/elvis/.local/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+    searched_directories:
+      - "/usr/bin/strip-14"
+      - "/home/elvis/.local/bin/strip-14"
+      - "/usr/local/sbin/strip-14"
+      - "/usr/local/bin/strip-14"
+      - "/usr/sbin/strip-14"
+      - "/sbin/strip-14"
+      - "/bin/strip-14"
+      - "/usr/games/strip-14"
+      - "/usr/local/games/strip-14"
+      - "/snap/bin/strip-14"
+      - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/strip-14"
+    found: "/usr/bin/strip"
+    search_context:
+      ENV{PATH}:
+        - "/home/elvis/.local/bin"
+        - "/home/elvis/.local/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/snap/cmake/1479/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
+      - "/snap/cmake/1479/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_LINKER"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "ld-14"
+      - "ld"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/home/elvis/.local/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+    searched_directories:
+      - "/usr/bin/ld-14"
+      - "/home/elvis/.local/bin/ld-14"
+      - "/usr/local/sbin/ld-14"
+      - "/usr/local/bin/ld-14"
+      - "/usr/sbin/ld-14"
+      - "/sbin/ld-14"
+      - "/bin/ld-14"
+      - "/usr/games/ld-14"
+      - "/usr/local/games/ld-14"
+      - "/snap/bin/ld-14"
+      - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/ld-14"
+    found: "/usr/bin/ld"
+    search_context:
+      ENV{PATH}:
+        - "/home/elvis/.local/bin"
+        - "/home/elvis/.local/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/snap/cmake/1479/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
+      - "/snap/cmake/1479/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_NM"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "nm-14"
+      - "nm"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/home/elvis/.local/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+    searched_directories:
+      - "/usr/bin/nm-14"
+      - "/home/elvis/.local/bin/nm-14"
+      - "/usr/local/sbin/nm-14"
+      - "/usr/local/bin/nm-14"
+      - "/usr/sbin/nm-14"
+      - "/sbin/nm-14"
+      - "/bin/nm-14"
+      - "/usr/games/nm-14"
+      - "/usr/local/games/nm-14"
+      - "/snap/bin/nm-14"
+      - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/nm-14"
+    found: "/usr/bin/nm"
+    search_context:
+      ENV{PATH}:
+        - "/home/elvis/.local/bin"
+        - "/home/elvis/.local/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/snap/cmake/1479/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
+      - "/snap/cmake/1479/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_OBJDUMP"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "objdump-14"
+      - "objdump"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/home/elvis/.local/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+    searched_directories:
+      - "/usr/bin/objdump-14"
+      - "/home/elvis/.local/bin/objdump-14"
+      - "/usr/local/sbin/objdump-14"
+      - "/usr/local/bin/objdump-14"
+      - "/usr/sbin/objdump-14"
+      - "/sbin/objdump-14"
+      - "/bin/objdump-14"
+      - "/usr/games/objdump-14"
+      - "/usr/local/games/objdump-14"
+      - "/snap/bin/objdump-14"
+      - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/objdump-14"
+    found: "/usr/bin/objdump"
+    search_context:
+      ENV{PATH}:
+        - "/home/elvis/.local/bin"
+        - "/home/elvis/.local/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/snap/cmake/1479/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
+      - "/snap/cmake/1479/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_OBJCOPY"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "objcopy-14"
+      - "objcopy"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/home/elvis/.local/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+    searched_directories:
+      - "/usr/bin/objcopy-14"
+      - "/home/elvis/.local/bin/objcopy-14"
+      - "/usr/local/sbin/objcopy-14"
+      - "/usr/local/bin/objcopy-14"
+      - "/usr/sbin/objcopy-14"
+      - "/sbin/objcopy-14"
+      - "/bin/objcopy-14"
+      - "/usr/games/objcopy-14"
+      - "/usr/local/games/objcopy-14"
+      - "/snap/bin/objcopy-14"
+      - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/objcopy-14"
+    found: "/usr/bin/objcopy"
+    search_context:
+      ENV{PATH}:
+        - "/home/elvis/.local/bin"
+        - "/home/elvis/.local/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/snap/cmake/1479/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
+      - "/snap/cmake/1479/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_READELF"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "readelf-14"
+      - "readelf"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/home/elvis/.local/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+    searched_directories:
+      - "/usr/bin/readelf-14"
+      - "/home/elvis/.local/bin/readelf-14"
+      - "/usr/local/sbin/readelf-14"
+      - "/usr/local/bin/readelf-14"
+      - "/usr/sbin/readelf-14"
+      - "/sbin/readelf-14"
+      - "/bin/readelf-14"
+      - "/usr/games/readelf-14"
+      - "/usr/local/games/readelf-14"
+      - "/snap/bin/readelf-14"
+      - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/readelf-14"
+    found: "/usr/bin/readelf"
+    search_context:
+      ENV{PATH}:
+        - "/home/elvis/.local/bin"
+        - "/home/elvis/.local/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/snap/cmake/1479/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
+      - "/snap/cmake/1479/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_DLLTOOL"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "dlltool-14"
+      - "dlltool"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/home/elvis/.local/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+    searched_directories:
+      - "/usr/bin/dlltool-14"
+      - "/home/elvis/.local/bin/dlltool-14"
+      - "/usr/local/sbin/dlltool-14"
+      - "/usr/local/bin/dlltool-14"
+      - "/usr/sbin/dlltool-14"
+      - "/sbin/dlltool-14"
+      - "/bin/dlltool-14"
+      - "/usr/games/dlltool-14"
+      - "/usr/local/games/dlltool-14"
+      - "/snap/bin/dlltool-14"
+      - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/dlltool-14"
+      - "/usr/bin/dlltool"
+      - "/home/elvis/.local/bin/dlltool"
+      - "/usr/local/sbin/dlltool"
+      - "/usr/local/bin/dlltool"
+      - "/usr/sbin/dlltool"
+      - "/sbin/dlltool"
+      - "/bin/dlltool"
+      - "/usr/games/dlltool"
+      - "/usr/local/games/dlltool"
+      - "/snap/bin/dlltool"
+      - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/dlltool"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "/home/elvis/.local/bin"
+        - "/home/elvis/.local/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/snap/cmake/1479/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
+      - "/snap/cmake/1479/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_ADDR2LINE"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "addr2line-14"
+      - "addr2line"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/home/elvis/.local/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+    searched_directories:
+      - "/usr/bin/addr2line-14"
+      - "/home/elvis/.local/bin/addr2line-14"
+      - "/usr/local/sbin/addr2line-14"
+      - "/usr/local/bin/addr2line-14"
+      - "/usr/sbin/addr2line-14"
+      - "/sbin/addr2line-14"
+      - "/bin/addr2line-14"
+      - "/usr/games/addr2line-14"
+      - "/usr/local/games/addr2line-14"
+      - "/snap/bin/addr2line-14"
+      - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/addr2line-14"
+    found: "/usr/bin/addr2line"
+    search_context:
+      ENV{PATH}:
+        - "/home/elvis/.local/bin"
+        - "/home/elvis/.local/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/snap/cmake/1479/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
+      - "/snap/cmake/1479/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_TAPI"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "tapi-14"
+      - "tapi"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/home/elvis/.local/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+    searched_directories:
+      - "/usr/bin/tapi-14"
+      - "/home/elvis/.local/bin/tapi-14"
+      - "/usr/local/sbin/tapi-14"
+      - "/usr/local/bin/tapi-14"
+      - "/usr/sbin/tapi-14"
+      - "/sbin/tapi-14"
+      - "/bin/tapi-14"
+      - "/usr/games/tapi-14"
+      - "/usr/local/games/tapi-14"
+      - "/snap/bin/tapi-14"
+      - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/tapi-14"
+      - "/usr/bin/tapi"
+      - "/home/elvis/.local/bin/tapi"
+      - "/usr/local/sbin/tapi"
+      - "/usr/local/bin/tapi"
+      - "/usr/sbin/tapi"
+      - "/sbin/tapi"
+      - "/bin/tapi"
+      - "/usr/games/tapi"
+      - "/usr/local/games/tapi"
+      - "/snap/bin/tapi"
+      - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/tapi"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "/home/elvis/.local/bin"
+        - "/home/elvis/.local/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/snap/cmake/1479/share/cmake-4.1/Modules/Compiler/GNU-FindBinUtils.cmake:18 (find_program)"
+      - "/snap/cmake/1479/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:207 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_CXX_COMPILER_AR"
+    description: "A wrapper around 'ar' adding the appropriate '--plugin' option for the GCC compiler"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "gcc-ar-14.3"
+      - "gcc-ar-14"
+      - "gcc-ar14"
+      - "gcc-ar"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/home/elvis/.local/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+    searched_directories:
+      - "/usr/bin/gcc-ar-14.3"
+      - "/home/elvis/.local/bin/gcc-ar-14.3"
+      - "/usr/local/sbin/gcc-ar-14.3"
+      - "/usr/local/bin/gcc-ar-14.3"
+      - "/usr/sbin/gcc-ar-14.3"
+      - "/sbin/gcc-ar-14.3"
+      - "/bin/gcc-ar-14.3"
+      - "/usr/games/gcc-ar-14.3"
+      - "/usr/local/games/gcc-ar-14.3"
+      - "/snap/bin/gcc-ar-14.3"
+      - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ar-14.3"
+      - "/usr/bin/gcc-ar-14"
+      - "/home/elvis/.local/bin/gcc-ar-14"
+      - "/usr/local/sbin/gcc-ar-14"
+      - "/usr/local/bin/gcc-ar-14"
+      - "/usr/sbin/gcc-ar-14"
+      - "/sbin/gcc-ar-14"
+      - "/bin/gcc-ar-14"
+      - "/usr/games/gcc-ar-14"
+      - "/usr/local/games/gcc-ar-14"
+      - "/snap/bin/gcc-ar-14"
+      - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ar-14"
+      - "/usr/bin/gcc-ar14"
+      - "/home/elvis/.local/bin/gcc-ar14"
+      - "/usr/local/sbin/gcc-ar14"
+      - "/usr/local/bin/gcc-ar14"
+      - "/usr/sbin/gcc-ar14"
+      - "/sbin/gcc-ar14"
+      - "/bin/gcc-ar14"
+      - "/usr/games/gcc-ar14"
+      - "/usr/local/games/gcc-ar14"
+      - "/snap/bin/gcc-ar14"
+      - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ar14"
+    found: "/usr/bin/gcc-ar"
+    search_context:
+      ENV{PATH}:
+        - "/home/elvis/.local/bin"
+        - "/home/elvis/.local/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/snap/cmake/1479/share/cmake-4.1/Modules/Compiler/GNU-FindBinUtils.cmake:30 (find_program)"
+      - "/snap/cmake/1479/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:207 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_CXX_COMPILER_RANLIB"
+    description: "A wrapper around 'ranlib' adding the appropriate '--plugin' option for the GCC compiler"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "gcc-ranlib-14.3"
+      - "gcc-ranlib-14"
+      - "gcc-ranlib14"
+      - "gcc-ranlib"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/home/elvis/.local/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+    searched_directories:
+      - "/usr/bin/gcc-ranlib-14.3"
+      - "/home/elvis/.local/bin/gcc-ranlib-14.3"
+      - "/usr/local/sbin/gcc-ranlib-14.3"
+      - "/usr/local/bin/gcc-ranlib-14.3"
+      - "/usr/sbin/gcc-ranlib-14.3"
+      - "/sbin/gcc-ranlib-14.3"
+      - "/bin/gcc-ranlib-14.3"
+      - "/usr/games/gcc-ranlib-14.3"
+      - "/usr/local/games/gcc-ranlib-14.3"
+      - "/snap/bin/gcc-ranlib-14.3"
+      - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ranlib-14.3"
+      - "/usr/bin/gcc-ranlib-14"
+      - "/home/elvis/.local/bin/gcc-ranlib-14"
+      - "/usr/local/sbin/gcc-ranlib-14"
+      - "/usr/local/bin/gcc-ranlib-14"
+      - "/usr/sbin/gcc-ranlib-14"
+      - "/sbin/gcc-ranlib-14"
+      - "/bin/gcc-ranlib-14"
+      - "/usr/games/gcc-ranlib-14"
+      - "/usr/local/games/gcc-ranlib-14"
+      - "/snap/bin/gcc-ranlib-14"
+      - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ranlib-14"
+      - "/usr/bin/gcc-ranlib14"
+      - "/home/elvis/.local/bin/gcc-ranlib14"
+      - "/usr/local/sbin/gcc-ranlib14"
+      - "/usr/local/bin/gcc-ranlib14"
+      - "/usr/sbin/gcc-ranlib14"
+      - "/sbin/gcc-ranlib14"
+      - "/bin/gcc-ranlib14"
+      - "/usr/games/gcc-ranlib14"
+      - "/usr/local/games/gcc-ranlib14"
+      - "/snap/bin/gcc-ranlib14"
+      - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ranlib14"
+    found: "/usr/bin/gcc-ranlib"
+    search_context:
+      ENV{PATH}:
+        - "/home/elvis/.local/bin"
+        - "/home/elvis/.local/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/snap/cmake/1479/share/cmake-4.1/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
+      - "/snap/cmake/1479/share/cmake-4.1/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "/home/elvis/programas/visualizations_cpp/build/CMakeFiles/CMakeScratch/TryCompile-InQRSl"
+      binary: "/home/elvis/programas/visualizations_cpp/build/CMakeFiles/CMakeScratch/TryCompile-InQRSl"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_CXX_SCAN_FOR_MODULES: "OFF"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/elvis/programas/visualizations_cpp/build/CMakeFiles/CMakeScratch/TryCompile-InQRSl'
+        
+        Run Build Command(s): /snap/cmake/1479/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_baf7e/fast
+        /usr/bin/make  -f CMakeFiles/cmTC_baf7e.dir/build.make CMakeFiles/cmTC_baf7e.dir/build
+        make[1]: Entering directory '/home/elvis/programas/visualizations_cpp/build/CMakeFiles/CMakeScratch/TryCompile-InQRSl'
+        Building CXX object CMakeFiles/cmTC_baf7e.dir/CMakeCXXCompilerABI.cpp.o
+        /usr/bin/g++-14   -v -o CMakeFiles/cmTC_baf7e.dir/CMakeCXXCompilerABI.cpp.o -c /snap/cmake/1479/share/cmake-4.1/Modules/CMakeCXXCompilerABI.cpp
+        Using built-in specs.
+        COLLECT_GCC=/usr/bin/g++-14
+        Target: x86_64-pc-linux-gnu
+        Configured with: ../configure --enable-languages=c,c++ --disable-multilib --prefix=/usr/local/gcc-14
+        Thread model: posix
+        Supported LTO compression algorithms: zlib
+        gcc version 14.3.0 (GCC) 
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_baf7e.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_baf7e.dir/'
+         /usr/local/gcc-14/libexec/gcc/x86_64-pc-linux-gnu/14.3.0/cc1plus -quiet -v -imultiarch x86_64-linux-gnu -D_GNU_SOURCE /snap/cmake/1479/share/cmake-4.1/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_baf7e.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -o /tmp/cc5vbyUM.s
+        GNU C++17 (GCC) version 14.3.0 (x86_64-pc-linux-gnu)
+        	compiled by GNU C version 14.3.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version isl-0.24-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring nonexistent directory "/usr/local/include/x86_64-linux-gnu"
+        ignoring nonexistent directory "/usr/local/gcc-14/lib/gcc/x86_64-pc-linux-gnu/14.3.0/../../../../x86_64-pc-linux-gnu/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /usr/local/gcc-14/lib/gcc/x86_64-pc-linux-gnu/14.3.0/../../../../include/c++/14.3.0
+         /usr/local/gcc-14/lib/gcc/x86_64-pc-linux-gnu/14.3.0/../../../../include/c++/14.3.0/x86_64-pc-linux-gnu
+         /usr/local/gcc-14/lib/gcc/x86_64-pc-linux-gnu/14.3.0/../../../../include/c++/14.3.0/backward
+         /usr/local/gcc-14/lib/gcc/x86_64-pc-linux-gnu/14.3.0/include
+         /usr/local/include
+         /usr/local/gcc-14/include
+         /usr/local/gcc-14/lib/gcc/x86_64-pc-linux-gnu/14.3.0/include-fixed/x86_64-linux-gnu
+         /usr/local/gcc-14/lib/gcc/x86_64-pc-linux-gnu/14.3.0/include-fixed
+         /usr/include/x86_64-linux-gnu
+         /usr/include
+        End of search list.
+        Compiler executable checksum: d452a803c307d024fd7b45e99f848402
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_baf7e.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_baf7e.dir/'
+         as -v --64 -o CMakeFiles/cmTC_baf7e.dir/CMakeCXXCompilerABI.cpp.o /tmp/cc5vbyUM.s
+        GNU assembler version 2.34 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.34
+        COMPILER_PATH=/usr/local/gcc-14/libexec/gcc/x86_64-pc-linux-gnu/14.3.0/:/usr/local/gcc-14/libexec/gcc/x86_64-pc-linux-gnu/14.3.0/:/usr/local/gcc-14/libexec/gcc/x86_64-pc-linux-gnu/:/usr/local/gcc-14/lib/gcc/x86_64-pc-linux-gnu/14.3.0/:/usr/local/gcc-14/lib/gcc/x86_64-pc-linux-gnu/
+        LIBRARY_PATH=/usr/local/gcc-14/lib/gcc/x86_64-pc-linux-gnu/14.3.0/:/usr/local/gcc-14/lib/gcc/x86_64-pc-linux-gnu/14.3.0/../../../../lib64/:/lib/x86_64-linux-gnu/:/lib/../lib64/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib64/:/usr/local/gcc-14/lib/gcc/x86_64-pc-linux-gnu/14.3.0/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_baf7e.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_baf7e.dir/CMakeCXXCompilerABI.cpp.'
+        Linking CXX executable cmTC_baf7e
+        /snap/cmake/1479/bin/cmake -E cmake_link_script CMakeFiles/cmTC_baf7e.dir/link.txt --verbose=1
+        Using built-in specs.
+        COLLECT_GCC=/usr/bin/g++-14
+        COLLECT_LTO_WRAPPER=/usr/local/gcc-14/libexec/gcc/x86_64-pc-linux-gnu/14.3.0/lto-wrapper
+        Target: x86_64-pc-linux-gnu
+        Configured with: ../configure --enable-languages=c,c++ --disable-multilib --prefix=/usr/local/gcc-14
+        Thread model: posix
+        Supported LTO compression algorithms: zlib
+        gcc version 14.3.0 (GCC) 
+        COMPILER_PATH=/usr/local/gcc-14/libexec/gcc/x86_64-pc-linux-gnu/14.3.0/:/usr/local/gcc-14/libexec/gcc/x86_64-pc-linux-gnu/14.3.0/:/usr/local/gcc-14/libexec/gcc/x86_64-pc-linux-gnu/:/usr/local/gcc-14/lib/gcc/x86_64-pc-linux-gnu/14.3.0/:/usr/local/gcc-14/lib/gcc/x86_64-pc-linux-gnu/
+        LIBRARY_PATH=/usr/local/gcc-14/lib/gcc/x86_64-pc-linux-gnu/14.3.0/:/usr/local/gcc-14/lib/gcc/x86_64-pc-linux-gnu/14.3.0/../../../../lib64/:/lib/x86_64-linux-gnu/:/lib/../lib64/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib64/:/usr/local/gcc-14/lib/gcc/x86_64-pc-linux-gnu/14.3.0/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_baf7e' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_baf7e.'
+         /usr/local/gcc-14/libexec/gcc/x86_64-pc-linux-gnu/14.3.0/collect2 -plugin /usr/local/gcc-14/libexec/gcc/x86_64-pc-linux-gnu/14.3.0/liblto_plugin.so -plugin-opt=/usr/local/gcc-14/libexec/gcc/x86_64-pc-linux-gnu/14.3.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccdTv68e.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_baf7e /lib/x86_64-linux-gnu/crt1.o /lib/x86_64-linux-gnu/crti.o /usr/local/gcc-14/lib/gcc/x86_64-pc-linux-gnu/14.3.0/crtbegin.o -L/usr/local/gcc-14/lib/gcc/x86_64-pc-linux-gnu/14.3.0 -L/usr/local/gcc-14/lib/gcc/x86_64-pc-linux-gnu/14.3.0/../../../../lib64 -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib64 -L/usr/local/gcc-14/lib/gcc/x86_64-pc-linux-gnu/14.3.0/../../.. -v CMakeFiles/cmTC_baf7e.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/local/gcc-14/lib/gcc/x86_64-pc-linux-gnu/14.3.0/crtend.o /lib/x86_64-linux-gnu/crtn.o
+        collect2 version 14.3.0
+        /usr/bin/ld -plugin /usr/local/gcc-14/libexec/gcc/x86_64-pc-linux-gnu/14.3.0/liblto_plugin.so -plugin-opt=/usr/local/gcc-14/libexec/gcc/x86_64-pc-linux-gnu/14.3.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccdTv68e.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_baf7e /lib/x86_64-linux-gnu/crt1.o /lib/x86_64-linux-gnu/crti.o /usr/local/gcc-14/lib/gcc/x86_64-pc-linux-gnu/14.3.0/crtbegin.o -L/usr/local/gcc-14/lib/gcc/x86_64-pc-linux-gnu/14.3.0 -L/usr/local/gcc-14/lib/gcc/x86_64-pc-linux-gnu/14.3.0/../../../../lib64 -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib64 -L/usr/local/gcc-14/lib/gcc/x86_64-pc-linux-gnu/14.3.0/../../.. -v CMakeFiles/cmTC_baf7e.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/local/gcc-14/lib/gcc/x86_64-pc-linux-gnu/14.3.0/crtend.o /lib/x86_64-linux-gnu/crtn.o
+        GNU ld (GNU Binutils for Ubuntu) 2.34
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_baf7e' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_baf7e.'
+        /usr/bin/g++-14  -v -Wl,-v CMakeFiles/cmTC_baf7e.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_baf7e
+        make[1]: Leaving directory '/home/elvis/programas/visualizations_cpp/build/CMakeFiles/CMakeScratch/TryCompile-InQRSl'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/snap/cmake/1479/share/cmake-4.1/Modules/CMakeDetermineCompilerABI.cmake:217 (message)"
+      - "/snap/cmake/1479/share/cmake-4.1/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed CXX implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/usr/local/gcc-14/lib/gcc/x86_64-pc-linux-gnu/14.3.0/../../../../include/c++/14.3.0]
+          add: [/usr/local/gcc-14/lib/gcc/x86_64-pc-linux-gnu/14.3.0/../../../../include/c++/14.3.0/x86_64-pc-linux-gnu]
+          add: [/usr/local/gcc-14/lib/gcc/x86_64-pc-linux-gnu/14.3.0/../../../../include/c++/14.3.0/backward]
+          add: [/usr/local/gcc-14/lib/gcc/x86_64-pc-linux-gnu/14.3.0/include]
+          add: [/usr/local/include]
+          add: [/usr/local/gcc-14/include]
+          add: [/usr/local/gcc-14/lib/gcc/x86_64-pc-linux-gnu/14.3.0/include-fixed/x86_64-linux-gnu]
+          add: [/usr/local/gcc-14/lib/gcc/x86_64-pc-linux-gnu/14.3.0/include-fixed]
+          add: [/usr/include/x86_64-linux-gnu]
+          add: [/usr/include]
+        end of search list found
+        collapse include dir [/usr/local/gcc-14/lib/gcc/x86_64-pc-linux-gnu/14.3.0/../../../../include/c++/14.3.0] ==> [/usr/local/gcc-14/include/c++/14.3.0]
+        collapse include dir [/usr/local/gcc-14/lib/gcc/x86_64-pc-linux-gnu/14.3.0/../../../../include/c++/14.3.0/x86_64-pc-linux-gnu] ==> [/usr/local/gcc-14/include/c++/14.3.0/x86_64-pc-linux-gnu]
+        collapse include dir [/usr/local/gcc-14/lib/gcc/x86_64-pc-linux-gnu/14.3.0/../../../../include/c++/14.3.0/backward] ==> [/usr/local/gcc-14/include/c++/14.3.0/backward]
+        collapse include dir [/usr/local/gcc-14/lib/gcc/x86_64-pc-linux-gnu/14.3.0/include] ==> [/usr/local/gcc-14/lib/gcc/x86_64-pc-linux-gnu/14.3.0/include]
+        collapse include dir [/usr/local/include] ==> [/usr/local/include]
+        collapse include dir [/usr/local/gcc-14/include] ==> [/usr/local/gcc-14/include]
+        collapse include dir [/usr/local/gcc-14/lib/gcc/x86_64-pc-linux-gnu/14.3.0/include-fixed/x86_64-linux-gnu] ==> [/usr/local/gcc-14/lib/gcc/x86_64-pc-linux-gnu/14.3.0/include-fixed/x86_64-linux-gnu]
+        collapse include dir [/usr/local/gcc-14/lib/gcc/x86_64-pc-linux-gnu/14.3.0/include-fixed] ==> [/usr/local/gcc-14/lib/gcc/x86_64-pc-linux-gnu/14.3.0/include-fixed]
+        collapse include dir [/usr/include/x86_64-linux-gnu] ==> [/usr/include/x86_64-linux-gnu]
+        collapse include dir [/usr/include] ==> [/usr/include]
+        implicit include dirs: [/usr/local/gcc-14/include/c++/14.3.0;/usr/local/gcc-14/include/c++/14.3.0/x86_64-pc-linux-gnu;/usr/local/gcc-14/include/c++/14.3.0/backward;/usr/local/gcc-14/lib/gcc/x86_64-pc-linux-gnu/14.3.0/include;/usr/local/include;/usr/local/gcc-14/include;/usr/local/gcc-14/lib/gcc/x86_64-pc-linux-gnu/14.3.0/include-fixed/x86_64-linux-gnu;/usr/local/gcc-14/lib/gcc/x86_64-pc-linux-gnu/14.3.0/include-fixed;/usr/include/x86_64-linux-gnu;/usr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/snap/cmake/1479/share/cmake-4.1/Modules/CMakeDetermineCompilerABI.cmake:253 (message)"
+      - "/snap/cmake/1479/share/cmake-4.1/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
+        ignore line: [Change Dir: '/home/elvis/programas/visualizations_cpp/build/CMakeFiles/CMakeScratch/TryCompile-InQRSl']
+        ignore line: []
+        ignore line: [Run Build Command(s): /snap/cmake/1479/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_baf7e/fast]
+        ignore line: [/usr/bin/make  -f CMakeFiles/cmTC_baf7e.dir/build.make CMakeFiles/cmTC_baf7e.dir/build]
+        ignore line: [make[1]: Entering directory '/home/elvis/programas/visualizations_cpp/build/CMakeFiles/CMakeScratch/TryCompile-InQRSl']
+        ignore line: [Building CXX object CMakeFiles/cmTC_baf7e.dir/CMakeCXXCompilerABI.cpp.o]
+        ignore line: [/usr/bin/g++-14   -v -o CMakeFiles/cmTC_baf7e.dir/CMakeCXXCompilerABI.cpp.o -c /snap/cmake/1479/share/cmake-4.1/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/usr/bin/g++-14]
+        ignore line: [Target: x86_64-pc-linux-gnu]
+        ignore line: [Configured with: ../configure --enable-languages=c c++ --disable-multilib --prefix=/usr/local/gcc-14]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib]
+        ignore line: [gcc version 14.3.0 (GCC) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_baf7e.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_baf7e.dir/']
+        ignore line: [ /usr/local/gcc-14/libexec/gcc/x86_64-pc-linux-gnu/14.3.0/cc1plus -quiet -v -imultiarch x86_64-linux-gnu -D_GNU_SOURCE /snap/cmake/1479/share/cmake-4.1/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_baf7e.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -o /tmp/cc5vbyUM.s]
+        ignore line: [GNU C++17 (GCC) version 14.3.0 (x86_64-pc-linux-gnu)]
+        ignore line: [	compiled by GNU C version 14.3.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version isl-0.24-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring nonexistent directory "/usr/local/include/x86_64-linux-gnu"]
+        ignore line: [ignoring nonexistent directory "/usr/local/gcc-14/lib/gcc/x86_64-pc-linux-gnu/14.3.0/../../../../x86_64-pc-linux-gnu/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /usr/local/gcc-14/lib/gcc/x86_64-pc-linux-gnu/14.3.0/../../../../include/c++/14.3.0]
+        ignore line: [ /usr/local/gcc-14/lib/gcc/x86_64-pc-linux-gnu/14.3.0/../../../../include/c++/14.3.0/x86_64-pc-linux-gnu]
+        ignore line: [ /usr/local/gcc-14/lib/gcc/x86_64-pc-linux-gnu/14.3.0/../../../../include/c++/14.3.0/backward]
+        ignore line: [ /usr/local/gcc-14/lib/gcc/x86_64-pc-linux-gnu/14.3.0/include]
+        ignore line: [ /usr/local/include]
+        ignore line: [ /usr/local/gcc-14/include]
+        ignore line: [ /usr/local/gcc-14/lib/gcc/x86_64-pc-linux-gnu/14.3.0/include-fixed/x86_64-linux-gnu]
+        ignore line: [ /usr/local/gcc-14/lib/gcc/x86_64-pc-linux-gnu/14.3.0/include-fixed]
+        ignore line: [ /usr/include/x86_64-linux-gnu]
+        ignore line: [ /usr/include]
+        ignore line: [End of search list.]
+        ignore line: [Compiler executable checksum: d452a803c307d024fd7b45e99f848402]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_baf7e.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_baf7e.dir/']
+        ignore line: [ as -v --64 -o CMakeFiles/cmTC_baf7e.dir/CMakeCXXCompilerABI.cpp.o /tmp/cc5vbyUM.s]
+        ignore line: [GNU assembler version 2.34 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.34]
+        ignore line: [COMPILER_PATH=/usr/local/gcc-14/libexec/gcc/x86_64-pc-linux-gnu/14.3.0/:/usr/local/gcc-14/libexec/gcc/x86_64-pc-linux-gnu/14.3.0/:/usr/local/gcc-14/libexec/gcc/x86_64-pc-linux-gnu/:/usr/local/gcc-14/lib/gcc/x86_64-pc-linux-gnu/14.3.0/:/usr/local/gcc-14/lib/gcc/x86_64-pc-linux-gnu/]
+        ignore line: [LIBRARY_PATH=/usr/local/gcc-14/lib/gcc/x86_64-pc-linux-gnu/14.3.0/:/usr/local/gcc-14/lib/gcc/x86_64-pc-linux-gnu/14.3.0/../../../../lib64/:/lib/x86_64-linux-gnu/:/lib/../lib64/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib64/:/usr/local/gcc-14/lib/gcc/x86_64-pc-linux-gnu/14.3.0/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_baf7e.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_baf7e.dir/CMakeCXXCompilerABI.cpp.']
+        ignore line: [Linking CXX executable cmTC_baf7e]
+        ignore line: [/snap/cmake/1479/bin/cmake -E cmake_link_script CMakeFiles/cmTC_baf7e.dir/link.txt --verbose=1]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/usr/bin/g++-14]
+        ignore line: [COLLECT_LTO_WRAPPER=/usr/local/gcc-14/libexec/gcc/x86_64-pc-linux-gnu/14.3.0/lto-wrapper]
+        ignore line: [Target: x86_64-pc-linux-gnu]
+        ignore line: [Configured with: ../configure --enable-languages=c c++ --disable-multilib --prefix=/usr/local/gcc-14]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib]
+        ignore line: [gcc version 14.3.0 (GCC) ]
+        ignore line: [COMPILER_PATH=/usr/local/gcc-14/libexec/gcc/x86_64-pc-linux-gnu/14.3.0/:/usr/local/gcc-14/libexec/gcc/x86_64-pc-linux-gnu/14.3.0/:/usr/local/gcc-14/libexec/gcc/x86_64-pc-linux-gnu/:/usr/local/gcc-14/lib/gcc/x86_64-pc-linux-gnu/14.3.0/:/usr/local/gcc-14/lib/gcc/x86_64-pc-linux-gnu/]
+        ignore line: [LIBRARY_PATH=/usr/local/gcc-14/lib/gcc/x86_64-pc-linux-gnu/14.3.0/:/usr/local/gcc-14/lib/gcc/x86_64-pc-linux-gnu/14.3.0/../../../../lib64/:/lib/x86_64-linux-gnu/:/lib/../lib64/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib64/:/usr/local/gcc-14/lib/gcc/x86_64-pc-linux-gnu/14.3.0/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_baf7e' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_baf7e.']
+        link line: [ /usr/local/gcc-14/libexec/gcc/x86_64-pc-linux-gnu/14.3.0/collect2 -plugin /usr/local/gcc-14/libexec/gcc/x86_64-pc-linux-gnu/14.3.0/liblto_plugin.so -plugin-opt=/usr/local/gcc-14/libexec/gcc/x86_64-pc-linux-gnu/14.3.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccdTv68e.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_baf7e /lib/x86_64-linux-gnu/crt1.o /lib/x86_64-linux-gnu/crti.o /usr/local/gcc-14/lib/gcc/x86_64-pc-linux-gnu/14.3.0/crtbegin.o -L/usr/local/gcc-14/lib/gcc/x86_64-pc-linux-gnu/14.3.0 -L/usr/local/gcc-14/lib/gcc/x86_64-pc-linux-gnu/14.3.0/../../../../lib64 -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib64 -L/usr/local/gcc-14/lib/gcc/x86_64-pc-linux-gnu/14.3.0/../../.. -v CMakeFiles/cmTC_baf7e.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/local/gcc-14/lib/gcc/x86_64-pc-linux-gnu/14.3.0/crtend.o /lib/x86_64-linux-gnu/crtn.o]
+          arg [/usr/local/gcc-14/libexec/gcc/x86_64-pc-linux-gnu/14.3.0/collect2] ==> ignore
+          arg [-plugin] ==> ignore
+          arg [/usr/local/gcc-14/libexec/gcc/x86_64-pc-linux-gnu/14.3.0/liblto_plugin.so] ==> ignore
+          arg [-plugin-opt=/usr/local/gcc-14/libexec/gcc/x86_64-pc-linux-gnu/14.3.0/lto-wrapper] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/ccdTv68e.res] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [--eh-frame-hdr] ==> ignore
+          arg [-m] ==> ignore
+          arg [elf_x86_64] ==> ignore
+          arg [-dynamic-linker] ==> ignore
+          arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_baf7e] ==> ignore
+          arg [/lib/x86_64-linux-gnu/crt1.o] ==> obj [/lib/x86_64-linux-gnu/crt1.o]
+          arg [/lib/x86_64-linux-gnu/crti.o] ==> obj [/lib/x86_64-linux-gnu/crti.o]
+          arg [/usr/local/gcc-14/lib/gcc/x86_64-pc-linux-gnu/14.3.0/crtbegin.o] ==> obj [/usr/local/gcc-14/lib/gcc/x86_64-pc-linux-gnu/14.3.0/crtbegin.o]
+          arg [-L/usr/local/gcc-14/lib/gcc/x86_64-pc-linux-gnu/14.3.0] ==> dir [/usr/local/gcc-14/lib/gcc/x86_64-pc-linux-gnu/14.3.0]
+          arg [-L/usr/local/gcc-14/lib/gcc/x86_64-pc-linux-gnu/14.3.0/../../../../lib64] ==> dir [/usr/local/gcc-14/lib/gcc/x86_64-pc-linux-gnu/14.3.0/../../../../lib64]
+          arg [-L/lib/x86_64-linux-gnu] ==> dir [/lib/x86_64-linux-gnu]
+          arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
+          arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
+          arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
+          arg [-L/usr/local/gcc-14/lib/gcc/x86_64-pc-linux-gnu/14.3.0/../../..] ==> dir [/usr/local/gcc-14/lib/gcc/x86_64-pc-linux-gnu/14.3.0/../../..]
+          arg [-v] ==> ignore
+          arg [CMakeFiles/cmTC_baf7e.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [-lstdc++] ==> lib [stdc++]
+          arg [-lm] ==> lib [m]
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [-lgcc] ==> lib [gcc]
+          arg [-lc] ==> lib [c]
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [-lgcc] ==> lib [gcc]
+          arg [/usr/local/gcc-14/lib/gcc/x86_64-pc-linux-gnu/14.3.0/crtend.o] ==> obj [/usr/local/gcc-14/lib/gcc/x86_64-pc-linux-gnu/14.3.0/crtend.o]
+          arg [/lib/x86_64-linux-gnu/crtn.o] ==> obj [/lib/x86_64-linux-gnu/crtn.o]
+        ignore line: [collect2 version 14.3.0]
+        ignore line: [/usr/bin/ld -plugin /usr/local/gcc-14/libexec/gcc/x86_64-pc-linux-gnu/14.3.0/liblto_plugin.so -plugin-opt=/usr/local/gcc-14/libexec/gcc/x86_64-pc-linux-gnu/14.3.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccdTv68e.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_baf7e /lib/x86_64-linux-gnu/crt1.o /lib/x86_64-linux-gnu/crti.o /usr/local/gcc-14/lib/gcc/x86_64-pc-linux-gnu/14.3.0/crtbegin.o -L/usr/local/gcc-14/lib/gcc/x86_64-pc-linux-gnu/14.3.0 -L/usr/local/gcc-14/lib/gcc/x86_64-pc-linux-gnu/14.3.0/../../../../lib64 -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib64 -L/usr/local/gcc-14/lib/gcc/x86_64-pc-linux-gnu/14.3.0/../../.. -v CMakeFiles/cmTC_baf7e.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/local/gcc-14/lib/gcc/x86_64-pc-linux-gnu/14.3.0/crtend.o /lib/x86_64-linux-gnu/crtn.o]
+        linker tool for 'CXX': /usr/bin/ld
+        collapse library dir [/usr/local/gcc-14/lib/gcc/x86_64-pc-linux-gnu/14.3.0] ==> [/usr/local/gcc-14/lib/gcc/x86_64-pc-linux-gnu/14.3.0]
+        collapse library dir [/usr/local/gcc-14/lib/gcc/x86_64-pc-linux-gnu/14.3.0/../../../../lib64] ==> [/usr/local/gcc-14/lib64]
+        collapse library dir [/lib/x86_64-linux-gnu] ==> [/lib/x86_64-linux-gnu]
+        collapse library dir [/lib/../lib64] ==> [/lib64]
+        collapse library dir [/usr/lib/x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+        collapse library dir [/usr/lib/../lib64] ==> [/usr/lib64]
+        collapse library dir [/usr/local/gcc-14/lib/gcc/x86_64-pc-linux-gnu/14.3.0/../../..] ==> [/usr/local/gcc-14/lib]
+        implicit libs: [stdc++;m;gcc_s;gcc;c;gcc_s;gcc]
+        implicit objs: [/lib/x86_64-linux-gnu/crt1.o;/lib/x86_64-linux-gnu/crti.o;/usr/local/gcc-14/lib/gcc/x86_64-pc-linux-gnu/14.3.0/crtbegin.o;/usr/local/gcc-14/lib/gcc/x86_64-pc-linux-gnu/14.3.0/crtend.o;/lib/x86_64-linux-gnu/crtn.o]
+        implicit dirs: [/usr/local/gcc-14/lib/gcc/x86_64-pc-linux-gnu/14.3.0;/usr/local/gcc-14/lib64;/lib/x86_64-linux-gnu;/lib64;/usr/lib/x86_64-linux-gnu;/usr/lib64;/usr/local/gcc-14/lib]
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/snap/cmake/1479/share/cmake-4.1/Modules/Internal/CMakeDetermineLinkerId.cmake:36 (message)"
+      - "/snap/cmake/1479/share/cmake-4.1/Modules/CMakeDetermineCompilerABI.cmake:299 (cmake_determine_linker_id)"
+      - "/snap/cmake/1479/share/cmake-4.1/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Running the CXX compiler's linker: "/usr/bin/ld" "-v"
+      GNU ld (GNU Binutils for Ubuntu) 2.34
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/snap/cmake/1479/share/cmake-4.1/Modules/FindOpenCL.cmake:102 (find_path)"
+      - "CMakeLists.txt:15 (find_package)"
+    mode: "path"
+    variable: "OpenCL_INCLUDE_DIR"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CL/cl.h"
+      - "OpenCL/cl.h"
+    candidate_directories:
+      - "/home/elvis/.local/bin/include/"
+      - "/home/elvis/.local/bin/OpenCL/common/inc/"
+      - "/home/elvis/.local/bin/AMD APP/include/"
+      - "/home/elvis/.local/bin/"
+      - "/usr/local/sbin/include/"
+      - "/usr/local/sbin/OpenCL/common/inc/"
+      - "/usr/local/sbin/AMD APP/include/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/include/"
+      - "/usr/local/bin/OpenCL/common/inc/"
+      - "/usr/local/bin/AMD APP/include/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/include/"
+      - "/usr/sbin/OpenCL/common/inc/"
+      - "/usr/sbin/AMD APP/include/"
+      - "/usr/sbin/"
+      - "/usr/bin/include/"
+      - "/usr/bin/OpenCL/common/inc/"
+      - "/usr/bin/AMD APP/include/"
+      - "/usr/bin/"
+      - "/sbin/include/"
+      - "/sbin/OpenCL/common/inc/"
+      - "/sbin/AMD APP/include/"
+      - "/sbin/"
+      - "/bin/include/"
+      - "/bin/OpenCL/common/inc/"
+      - "/bin/AMD APP/include/"
+      - "/bin/"
+      - "/usr/games/include/"
+      - "/usr/games/OpenCL/common/inc/"
+      - "/usr/games/AMD APP/include/"
+      - "/usr/games/"
+      - "/usr/local/games/include/"
+      - "/usr/local/games/OpenCL/common/inc/"
+      - "/usr/local/games/AMD APP/include/"
+      - "/usr/local/games/"
+      - "/snap/bin/include/"
+      - "/snap/bin/OpenCL/common/inc/"
+      - "/snap/bin/AMD APP/include/"
+      - "/snap/bin/"
+      - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/include/"
+      - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/OpenCL/common/inc/"
+      - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/AMD APP/include/"
+      - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/usr/local/include/x86_64-linux-gnu/include/"
+      - "/usr/local/include/x86_64-linux-gnu/OpenCL/common/inc/"
+      - "/usr/local/include/x86_64-linux-gnu/AMD APP/include/"
+      - "/usr/local/include/x86_64-linux-gnu/"
+      - "/usr/local/include/include/"
+      - "/usr/local/include/OpenCL/common/inc/"
+      - "/usr/local/include/AMD APP/include/"
+      - "/usr/local/include/"
+      - "/usr/local/include/"
+      - "/usr/local/OpenCL/common/inc/"
+      - "/usr/local/AMD APP/include/"
+      - "/usr/local/"
+      - "/usr/include/x86_64-linux-gnu/include/"
+      - "/usr/include/x86_64-linux-gnu/OpenCL/common/inc/"
+      - "/usr/include/x86_64-linux-gnu/AMD APP/include/"
+      - "/usr/include/x86_64-linux-gnu/"
+      - "/usr/include/include/"
+      - "/usr/include/OpenCL/common/inc/"
+      - "/usr/include/AMD APP/include/"
+      - "/usr/include/"
+      - "/usr/include/"
+      - "/usr/OpenCL/common/inc/"
+      - "/usr/AMD APP/include/"
+      - "/usr/"
+      - "/include/x86_64-linux-gnu/include/"
+      - "/include/x86_64-linux-gnu/OpenCL/common/inc/"
+      - "/include/x86_64-linux-gnu/AMD APP/include/"
+      - "/include/x86_64-linux-gnu/"
+      - "/include/include/"
+      - "/include/OpenCL/common/inc/"
+      - "/include/AMD APP/include/"
+      - "/include/"
+      - "/snap/cmake/1479/include/x86_64-linux-gnu/include/"
+      - "/snap/cmake/1479/include/x86_64-linux-gnu/OpenCL/common/inc/"
+      - "/snap/cmake/1479/include/x86_64-linux-gnu/AMD APP/include/"
+      - "/snap/cmake/1479/include/x86_64-linux-gnu/"
+      - "/snap/cmake/1479/include/include/"
+      - "/snap/cmake/1479/include/OpenCL/common/inc/"
+      - "/snap/cmake/1479/include/AMD APP/include/"
+      - "/snap/cmake/1479/include/"
+      - "/snap/cmake/1479/include/"
+      - "/snap/cmake/1479/OpenCL/common/inc/"
+      - "/snap/cmake/1479/AMD APP/include/"
+      - "/snap/cmake/1479/"
+      - "/usr/X11R6/include/x86_64-linux-gnu/include/"
+      - "/usr/X11R6/include/x86_64-linux-gnu/OpenCL/common/inc/"
+      - "/usr/X11R6/include/x86_64-linux-gnu/AMD APP/include/"
+      - "/usr/X11R6/include/x86_64-linux-gnu/"
+      - "/usr/X11R6/include/include/"
+      - "/usr/X11R6/include/OpenCL/common/inc/"
+      - "/usr/X11R6/include/AMD APP/include/"
+      - "/usr/X11R6/include/"
+      - "/usr/X11R6/include/"
+      - "/usr/X11R6/OpenCL/common/inc/"
+      - "/usr/X11R6/AMD APP/include/"
+      - "/usr/X11R6/"
+      - "/usr/pkg/include/x86_64-linux-gnu/include/"
+      - "/usr/pkg/include/x86_64-linux-gnu/OpenCL/common/inc/"
+      - "/usr/pkg/include/x86_64-linux-gnu/AMD APP/include/"
+      - "/usr/pkg/include/x86_64-linux-gnu/"
+      - "/usr/pkg/include/include/"
+      - "/usr/pkg/include/OpenCL/common/inc/"
+      - "/usr/pkg/include/AMD APP/include/"
+      - "/usr/pkg/include/"
+      - "/usr/pkg/include/"
+      - "/usr/pkg/OpenCL/common/inc/"
+      - "/usr/pkg/AMD APP/include/"
+      - "/usr/pkg/"
+      - "/opt/include/x86_64-linux-gnu/include/"
+      - "/opt/include/x86_64-linux-gnu/OpenCL/common/inc/"
+      - "/opt/include/x86_64-linux-gnu/AMD APP/include/"
+      - "/opt/include/x86_64-linux-gnu/"
+      - "/opt/include/include/"
+      - "/opt/include/OpenCL/common/inc/"
+      - "/opt/include/AMD APP/include/"
+      - "/opt/include/"
+      - "/opt/include/"
+      - "/opt/OpenCL/common/inc/"
+      - "/opt/AMD APP/include/"
+      - "/opt/"
+      - "/usr/include/X11/include/"
+      - "/usr/include/X11/OpenCL/common/inc/"
+      - "/usr/include/X11/AMD APP/include/"
+      - "/usr/include/X11/"
+      - "/OpenCLHeaders/include/"
+      - "/OpenCLHeaders/OpenCL/common/inc/"
+      - "/OpenCLHeaders/AMD APP/include/"
+      - "/OpenCLHeaders/"
+      - "/usr/local/cuda/include/"
+      - "/usr/local/cuda/OpenCL/common/inc/"
+      - "/usr/local/cuda/AMD APP/include/"
+      - "/usr/local/cuda/"
+      - "/opt/cuda/include/"
+      - "/opt/cuda/OpenCL/common/inc/"
+      - "/opt/cuda/AMD APP/include/"
+      - "/opt/cuda/"
+    searched_directories:
+      - "/home/elvis/.local/bin/include/CL/cl.h"
+      - "/home/elvis/.local/bin/OpenCL/common/inc/CL/cl.h"
+      - "/home/elvis/.local/bin/AMD APP/include/CL/cl.h"
+      - "/home/elvis/.local/bin/CL/cl.h"
+      - "/usr/local/sbin/include/CL/cl.h"
+      - "/usr/local/sbin/OpenCL/common/inc/CL/cl.h"
+      - "/usr/local/sbin/AMD APP/include/CL/cl.h"
+      - "/usr/local/sbin/CL/cl.h"
+      - "/usr/local/bin/include/CL/cl.h"
+      - "/usr/local/bin/OpenCL/common/inc/CL/cl.h"
+      - "/usr/local/bin/AMD APP/include/CL/cl.h"
+      - "/usr/local/bin/CL/cl.h"
+      - "/usr/sbin/include/CL/cl.h"
+      - "/usr/sbin/OpenCL/common/inc/CL/cl.h"
+      - "/usr/sbin/AMD APP/include/CL/cl.h"
+      - "/usr/sbin/CL/cl.h"
+      - "/usr/bin/include/CL/cl.h"
+      - "/usr/bin/OpenCL/common/inc/CL/cl.h"
+      - "/usr/bin/AMD APP/include/CL/cl.h"
+      - "/usr/bin/CL/cl.h"
+      - "/sbin/include/CL/cl.h"
+      - "/sbin/OpenCL/common/inc/CL/cl.h"
+      - "/sbin/AMD APP/include/CL/cl.h"
+      - "/sbin/CL/cl.h"
+      - "/bin/include/CL/cl.h"
+      - "/bin/OpenCL/common/inc/CL/cl.h"
+      - "/bin/AMD APP/include/CL/cl.h"
+      - "/bin/CL/cl.h"
+      - "/usr/games/include/CL/cl.h"
+      - "/usr/games/OpenCL/common/inc/CL/cl.h"
+      - "/usr/games/AMD APP/include/CL/cl.h"
+      - "/usr/games/CL/cl.h"
+      - "/usr/local/games/include/CL/cl.h"
+      - "/usr/local/games/OpenCL/common/inc/CL/cl.h"
+      - "/usr/local/games/AMD APP/include/CL/cl.h"
+      - "/usr/local/games/CL/cl.h"
+      - "/snap/bin/include/CL/cl.h"
+      - "/snap/bin/OpenCL/common/inc/CL/cl.h"
+      - "/snap/bin/AMD APP/include/CL/cl.h"
+      - "/snap/bin/CL/cl.h"
+      - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/include/CL/cl.h"
+      - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/OpenCL/common/inc/CL/cl.h"
+      - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/AMD APP/include/CL/cl.h"
+      - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/CL/cl.h"
+      - "/usr/local/include/x86_64-linux-gnu/include/CL/cl.h"
+      - "/usr/local/include/x86_64-linux-gnu/OpenCL/common/inc/CL/cl.h"
+      - "/usr/local/include/x86_64-linux-gnu/AMD APP/include/CL/cl.h"
+      - "/usr/local/include/x86_64-linux-gnu/CL/cl.h"
+      - "/usr/local/include/include/CL/cl.h"
+      - "/usr/local/include/OpenCL/common/inc/CL/cl.h"
+      - "/usr/local/include/AMD APP/include/CL/cl.h"
+      - "/usr/local/include/CL/cl.h"
+      - "/usr/local/include/CL/cl.h"
+      - "/usr/local/OpenCL/common/inc/CL/cl.h"
+      - "/usr/local/AMD APP/include/CL/cl.h"
+      - "/usr/local/CL/cl.h"
+      - "/usr/include/x86_64-linux-gnu/include/CL/cl.h"
+      - "/usr/include/x86_64-linux-gnu/OpenCL/common/inc/CL/cl.h"
+      - "/usr/include/x86_64-linux-gnu/AMD APP/include/CL/cl.h"
+      - "/usr/include/x86_64-linux-gnu/CL/cl.h"
+      - "/usr/include/include/CL/cl.h"
+      - "/usr/include/OpenCL/common/inc/CL/cl.h"
+      - "/usr/include/AMD APP/include/CL/cl.h"
+    found: "/usr/include/"
+    search_context:
+      ENV{PATH}:
+        - "/home/elvis/.local/bin"
+        - "/home/elvis/.local/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/snap/cmake/1479"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+      CMAKE_SYSTEM_INCLUDE_PATH:
+        - "/usr/include/X11"
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/snap/cmake/1479/share/cmake-4.1/Modules/CheckSymbolExists.cmake:193 (try_compile)"
+      - "/snap/cmake/1479/share/cmake-4.1/Modules/CheckSymbolExists.cmake:102 (__CHECK_SYMBOL_EXISTS_IMPL)"
+      - "/snap/cmake/1479/share/cmake-4.1/Modules/FindOpenCL.cmake:82 (check_symbol_exists)"
+      - "/snap/cmake/1479/share/cmake-4.1/Modules/FindOpenCL.cmake:123 (_FIND_OPENCL_VERSION)"
+      - "CMakeLists.txt:15 (find_package)"
+    checks:
+      - "Looking for CL_VERSION_3_0"
+    directories:
+      source: "/home/elvis/programas/visualizations_cpp/build/CMakeFiles/CMakeScratch/TryCompile-NKgqin"
+      binary: "/home/elvis/programas/visualizations_cpp/build/CMakeFiles/CMakeScratch/TryCompile-NKgqin"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "OPENCL_VERSION_3_0"
+      cached: true
+      stdout: |
+        Change Dir: '/home/elvis/programas/visualizations_cpp/build/CMakeFiles/CMakeScratch/TryCompile-NKgqin'
+        
+        Run Build Command(s): /snap/cmake/1479/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_cc031/fast
+        /usr/bin/make  -f CMakeFiles/cmTC_cc031.dir/build.make CMakeFiles/cmTC_cc031.dir/build
+        make[1]: Entering directory '/home/elvis/programas/visualizations_cpp/build/CMakeFiles/CMakeScratch/TryCompile-NKgqin'
+        Building CXX object CMakeFiles/cmTC_cc031.dir/CheckSymbolExists.cxx.o
+        /usr/bin/g++-14   -std=c++23 -o CMakeFiles/cmTC_cc031.dir/CheckSymbolExists.cxx.o -c /home/elvis/programas/visualizations_cpp/build/CMakeFiles/CMakeScratch/TryCompile-NKgqin/CheckSymbolExists.cxx
+        In file included from /usr/include/CL/cl.h:32,
+                         from /home/elvis/programas/visualizations_cpp/build/CMakeFiles/CMakeScratch/TryCompile-NKgqin/CheckSymbolExists.cxx:2:
+        /usr/include/CL/cl_version.h:34:104: note: ‘#pragma message: cl_version.h: CL_TARGET_OPENCL_VERSION is not defined. Defaulting to 220 (OpenCL 2.2)’
+           34 | #pragma message("cl_version.h: CL_TARGET_OPENCL_VERSION is not defined. Defaulting to 220 (OpenCL 2.2)")
+              |                                                                                                        ^
+        /home/elvis/programas/visualizations_cpp/build/CMakeFiles/CMakeScratch/TryCompile-NKgqin/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
+        /home/elvis/programas/visualizations_cpp/build/CMakeFiles/CMakeScratch/TryCompile-NKgqin/CheckSymbolExists.cxx:8:19: error: ‘CL_VERSION_3_0’ was not declared in this scope; did you mean ‘CL_VERSION_1_0’?
+            8 |   return ((int*)(&CL_VERSION_3_0))[argc];
+              |                   ^~~~~~~~~~~~~~
+              |                   CL_VERSION_1_0
+        make[1]: *** [CMakeFiles/cmTC_cc031.dir/build.make:81: CMakeFiles/cmTC_cc031.dir/CheckSymbolExists.cxx.o] Error 1
+        make[1]: Leaving directory '/home/elvis/programas/visualizations_cpp/build/CMakeFiles/CMakeScratch/TryCompile-NKgqin'
+        make: *** [Makefile:134: cmTC_cc031/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/snap/cmake/1479/share/cmake-4.1/Modules/CheckSymbolExists.cmake:193 (try_compile)"
+      - "/snap/cmake/1479/share/cmake-4.1/Modules/CheckSymbolExists.cmake:102 (__CHECK_SYMBOL_EXISTS_IMPL)"
+      - "/snap/cmake/1479/share/cmake-4.1/Modules/FindOpenCL.cmake:82 (check_symbol_exists)"
+      - "/snap/cmake/1479/share/cmake-4.1/Modules/FindOpenCL.cmake:123 (_FIND_OPENCL_VERSION)"
+      - "CMakeLists.txt:15 (find_package)"
+    checks:
+      - "Looking for CL_VERSION_2_2"
+    directories:
+      source: "/home/elvis/programas/visualizations_cpp/build/CMakeFiles/CMakeScratch/TryCompile-TbHrTo"
+      binary: "/home/elvis/programas/visualizations_cpp/build/CMakeFiles/CMakeScratch/TryCompile-TbHrTo"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "OPENCL_VERSION_2_2"
+      cached: true
+      stdout: |
+        Change Dir: '/home/elvis/programas/visualizations_cpp/build/CMakeFiles/CMakeScratch/TryCompile-TbHrTo'
+        
+        Run Build Command(s): /snap/cmake/1479/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_78bb8/fast
+        /usr/bin/make  -f CMakeFiles/cmTC_78bb8.dir/build.make CMakeFiles/cmTC_78bb8.dir/build
+        make[1]: Entering directory '/home/elvis/programas/visualizations_cpp/build/CMakeFiles/CMakeScratch/TryCompile-TbHrTo'
+        Building CXX object CMakeFiles/cmTC_78bb8.dir/CheckSymbolExists.cxx.o
+        /usr/bin/g++-14   -std=c++23 -o CMakeFiles/cmTC_78bb8.dir/CheckSymbolExists.cxx.o -c /home/elvis/programas/visualizations_cpp/build/CMakeFiles/CMakeScratch/TryCompile-TbHrTo/CheckSymbolExists.cxx
+        In file included from /usr/include/CL/cl.h:32,
+                         from /home/elvis/programas/visualizations_cpp/build/CMakeFiles/CMakeScratch/TryCompile-TbHrTo/CheckSymbolExists.cxx:2:
+        /usr/include/CL/cl_version.h:34:104: note: ‘#pragma message: cl_version.h: CL_TARGET_OPENCL_VERSION is not defined. Defaulting to 220 (OpenCL 2.2)’
+           34 | #pragma message("cl_version.h: CL_TARGET_OPENCL_VERSION is not defined. Defaulting to 220 (OpenCL 2.2)")
+              |                                                                                                        ^
+        Linking CXX executable cmTC_78bb8
+        /snap/cmake/1479/bin/cmake -E cmake_link_script CMakeFiles/cmTC_78bb8.dir/link.txt --verbose=1
+        /usr/bin/g++-14 CMakeFiles/cmTC_78bb8.dir/CheckSymbolExists.cxx.o -o cmTC_78bb8
+        make[1]: Leaving directory '/home/elvis/programas/visualizations_cpp/build/CMakeFiles/CMakeScratch/TryCompile-TbHrTo'
+        
+      exitCode: 0
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/snap/cmake/1479/share/cmake-4.1/Modules/FindOpenCL.cmake:179 (find_library)"
+      - "CMakeLists.txt:15 (find_package)"
+    mode: "library"
+    variable: "OpenCL_LIBRARY"
+    description: "Path to a library."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "OpenCL"
+    candidate_directories:
+      - "/home/elvis/.local/bin/lib/x86_64/"
+      - "/home/elvis/.local/bin/lib/x64/"
+      - "/home/elvis/.local/bin/lib/"
+      - "/home/elvis/.local/bin/lib64/"
+      - "/home/elvis/.local/bin/"
+      - "/usr/local/sbin/lib/x86_64/"
+      - "/usr/local/sbin/lib/x64/"
+      - "/usr/local/sbin/lib/"
+      - "/usr/local/sbin/lib64/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/lib/x86_64/"
+      - "/usr/local/bin/lib/x64/"
+      - "/usr/local/bin/lib/"
+      - "/usr/local/bin/lib64/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/lib/x86_64/"
+      - "/usr/sbin/lib/x64/"
+      - "/usr/sbin/lib/"
+      - "/usr/sbin/lib64/"
+      - "/usr/sbin/"
+      - "/usr/bin/lib/x86_64/"
+      - "/usr/bin/lib/x64/"
+      - "/usr/bin/lib/"
+      - "/usr/bin/lib64/"
+      - "/usr/bin/"
+      - "/sbin/lib/x86_64/"
+      - "/sbin/lib/x64/"
+      - "/sbin/lib/"
+      - "/sbin/lib64/"
+      - "/sbin/"
+      - "/bin/lib/x86_64/"
+      - "/bin/lib/x64/"
+      - "/bin/lib/"
+      - "/bin/lib64/"
+      - "/bin/"
+      - "/usr/games/lib/x86_64/"
+      - "/usr/games/lib/x64/"
+      - "/usr/games/lib/"
+      - "/usr/games/lib64/"
+      - "/usr/games/"
+      - "/usr/local/games/lib/x86_64/"
+      - "/usr/local/games/lib/x64/"
+      - "/usr/local/games/lib/"
+      - "/usr/local/games/lib64/"
+      - "/usr/local/games/"
+      - "/snap/bin/lib/x86_64/"
+      - "/snap/bin/lib/x64/"
+      - "/snap/bin/lib/"
+      - "/snap/bin/lib64/"
+      - "/snap/bin/"
+      - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/lib/x86_64/"
+      - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/lib/x64/"
+      - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/lib/"
+      - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/lib64/"
+      - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/usr/local/lib/x86_64-linux-gnu/lib/x86_64/"
+      - "/usr/local/lib/x86_64-linux-gnu/lib/x64/"
+      - "/usr/local/lib/x86_64-linux-gnu/lib/"
+      - "/usr/local/lib/x86_64-linux-gnu/lib64/"
+      - "/usr/local/lib/x86_64-linux-gnu/"
+      - "/usr/local/lib/lib/x86_64/"
+      - "/usr/local/lib/lib/x64/"
+      - "/usr/local/lib/lib/"
+      - "/usr/local/lib/lib64/"
+      - "/usr/local/lib/"
+      - "/usr/local/lib/x86_64/"
+      - "/usr/local/lib/x64/"
+      - "/usr/local/lib/"
+      - "/usr/local/lib64/"
+      - "/usr/local/"
+      - "/usr/lib/x86_64-linux-gnu/lib/x86_64/"
+      - "/usr/lib/x86_64-linux-gnu/lib/x64/"
+      - "/usr/lib/x86_64-linux-gnu/lib/"
+      - "/usr/lib/x86_64-linux-gnu/lib64/"
+      - "/usr/lib/x86_64-linux-gnu/"
+      - "/usr/lib/lib/x86_64/"
+      - "/usr/lib/lib/x64/"
+      - "/usr/lib/lib/"
+      - "/usr/lib/lib64/"
+      - "/usr/lib/"
+      - "/usr/lib/x86_64/"
+      - "/usr/lib/x64/"
+      - "/usr/lib/"
+      - "/usr/lib64/"
+      - "/usr/"
+      - "/lib/x86_64-linux-gnu/lib/x86_64/"
+      - "/lib/x86_64-linux-gnu/lib/x64/"
+      - "/lib/x86_64-linux-gnu/lib/"
+      - "/lib/x86_64-linux-gnu/lib64/"
+      - "/lib/x86_64-linux-gnu/"
+      - "/lib/lib/x86_64/"
+      - "/lib/lib/x64/"
+      - "/lib/lib/"
+      - "/lib/lib64/"
+      - "/lib/"
+      - "/snap/cmake/1479/lib/x86_64-linux-gnu/lib/x86_64/"
+      - "/snap/cmake/1479/lib/x86_64-linux-gnu/lib/x64/"
+      - "/snap/cmake/1479/lib/x86_64-linux-gnu/lib/"
+      - "/snap/cmake/1479/lib/x86_64-linux-gnu/lib64/"
+      - "/snap/cmake/1479/lib/x86_64-linux-gnu/"
+      - "/snap/cmake/1479/lib/lib/x86_64/"
+      - "/snap/cmake/1479/lib/lib/x64/"
+      - "/snap/cmake/1479/lib/lib/"
+      - "/snap/cmake/1479/lib/lib64/"
+      - "/snap/cmake/1479/lib/"
+      - "/snap/cmake/1479/lib/x86_64/"
+      - "/snap/cmake/1479/lib/x64/"
+      - "/snap/cmake/1479/lib/"
+      - "/snap/cmake/1479/lib64/"
+      - "/snap/cmake/1479/"
+      - "/usr/X11R6/lib/x86_64-linux-gnu/lib/x86_64/"
+      - "/usr/X11R6/lib/x86_64-linux-gnu/lib/x64/"
+      - "/usr/X11R6/lib/x86_64-linux-gnu/lib/"
+      - "/usr/X11R6/lib/x86_64-linux-gnu/lib64/"
+      - "/usr/X11R6/lib/x86_64-linux-gnu/"
+      - "/usr/X11R6/lib/lib/x86_64/"
+      - "/usr/X11R6/lib/lib/x64/"
+      - "/usr/X11R6/lib/lib/"
+      - "/usr/X11R6/lib/lib64/"
+      - "/usr/X11R6/lib/"
+      - "/usr/X11R6/lib/x86_64/"
+      - "/usr/X11R6/lib/x64/"
+      - "/usr/X11R6/lib/"
+      - "/usr/X11R6/lib64/"
+      - "/usr/X11R6/"
+      - "/usr/pkg/lib/x86_64-linux-gnu/lib/x86_64/"
+      - "/usr/pkg/lib/x86_64-linux-gnu/lib/x64/"
+      - "/usr/pkg/lib/x86_64-linux-gnu/lib/"
+      - "/usr/pkg/lib/x86_64-linux-gnu/lib64/"
+      - "/usr/pkg/lib/x86_64-linux-gnu/"
+      - "/usr/pkg/lib/lib/x86_64/"
+      - "/usr/pkg/lib/lib/x64/"
+      - "/usr/pkg/lib/lib/"
+      - "/usr/pkg/lib/lib64/"
+      - "/usr/pkg/lib/"
+      - "/usr/pkg/lib/x86_64/"
+      - "/usr/pkg/lib/x64/"
+      - "/usr/pkg/lib/"
+      - "/usr/pkg/lib64/"
+      - "/usr/pkg/"
+      - "/opt/lib/x86_64-linux-gnu/lib/x86_64/"
+      - "/opt/lib/x86_64-linux-gnu/lib/x64/"
+      - "/opt/lib/x86_64-linux-gnu/lib/"
+      - "/opt/lib/x86_64-linux-gnu/lib64/"
+      - "/opt/lib/x86_64-linux-gnu/"
+      - "/opt/lib/lib/x86_64/"
+      - "/opt/lib/lib/x64/"
+      - "/opt/lib/lib/"
+      - "/opt/lib/lib64/"
+      - "/opt/lib/"
+      - "/opt/lib/x86_64/"
+      - "/opt/lib/x64/"
+      - "/opt/lib/"
+      - "/opt/lib64/"
+      - "/opt/"
+      - "/usr/lib/X11/lib/x86_64/"
+      - "/usr/lib/X11/lib/x64/"
+      - "/usr/lib/X11/lib/"
+      - "/usr/lib/X11/lib64/"
+      - "/usr/lib/X11/"
+      - "/usr/local/cuda/lib/x86_64/"
+      - "/usr/local/cuda/lib/x64/"
+      - "/usr/local/cuda/lib/"
+      - "/usr/local/cuda/lib64/"
+      - "/usr/local/cuda/"
+      - "/opt/cuda/lib/x86_64/"
+      - "/opt/cuda/lib/x64/"
+      - "/opt/cuda/lib/"
+      - "/opt/cuda/lib64/"
+      - "/opt/cuda/"
+    searched_directories:
+      - "/home/elvis/.local/bin/lib/x86_64/"
+      - "/home/elvis/.local/bin/lib/x64/"
+      - "/home/elvis/.local/bin/lib/"
+      - "/home/elvis/.local/bin/lib64/"
+      - "/home/elvis/.local/bin/"
+      - "/usr/local/sbin/lib/x86_64/"
+      - "/usr/local/sbin/lib/x64/"
+      - "/usr/local/sbin/lib/"
+      - "/usr/local/sbin/lib64/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/lib/x86_64/"
+      - "/usr/local/bin/lib/x64/"
+      - "/usr/local/bin/lib/"
+      - "/usr/local/bin/lib64/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/lib/x86_64/"
+      - "/usr/sbin/lib/x64/"
+      - "/usr/sbin/lib/"
+      - "/usr/sbin/lib64/"
+      - "/usr/sbin/"
+      - "/usr/bin/lib/x86_64/"
+      - "/usr/bin/lib/x64/"
+      - "/usr/bin/lib/"
+      - "/usr/bin/lib64/"
+      - "/usr/bin/"
+      - "/sbin/lib/x86_64/"
+      - "/sbin/lib/x64/"
+      - "/sbin/lib/"
+      - "/sbin/lib64/"
+      - "/sbin/"
+      - "/bin/lib/x86_64/"
+      - "/bin/lib/x64/"
+      - "/bin/lib/"
+      - "/bin/lib64/"
+      - "/bin/"
+      - "/usr/games/lib/x86_64/"
+      - "/usr/games/lib/x64/"
+      - "/usr/games/lib/"
+      - "/usr/games/lib64/"
+      - "/usr/games/"
+      - "/usr/local/games/lib/x86_64/"
+      - "/usr/local/games/lib/x64/"
+      - "/usr/local/games/lib/"
+      - "/usr/local/games/lib64/"
+      - "/usr/local/games/"
+      - "/snap/bin/lib/x86_64/"
+      - "/snap/bin/lib/x64/"
+      - "/snap/bin/lib/"
+      - "/snap/bin/lib64/"
+      - "/snap/bin/"
+      - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/lib/x86_64/"
+      - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/lib/x64/"
+      - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/lib/"
+      - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/lib64/"
+      - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/usr/local/lib/x86_64-linux-gnu/lib/x86_64/"
+      - "/usr/local/lib/x86_64-linux-gnu/lib/x64/"
+      - "/usr/local/lib/x86_64-linux-gnu/lib/"
+      - "/usr/local/lib/x86_64-linux-gnu/lib64/"
+      - "/usr/local/lib/x86_64-linux-gnu/"
+      - "/usr/local/lib/lib/x86_64/"
+      - "/usr/local/lib/lib/x64/"
+      - "/usr/local/lib/lib/"
+      - "/usr/local/lib/lib64/"
+      - "/usr/local/lib/"
+      - "/usr/local/lib/x86_64/"
+      - "/usr/local/lib/x64/"
+      - "/usr/local/lib/"
+      - "/usr/local/lib64/"
+      - "/usr/local/"
+      - "/usr/lib/x86_64-linux-gnu/lib/x86_64/"
+      - "/usr/lib/x86_64-linux-gnu/lib/x64/"
+      - "/usr/lib/x86_64-linux-gnu/lib/"
+      - "/usr/lib/x86_64-linux-gnu/lib64/"
+    found: "/usr/lib/x86_64-linux-gnu/libOpenCL.so"
+    search_context:
+      ENV{PATH}:
+        - "/home/elvis/.local/bin"
+        - "/home/elvis/.local/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/snap/cmake/1479"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+      CMAKE_SYSTEM_LIBRARY_PATH:
+        - "/usr/lib/X11"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/snap/cmake/1479/share/cmake-4.1/Modules/FindOpenGL.cmake:289 (find_path)"
+      - "CMakeLists.txt:16 (find_package)"
+    mode: "path"
+    variable: "OPENGL_INCLUDE_DIR"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "GL/gl.h"
+    candidate_directories:
+      - "/home/elvis/.local/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/usr/local/include/x86_64-linux-gnu/"
+      - "/usr/local/include/"
+      - "/usr/local/"
+      - "/usr/include/x86_64-linux-gnu/"
+      - "/usr/include/"
+      - "/usr/"
+      - "/include/x86_64-linux-gnu/"
+      - "/include/"
+      - "/snap/cmake/1479/include/x86_64-linux-gnu/"
+      - "/snap/cmake/1479/include/"
+      - "/snap/cmake/1479/"
+      - "/usr/X11R6/include/x86_64-linux-gnu/"
+      - "/usr/X11R6/include/"
+      - "/usr/X11R6/"
+      - "/usr/pkg/include/x86_64-linux-gnu/"
+      - "/usr/pkg/include/"
+      - "/usr/pkg/"
+      - "/opt/include/x86_64-linux-gnu/"
+      - "/opt/include/"
+      - "/opt/"
+      - "/usr/include/X11/"
+      - "/usr/share/doc/NVIDIA_GLX-1.0/include/"
+      - "/usr/openwin/share/include/"
+      - "/opt/graphics/OpenGL/include/"
+    searched_directories:
+      - "/home/elvis/.local/bin/GL/gl.h"
+      - "/usr/local/sbin/GL/gl.h"
+      - "/usr/local/bin/GL/gl.h"
+      - "/usr/sbin/GL/gl.h"
+      - "/usr/bin/GL/gl.h"
+      - "/sbin/GL/gl.h"
+      - "/bin/GL/gl.h"
+      - "/usr/games/GL/gl.h"
+      - "/usr/local/games/GL/gl.h"
+      - "/snap/bin/GL/gl.h"
+      - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/GL/gl.h"
+      - "/usr/local/include/x86_64-linux-gnu/GL/gl.h"
+      - "/usr/local/include/GL/gl.h"
+      - "/usr/local/GL/gl.h"
+      - "/usr/include/x86_64-linux-gnu/GL/gl.h"
+    found: "/usr/include/"
+    search_context:
+      ENV{PATH}:
+        - "/home/elvis/.local/bin"
+        - "/home/elvis/.local/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/snap/cmake/1479"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+      CMAKE_SYSTEM_INCLUDE_PATH:
+        - "/usr/include/X11"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/snap/cmake/1479/share/cmake-4.1/Modules/FindOpenGL.cmake:295 (find_path)"
+      - "CMakeLists.txt:16 (find_package)"
+    mode: "path"
+    variable: "OPENGL_GLX_INCLUDE_DIR"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "GL/glx.h"
+    candidate_directories:
+      - "/home/elvis/.local/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/usr/local/include/x86_64-linux-gnu/"
+      - "/usr/local/include/"
+      - "/usr/local/"
+      - "/usr/include/x86_64-linux-gnu/"
+      - "/usr/include/"
+      - "/usr/"
+      - "/include/x86_64-linux-gnu/"
+      - "/include/"
+      - "/snap/cmake/1479/include/x86_64-linux-gnu/"
+      - "/snap/cmake/1479/include/"
+      - "/snap/cmake/1479/"
+      - "/usr/X11R6/include/x86_64-linux-gnu/"
+      - "/usr/X11R6/include/"
+      - "/usr/X11R6/"
+      - "/usr/pkg/include/x86_64-linux-gnu/"
+      - "/usr/pkg/include/"
+      - "/usr/pkg/"
+      - "/opt/include/x86_64-linux-gnu/"
+      - "/opt/include/"
+      - "/opt/"
+      - "/usr/include/X11/"
+    searched_directories:
+      - "/home/elvis/.local/bin/GL/glx.h"
+      - "/usr/local/sbin/GL/glx.h"
+      - "/usr/local/bin/GL/glx.h"
+      - "/usr/sbin/GL/glx.h"
+      - "/usr/bin/GL/glx.h"
+      - "/sbin/GL/glx.h"
+      - "/bin/GL/glx.h"
+      - "/usr/games/GL/glx.h"
+      - "/usr/local/games/GL/glx.h"
+      - "/snap/bin/GL/glx.h"
+      - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/GL/glx.h"
+      - "/usr/local/include/x86_64-linux-gnu/GL/glx.h"
+      - "/usr/local/include/GL/glx.h"
+      - "/usr/local/GL/glx.h"
+      - "/usr/include/x86_64-linux-gnu/GL/glx.h"
+    found: "/usr/include/"
+    search_context:
+      ENV{PATH}:
+        - "/home/elvis/.local/bin"
+        - "/home/elvis/.local/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/snap/cmake/1479"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+      CMAKE_SYSTEM_INCLUDE_PATH:
+        - "/usr/include/X11"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/snap/cmake/1479/share/cmake-4.1/Modules/FindOpenGL.cmake:296 (find_path)"
+      - "CMakeLists.txt:16 (find_package)"
+    mode: "path"
+    variable: "OPENGL_EGL_INCLUDE_DIR"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "EGL/egl.h"
+    candidate_directories:
+      - "/home/elvis/.local/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/usr/local/include/x86_64-linux-gnu/"
+      - "/usr/local/include/"
+      - "/usr/local/"
+      - "/usr/include/x86_64-linux-gnu/"
+      - "/usr/include/"
+      - "/usr/"
+      - "/include/x86_64-linux-gnu/"
+      - "/include/"
+      - "/snap/cmake/1479/include/x86_64-linux-gnu/"
+      - "/snap/cmake/1479/include/"
+      - "/snap/cmake/1479/"
+      - "/usr/X11R6/include/x86_64-linux-gnu/"
+      - "/usr/X11R6/include/"
+      - "/usr/X11R6/"
+      - "/usr/pkg/include/x86_64-linux-gnu/"
+      - "/usr/pkg/include/"
+      - "/usr/pkg/"
+      - "/opt/include/x86_64-linux-gnu/"
+      - "/opt/include/"
+      - "/opt/"
+      - "/usr/include/X11/"
+    searched_directories:
+      - "/home/elvis/.local/bin/EGL/egl.h"
+      - "/usr/local/sbin/EGL/egl.h"
+      - "/usr/local/bin/EGL/egl.h"
+      - "/usr/sbin/EGL/egl.h"
+      - "/usr/bin/EGL/egl.h"
+      - "/sbin/EGL/egl.h"
+      - "/bin/EGL/egl.h"
+      - "/usr/games/EGL/egl.h"
+      - "/usr/local/games/EGL/egl.h"
+      - "/snap/bin/EGL/egl.h"
+      - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/EGL/egl.h"
+      - "/usr/local/include/x86_64-linux-gnu/EGL/egl.h"
+      - "/usr/local/include/EGL/egl.h"
+      - "/usr/local/EGL/egl.h"
+      - "/usr/include/x86_64-linux-gnu/EGL/egl.h"
+    found: "/usr/include/"
+    search_context:
+      ENV{PATH}:
+        - "/home/elvis/.local/bin"
+        - "/home/elvis/.local/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/snap/cmake/1479"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+      CMAKE_SYSTEM_INCLUDE_PATH:
+        - "/usr/include/X11"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/snap/cmake/1479/share/cmake-4.1/Modules/FindOpenGL.cmake:297 (find_path)"
+      - "CMakeLists.txt:16 (find_package)"
+    mode: "path"
+    variable: "OPENGL_GLES2_INCLUDE_DIR"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "GLES2/gl2.h"
+    candidate_directories:
+      - "/home/elvis/.local/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/usr/local/include/x86_64-linux-gnu/"
+      - "/usr/local/include/"
+      - "/usr/local/"
+      - "/usr/include/x86_64-linux-gnu/"
+      - "/usr/include/"
+      - "/usr/"
+      - "/include/x86_64-linux-gnu/"
+      - "/include/"
+      - "/snap/cmake/1479/include/x86_64-linux-gnu/"
+      - "/snap/cmake/1479/include/"
+      - "/snap/cmake/1479/"
+      - "/usr/X11R6/include/x86_64-linux-gnu/"
+      - "/usr/X11R6/include/"
+      - "/usr/X11R6/"
+      - "/usr/pkg/include/x86_64-linux-gnu/"
+      - "/usr/pkg/include/"
+      - "/usr/pkg/"
+      - "/opt/include/x86_64-linux-gnu/"
+      - "/opt/include/"
+      - "/opt/"
+      - "/usr/include/X11/"
+    searched_directories:
+      - "/home/elvis/.local/bin/GLES2/gl2.h"
+      - "/usr/local/sbin/GLES2/gl2.h"
+      - "/usr/local/bin/GLES2/gl2.h"
+      - "/usr/sbin/GLES2/gl2.h"
+      - "/usr/bin/GLES2/gl2.h"
+      - "/sbin/GLES2/gl2.h"
+      - "/bin/GLES2/gl2.h"
+      - "/usr/games/GLES2/gl2.h"
+      - "/usr/local/games/GLES2/gl2.h"
+      - "/snap/bin/GLES2/gl2.h"
+      - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/GLES2/gl2.h"
+      - "/usr/local/include/x86_64-linux-gnu/GLES2/gl2.h"
+      - "/usr/local/include/GLES2/gl2.h"
+      - "/usr/local/GLES2/gl2.h"
+      - "/usr/include/x86_64-linux-gnu/GLES2/gl2.h"
+    found: "/usr/include/"
+    search_context:
+      ENV{PATH}:
+        - "/home/elvis/.local/bin"
+        - "/home/elvis/.local/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/snap/cmake/1479"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+      CMAKE_SYSTEM_INCLUDE_PATH:
+        - "/usr/include/X11"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/snap/cmake/1479/share/cmake-4.1/Modules/FindOpenGL.cmake:298 (find_path)"
+      - "CMakeLists.txt:16 (find_package)"
+    mode: "path"
+    variable: "OPENGL_GLES3_INCLUDE_DIR"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "GLES3/gl3.h"
+    candidate_directories:
+      - "/home/elvis/.local/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/usr/local/include/x86_64-linux-gnu/"
+      - "/usr/local/include/"
+      - "/usr/local/"
+      - "/usr/include/x86_64-linux-gnu/"
+      - "/usr/include/"
+      - "/usr/"
+      - "/include/x86_64-linux-gnu/"
+      - "/include/"
+      - "/snap/cmake/1479/include/x86_64-linux-gnu/"
+      - "/snap/cmake/1479/include/"
+      - "/snap/cmake/1479/"
+      - "/usr/X11R6/include/x86_64-linux-gnu/"
+      - "/usr/X11R6/include/"
+      - "/usr/X11R6/"
+      - "/usr/pkg/include/x86_64-linux-gnu/"
+      - "/usr/pkg/include/"
+      - "/usr/pkg/"
+      - "/opt/include/x86_64-linux-gnu/"
+      - "/opt/include/"
+      - "/opt/"
+      - "/usr/include/X11/"
+    searched_directories:
+      - "/home/elvis/.local/bin/GLES3/gl3.h"
+      - "/usr/local/sbin/GLES3/gl3.h"
+      - "/usr/local/bin/GLES3/gl3.h"
+      - "/usr/sbin/GLES3/gl3.h"
+      - "/usr/bin/GLES3/gl3.h"
+      - "/sbin/GLES3/gl3.h"
+      - "/bin/GLES3/gl3.h"
+      - "/usr/games/GLES3/gl3.h"
+      - "/usr/local/games/GLES3/gl3.h"
+      - "/snap/bin/GLES3/gl3.h"
+      - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/GLES3/gl3.h"
+      - "/usr/local/include/x86_64-linux-gnu/GLES3/gl3.h"
+      - "/usr/local/include/GLES3/gl3.h"
+      - "/usr/local/GLES3/gl3.h"
+      - "/usr/include/x86_64-linux-gnu/GLES3/gl3.h"
+    found: "/usr/include/"
+    search_context:
+      ENV{PATH}:
+        - "/home/elvis/.local/bin"
+        - "/home/elvis/.local/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/snap/cmake/1479"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+      CMAKE_SYSTEM_INCLUDE_PATH:
+        - "/usr/include/X11"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/snap/cmake/1479/share/cmake-4.1/Modules/FindOpenGL.cmake:299 (find_path)"
+      - "CMakeLists.txt:16 (find_package)"
+    mode: "path"
+    variable: "OPENGL_xmesa_INCLUDE_DIR"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "GL/xmesa.h"
+    candidate_directories:
+      - "/home/elvis/.local/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/usr/local/include/x86_64-linux-gnu/"
+      - "/usr/local/include/"
+      - "/usr/local/"
+      - "/usr/include/x86_64-linux-gnu/"
+      - "/usr/include/"
+      - "/usr/"
+      - "/include/x86_64-linux-gnu/"
+      - "/include/"
+      - "/snap/cmake/1479/include/x86_64-linux-gnu/"
+      - "/snap/cmake/1479/include/"
+      - "/snap/cmake/1479/"
+      - "/usr/X11R6/include/x86_64-linux-gnu/"
+      - "/usr/X11R6/include/"
+      - "/usr/X11R6/"
+      - "/usr/pkg/include/x86_64-linux-gnu/"
+      - "/usr/pkg/include/"
+      - "/usr/pkg/"
+      - "/opt/include/x86_64-linux-gnu/"
+      - "/opt/include/"
+      - "/opt/"
+      - "/usr/include/X11/"
+      - "/usr/share/doc/NVIDIA_GLX-1.0/include/"
+      - "/usr/openwin/share/include/"
+      - "/opt/graphics/OpenGL/include/"
+    searched_directories:
+      - "/home/elvis/.local/bin/GL/xmesa.h"
+      - "/usr/local/sbin/GL/xmesa.h"
+      - "/usr/local/bin/GL/xmesa.h"
+      - "/usr/sbin/GL/xmesa.h"
+      - "/usr/bin/GL/xmesa.h"
+      - "/sbin/GL/xmesa.h"
+      - "/bin/GL/xmesa.h"
+      - "/usr/games/GL/xmesa.h"
+      - "/usr/local/games/GL/xmesa.h"
+      - "/snap/bin/GL/xmesa.h"
+      - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/GL/xmesa.h"
+      - "/usr/local/include/x86_64-linux-gnu/GL/xmesa.h"
+      - "/usr/local/include/GL/xmesa.h"
+      - "/usr/local/GL/xmesa.h"
+      - "/usr/include/x86_64-linux-gnu/GL/xmesa.h"
+      - "/usr/include/GL/xmesa.h"
+      - "/usr/GL/xmesa.h"
+      - "/include/x86_64-linux-gnu/GL/xmesa.h"
+      - "/include/GL/xmesa.h"
+      - "/snap/cmake/1479/include/x86_64-linux-gnu/GL/xmesa.h"
+      - "/snap/cmake/1479/include/GL/xmesa.h"
+      - "/snap/cmake/1479/GL/xmesa.h"
+      - "/usr/X11R6/include/x86_64-linux-gnu/GL/xmesa.h"
+      - "/usr/X11R6/include/GL/xmesa.h"
+      - "/usr/X11R6/GL/xmesa.h"
+      - "/usr/pkg/include/x86_64-linux-gnu/GL/xmesa.h"
+      - "/usr/pkg/include/GL/xmesa.h"
+      - "/usr/pkg/GL/xmesa.h"
+      - "/opt/include/x86_64-linux-gnu/GL/xmesa.h"
+      - "/opt/include/GL/xmesa.h"
+      - "/opt/GL/xmesa.h"
+      - "/usr/include/X11/GL/xmesa.h"
+      - "/usr/share/doc/NVIDIA_GLX-1.0/include/GL/xmesa.h"
+      - "/usr/openwin/share/include/GL/xmesa.h"
+      - "/opt/graphics/OpenGL/include/GL/xmesa.h"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "/home/elvis/.local/bin"
+        - "/home/elvis/.local/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/snap/cmake/1479"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+      CMAKE_SYSTEM_INCLUDE_PATH:
+        - "/usr/include/X11"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/snap/cmake/1479/share/cmake-4.1/Modules/FindOpenGL.cmake:305 (find_path)"
+      - "CMakeLists.txt:16 (find_package)"
+    mode: "path"
+    variable: "OPENGL_GLU_INCLUDE_DIR"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "GL/glu.h"
+    candidate_directories:
+      - "/home/elvis/.local/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/usr/local/include/x86_64-linux-gnu/"
+      - "/usr/local/include/"
+      - "/usr/local/"
+      - "/usr/include/x86_64-linux-gnu/"
+      - "/usr/include/"
+      - "/usr/"
+      - "/include/x86_64-linux-gnu/"
+      - "/include/"
+      - "/snap/cmake/1479/include/x86_64-linux-gnu/"
+      - "/snap/cmake/1479/include/"
+      - "/snap/cmake/1479/"
+      - "/usr/X11R6/include/x86_64-linux-gnu/"
+      - "/usr/X11R6/include/"
+      - "/usr/X11R6/"
+      - "/usr/pkg/include/x86_64-linux-gnu/"
+      - "/usr/pkg/include/"
+      - "/usr/pkg/"
+      - "/opt/include/x86_64-linux-gnu/"
+      - "/opt/include/"
+      - "/opt/"
+      - "/usr/include/X11/"
+    searched_directories:
+      - "/home/elvis/.local/bin/GL/glu.h"
+      - "/usr/local/sbin/GL/glu.h"
+      - "/usr/local/bin/GL/glu.h"
+      - "/usr/sbin/GL/glu.h"
+      - "/usr/bin/GL/glu.h"
+      - "/sbin/GL/glu.h"
+      - "/bin/GL/glu.h"
+      - "/usr/games/GL/glu.h"
+      - "/usr/local/games/GL/glu.h"
+      - "/snap/bin/GL/glu.h"
+      - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/GL/glu.h"
+      - "/usr/local/include/x86_64-linux-gnu/GL/glu.h"
+      - "/usr/local/include/GL/glu.h"
+      - "/usr/local/GL/glu.h"
+      - "/usr/include/x86_64-linux-gnu/GL/glu.h"
+    found: "/usr/include/"
+    search_context:
+      ENV{PATH}:
+        - "/home/elvis/.local/bin"
+        - "/home/elvis/.local/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/snap/cmake/1479"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+      CMAKE_SYSTEM_INCLUDE_PATH:
+        - "/usr/include/X11"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/snap/cmake/1479/share/cmake-4.1/Modules/FindOpenGL.cmake:319 (find_library)"
+      - "CMakeLists.txt:16 (find_package)"
+    mode: "library"
+    variable: "OPENGL_opengl_LIBRARY"
+    description: "Path to a library."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "OpenGL"
+    candidate_directories:
+      - "/home/elvis/.local/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/usr/local/lib/x86_64-linux-gnu/"
+      - "/usr/local/lib/"
+      - "/usr/local/"
+      - "/usr/lib/x86_64-linux-gnu/"
+      - "/usr/lib/"
+      - "/usr/"
+      - "/lib/x86_64-linux-gnu/"
+      - "/lib/"
+      - "/snap/cmake/1479/lib/x86_64-linux-gnu/"
+      - "/snap/cmake/1479/lib/"
+      - "/snap/cmake/1479/"
+      - "/usr/X11R6/lib/x86_64-linux-gnu/"
+      - "/usr/X11R6/lib/"
+      - "/usr/X11R6/"
+      - "/usr/pkg/lib/x86_64-linux-gnu/"
+      - "/usr/pkg/lib/"
+      - "/usr/pkg/"
+      - "/opt/lib/x86_64-linux-gnu/"
+      - "/opt/lib/"
+      - "/opt/"
+      - "/usr/lib/X11/"
+    searched_directories:
+      - "/home/elvis/.local/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/usr/local/lib/x86_64-linux-gnu/"
+      - "/usr/local/lib/"
+      - "/usr/local/"
+    found: "/usr/lib/x86_64-linux-gnu/libOpenGL.so"
+    search_context:
+      ENV{PATH}:
+        - "/home/elvis/.local/bin"
+        - "/home/elvis/.local/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/snap/cmake/1479"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+      CMAKE_SYSTEM_LIBRARY_PATH:
+        - "/usr/lib/X11"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/snap/cmake/1479/share/cmake-4.1/Modules/FindOpenGL.cmake:324 (find_library)"
+      - "CMakeLists.txt:16 (find_package)"
+    mode: "library"
+    variable: "OPENGL_glx_LIBRARY"
+    description: "Path to a library."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "GLX"
+    candidate_directories:
+      - "/home/elvis/.local/bin/libglvnd/"
+      - "/home/elvis/.local/bin/"
+      - "/usr/local/sbin/libglvnd/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/libglvnd/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/libglvnd/"
+      - "/usr/sbin/"
+      - "/usr/bin/libglvnd/"
+      - "/usr/bin/"
+      - "/sbin/libglvnd/"
+      - "/sbin/"
+      - "/bin/libglvnd/"
+      - "/bin/"
+      - "/usr/games/libglvnd/"
+      - "/usr/games/"
+      - "/usr/local/games/libglvnd/"
+      - "/usr/local/games/"
+      - "/snap/bin/libglvnd/"
+      - "/snap/bin/"
+      - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/libglvnd/"
+      - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/usr/local/lib/x86_64-linux-gnu/libglvnd/"
+      - "/usr/local/lib/x86_64-linux-gnu/"
+      - "/usr/local/lib/libglvnd/"
+      - "/usr/local/lib/"
+      - "/usr/local/libglvnd/"
+      - "/usr/local/"
+      - "/usr/lib/x86_64-linux-gnu/libglvnd/"
+      - "/usr/lib/x86_64-linux-gnu/"
+      - "/usr/lib/libglvnd/"
+      - "/usr/lib/"
+      - "/usr/libglvnd/"
+      - "/usr/"
+      - "/lib/x86_64-linux-gnu/libglvnd/"
+      - "/lib/x86_64-linux-gnu/"
+      - "/lib/libglvnd/"
+      - "/lib/"
+      - "/snap/cmake/1479/lib/x86_64-linux-gnu/libglvnd/"
+      - "/snap/cmake/1479/lib/x86_64-linux-gnu/"
+      - "/snap/cmake/1479/lib/libglvnd/"
+      - "/snap/cmake/1479/lib/"
+      - "/snap/cmake/1479/libglvnd/"
+      - "/snap/cmake/1479/"
+      - "/usr/X11R6/lib/x86_64-linux-gnu/libglvnd/"
+      - "/usr/X11R6/lib/x86_64-linux-gnu/"
+      - "/usr/X11R6/lib/libglvnd/"
+      - "/usr/X11R6/lib/"
+      - "/usr/X11R6/libglvnd/"
+      - "/usr/X11R6/"
+      - "/usr/pkg/lib/x86_64-linux-gnu/libglvnd/"
+      - "/usr/pkg/lib/x86_64-linux-gnu/"
+      - "/usr/pkg/lib/libglvnd/"
+      - "/usr/pkg/lib/"
+      - "/usr/pkg/libglvnd/"
+      - "/usr/pkg/"
+      - "/opt/lib/x86_64-linux-gnu/libglvnd/"
+      - "/opt/lib/x86_64-linux-gnu/"
+      - "/opt/lib/libglvnd/"
+      - "/opt/lib/"
+      - "/opt/libglvnd/"
+      - "/opt/"
+      - "/usr/lib/X11/libglvnd/"
+      - "/usr/lib/X11/"
+    searched_directories:
+      - "/home/elvis/.local/bin/libglvnd/"
+      - "/home/elvis/.local/bin/"
+      - "/usr/local/sbin/libglvnd/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/libglvnd/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/libglvnd/"
+      - "/usr/sbin/"
+      - "/usr/bin/libglvnd/"
+      - "/usr/bin/"
+      - "/sbin/libglvnd/"
+      - "/sbin/"
+      - "/bin/libglvnd/"
+      - "/bin/"
+      - "/usr/games/libglvnd/"
+      - "/usr/games/"
+      - "/usr/local/games/libglvnd/"
+      - "/usr/local/games/"
+      - "/snap/bin/libglvnd/"
+      - "/snap/bin/"
+      - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/libglvnd/"
+      - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/usr/local/lib/x86_64-linux-gnu/libglvnd/"
+      - "/usr/local/lib/x86_64-linux-gnu/"
+      - "/usr/local/lib/libglvnd/"
+      - "/usr/local/lib/"
+      - "/usr/local/libglvnd/"
+      - "/usr/local/"
+      - "/usr/lib/x86_64-linux-gnu/libglvnd/"
+    found: "/usr/lib/x86_64-linux-gnu/libGLX.so"
+    search_context:
+      ENV{PATH}:
+        - "/home/elvis/.local/bin"
+        - "/home/elvis/.local/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/snap/cmake/1479"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+      CMAKE_SYSTEM_LIBRARY_PATH:
+        - "/usr/lib/X11"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/snap/cmake/1479/share/cmake-4.1/Modules/FindOpenGL.cmake:330 (find_library)"
+      - "CMakeLists.txt:16 (find_package)"
+    mode: "library"
+    variable: "OPENGL_egl_LIBRARY"
+    description: "Path to a library."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "EGL"
+    candidate_directories:
+      - "/home/elvis/.local/bin/libglvnd/"
+      - "/home/elvis/.local/bin/"
+      - "/usr/local/sbin/libglvnd/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/libglvnd/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/libglvnd/"
+      - "/usr/sbin/"
+      - "/usr/bin/libglvnd/"
+      - "/usr/bin/"
+      - "/sbin/libglvnd/"
+      - "/sbin/"
+      - "/bin/libglvnd/"
+      - "/bin/"
+      - "/usr/games/libglvnd/"
+      - "/usr/games/"
+      - "/usr/local/games/libglvnd/"
+      - "/usr/local/games/"
+      - "/snap/bin/libglvnd/"
+      - "/snap/bin/"
+      - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/libglvnd/"
+      - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/usr/local/lib/x86_64-linux-gnu/libglvnd/"
+      - "/usr/local/lib/x86_64-linux-gnu/"
+      - "/usr/local/lib/libglvnd/"
+      - "/usr/local/lib/"
+      - "/usr/local/libglvnd/"
+      - "/usr/local/"
+      - "/usr/lib/x86_64-linux-gnu/libglvnd/"
+      - "/usr/lib/x86_64-linux-gnu/"
+      - "/usr/lib/libglvnd/"
+      - "/usr/lib/"
+      - "/usr/libglvnd/"
+      - "/usr/"
+      - "/lib/x86_64-linux-gnu/libglvnd/"
+      - "/lib/x86_64-linux-gnu/"
+      - "/lib/libglvnd/"
+      - "/lib/"
+      - "/snap/cmake/1479/lib/x86_64-linux-gnu/libglvnd/"
+      - "/snap/cmake/1479/lib/x86_64-linux-gnu/"
+      - "/snap/cmake/1479/lib/libglvnd/"
+      - "/snap/cmake/1479/lib/"
+      - "/snap/cmake/1479/libglvnd/"
+      - "/snap/cmake/1479/"
+      - "/usr/X11R6/lib/x86_64-linux-gnu/libglvnd/"
+      - "/usr/X11R6/lib/x86_64-linux-gnu/"
+      - "/usr/X11R6/lib/libglvnd/"
+      - "/usr/X11R6/lib/"
+      - "/usr/X11R6/libglvnd/"
+      - "/usr/X11R6/"
+      - "/usr/pkg/lib/x86_64-linux-gnu/libglvnd/"
+      - "/usr/pkg/lib/x86_64-linux-gnu/"
+      - "/usr/pkg/lib/libglvnd/"
+      - "/usr/pkg/lib/"
+      - "/usr/pkg/libglvnd/"
+      - "/usr/pkg/"
+      - "/opt/lib/x86_64-linux-gnu/libglvnd/"
+      - "/opt/lib/x86_64-linux-gnu/"
+      - "/opt/lib/libglvnd/"
+      - "/opt/lib/"
+      - "/opt/libglvnd/"
+      - "/opt/"
+      - "/usr/lib/X11/libglvnd/"
+      - "/usr/lib/X11/"
+    searched_directories:
+      - "/home/elvis/.local/bin/libglvnd/"
+      - "/home/elvis/.local/bin/"
+      - "/usr/local/sbin/libglvnd/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/libglvnd/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/libglvnd/"
+      - "/usr/sbin/"
+      - "/usr/bin/libglvnd/"
+      - "/usr/bin/"
+      - "/sbin/libglvnd/"
+      - "/sbin/"
+      - "/bin/libglvnd/"
+      - "/bin/"
+      - "/usr/games/libglvnd/"
+      - "/usr/games/"
+      - "/usr/local/games/libglvnd/"
+      - "/usr/local/games/"
+      - "/snap/bin/libglvnd/"
+      - "/snap/bin/"
+      - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/libglvnd/"
+      - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/usr/local/lib/x86_64-linux-gnu/libglvnd/"
+      - "/usr/local/lib/x86_64-linux-gnu/"
+      - "/usr/local/lib/libglvnd/"
+      - "/usr/local/lib/"
+      - "/usr/local/libglvnd/"
+      - "/usr/local/"
+      - "/usr/lib/x86_64-linux-gnu/libglvnd/"
+    found: "/usr/lib/x86_64-linux-gnu/libEGL.so"
+    search_context:
+      ENV{PATH}:
+        - "/home/elvis/.local/bin"
+        - "/home/elvis/.local/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/snap/cmake/1479"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+      CMAKE_SYSTEM_LIBRARY_PATH:
+        - "/usr/lib/X11"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/snap/cmake/1479/share/cmake-4.1/Modules/FindOpenGL.cmake:336 (find_library)"
+      - "CMakeLists.txt:16 (find_package)"
+    mode: "library"
+    variable: "OPENGL_gles2_LIBRARY"
+    description: "Path to a library."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "GLESv2"
+    candidate_directories:
+      - "/home/elvis/.local/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/usr/local/lib/x86_64-linux-gnu/"
+      - "/usr/local/lib/"
+      - "/usr/local/"
+      - "/usr/lib/x86_64-linux-gnu/"
+      - "/usr/lib/"
+      - "/usr/"
+      - "/lib/x86_64-linux-gnu/"
+      - "/lib/"
+      - "/snap/cmake/1479/lib/x86_64-linux-gnu/"
+      - "/snap/cmake/1479/lib/"
+      - "/snap/cmake/1479/"
+      - "/usr/X11R6/lib/x86_64-linux-gnu/"
+      - "/usr/X11R6/lib/"
+      - "/usr/X11R6/"
+      - "/usr/pkg/lib/x86_64-linux-gnu/"
+      - "/usr/pkg/lib/"
+      - "/usr/pkg/"
+      - "/opt/lib/x86_64-linux-gnu/"
+      - "/opt/lib/"
+      - "/opt/"
+      - "/usr/lib/X11/"
+    searched_directories:
+      - "/home/elvis/.local/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/usr/local/lib/x86_64-linux-gnu/"
+      - "/usr/local/lib/"
+      - "/usr/local/"
+    found: "/usr/lib/x86_64-linux-gnu/libGLESv2.so"
+    search_context:
+      ENV{PATH}:
+        - "/home/elvis/.local/bin"
+        - "/home/elvis/.local/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/snap/cmake/1479"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+      CMAKE_SYSTEM_LIBRARY_PATH:
+        - "/usr/lib/X11"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/snap/cmake/1479/share/cmake-4.1/Modules/FindOpenGL.cmake:341 (find_library)"
+      - "CMakeLists.txt:16 (find_package)"
+    mode: "library"
+    variable: "OPENGL_gles3_LIBRARY"
+    description: "Path to a library."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "GLESv3"
+      - "GLESv2"
+    candidate_directories:
+      - "/home/elvis/.local/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/usr/local/lib/x86_64-linux-gnu/"
+      - "/usr/local/lib/"
+      - "/usr/local/"
+      - "/usr/lib/x86_64-linux-gnu/"
+      - "/usr/lib/"
+      - "/usr/"
+      - "/lib/x86_64-linux-gnu/"
+      - "/lib/"
+      - "/snap/cmake/1479/lib/x86_64-linux-gnu/"
+      - "/snap/cmake/1479/lib/"
+      - "/snap/cmake/1479/"
+      - "/usr/X11R6/lib/x86_64-linux-gnu/"
+      - "/usr/X11R6/lib/"
+      - "/usr/X11R6/"
+      - "/usr/pkg/lib/x86_64-linux-gnu/"
+      - "/usr/pkg/lib/"
+      - "/usr/pkg/"
+      - "/opt/lib/x86_64-linux-gnu/"
+      - "/opt/lib/"
+      - "/opt/"
+      - "/usr/lib/X11/"
+    searched_directories:
+      - "/home/elvis/.local/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/usr/local/lib/x86_64-linux-gnu/"
+      - "/usr/local/lib/"
+      - "/usr/local/"
+      - "/usr/lib/x86_64-linux-gnu/"
+      - "/usr/lib/"
+      - "/usr/"
+      - "/lib/x86_64-linux-gnu/"
+      - "/lib/"
+      - "/snap/cmake/1479/lib/x86_64-linux-gnu/"
+      - "/snap/cmake/1479/lib/"
+      - "/snap/cmake/1479/"
+      - "/usr/X11R6/lib/x86_64-linux-gnu/"
+      - "/usr/X11R6/lib/"
+      - "/usr/X11R6/"
+      - "/usr/pkg/lib/x86_64-linux-gnu/"
+      - "/usr/pkg/lib/"
+      - "/usr/pkg/"
+      - "/opt/lib/x86_64-linux-gnu/"
+      - "/opt/lib/"
+      - "/opt/"
+      - "/usr/lib/X11/"
+      - "/home/elvis/.local/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/usr/local/lib/x86_64-linux-gnu/"
+      - "/usr/local/lib/"
+      - "/usr/local/"
+    found: "/usr/lib/x86_64-linux-gnu/libGLESv2.so"
+    search_context:
+      ENV{PATH}:
+        - "/home/elvis/.local/bin"
+        - "/home/elvis/.local/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/snap/cmake/1479"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+      CMAKE_SYSTEM_LIBRARY_PATH:
+        - "/usr/lib/X11"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/snap/cmake/1479/share/cmake-4.1/Modules/FindOpenGL.cmake:347 (find_library)"
+      - "CMakeLists.txt:16 (find_package)"
+    mode: "library"
+    variable: "OPENGL_glu_LIBRARY"
+    description: "Path to a library."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "GLU"
+      - "MesaGLU"
+    candidate_directories:
+      - "/home/elvis/.local/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/usr/local/lib/x86_64-linux-gnu/"
+      - "/usr/local/lib/"
+      - "/usr/local/"
+      - "/usr/lib/x86_64-linux-gnu/"
+      - "/usr/lib/"
+      - "/usr/"
+      - "/lib/x86_64-linux-gnu/"
+      - "/lib/"
+      - "/snap/cmake/1479/lib/x86_64-linux-gnu/"
+      - "/snap/cmake/1479/lib/"
+      - "/snap/cmake/1479/"
+      - "/usr/X11R6/lib/x86_64-linux-gnu/"
+      - "/usr/X11R6/lib/"
+      - "/usr/X11R6/"
+      - "/usr/pkg/lib/x86_64-linux-gnu/"
+      - "/usr/pkg/lib/"
+      - "/usr/pkg/"
+      - "/opt/lib/x86_64-linux-gnu/"
+      - "/opt/lib/"
+      - "/opt/"
+      - "/usr/lib/X11/"
+      - "/opt/graphics/OpenGL/lib/"
+      - "/usr/openwin/lib/"
+      - "/usr/shlib/"
+    searched_directories:
+      - "/home/elvis/.local/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/usr/local/lib/x86_64-linux-gnu/"
+      - "/usr/local/lib/"
+      - "/usr/local/"
+    found: "/usr/lib/x86_64-linux-gnu/libGLU.so"
+    search_context:
+      ENV{PATH}:
+        - "/home/elvis/.local/bin"
+        - "/home/elvis/.local/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/snap/cmake/1479"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+      CMAKE_SYSTEM_LIBRARY_PATH:
+        - "/usr/lib/X11"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/snap/cmake/1479/share/cmake-4.1/Modules/FindPkgConfig.cmake:69 (find_program)"
+      - "CMakeLists.txt:17 (find_package)"
+    mode: "program"
+    variable: "PKG_CONFIG_EXECUTABLE"
+    description: "pkg-config executable"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "pkg-config"
+      - "pkgconf"
+    candidate_directories:
+      - "/home/elvis/.local/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/usr/local/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/"
+      - "/usr/bin/"
+      - "/usr/sbin/"
+      - "/usr/"
+      - "/bin/"
+      - "/sbin/"
+      - "/snap/cmake/1479/bin/"
+      - "/snap/cmake/1479/sbin/"
+      - "/snap/cmake/1479/"
+      - "/usr/X11R6/bin/"
+      - "/usr/X11R6/sbin/"
+      - "/usr/X11R6/"
+      - "/usr/pkg/bin/"
+      - "/usr/pkg/sbin/"
+      - "/usr/pkg/"
+      - "/opt/bin/"
+      - "/opt/sbin/"
+      - "/opt/"
+    searched_directories:
+      - "/home/elvis/.local/bin/pkg-config"
+      - "/home/elvis/.local/bin/pkgconf"
+      - "/usr/local/sbin/pkg-config"
+      - "/usr/local/sbin/pkgconf"
+      - "/usr/local/bin/pkg-config"
+      - "/usr/local/bin/pkgconf"
+      - "/usr/sbin/pkg-config"
+      - "/usr/sbin/pkgconf"
+    found: "/usr/bin/pkg-config"
+    search_context:
+      ENV{PATH}:
+        - "/home/elvis/.local/bin"
+        - "/home/elvis/.local/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/snap/cmake/1479"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/snap/cmake/1479/share/cmake-4.1/Modules/FindPkgConfig.cmake:307 (find_library)"
+      - "/snap/cmake/1479/share/cmake-4.1/Modules/FindPkgConfig.cmake:357 (_pkg_find_libs)"
+      - "/snap/cmake/1479/share/cmake-4.1/Modules/FindPkgConfig.cmake:695 (_pkg_recalculate)"
+      - "/snap/cmake/1479/share/cmake-4.1/Modules/FindPkgConfig.cmake:867 (_pkg_check_modules_internal)"
+      - "CMakeLists.txt:18 (pkg_check_modules)"
+    mode: "library"
+    variable: "pkgcfg_lib_GLFW_glfw"
+    description: "Path to a library."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "glfw"
+    candidate_directories:
+      - "/usr/lib/x86_64-linux-gnu/"
+    found: "/usr/lib/x86_64-linux-gnu/libglfw.so"
+    search_context:
+      ENV{PATH}:
+        - "/home/elvis/.local/bin"
+        - "/home/elvis/.local/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/snap/cmake/1479"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+      CMAKE_SYSTEM_LIBRARY_PATH:
+        - "/usr/lib/X11"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/snap/cmake/1479/share/cmake-4.1/Modules/FindPkgConfig.cmake:307 (find_library)"
+      - "/snap/cmake/1479/share/cmake-4.1/Modules/FindPkgConfig.cmake:357 (_pkg_find_libs)"
+      - "/snap/cmake/1479/share/cmake-4.1/Modules/FindPkgConfig.cmake:695 (_pkg_recalculate)"
+      - "/snap/cmake/1479/share/cmake-4.1/Modules/FindPkgConfig.cmake:867 (_pkg_check_modules_internal)"
+      - "CMakeLists.txt:19 (pkg_check_modules)"
+    mode: "library"
+    variable: "pkgcfg_lib_GLEW_GLEW"
+    description: "Path to a library."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "GLEW"
+    candidate_directories:
+      - "/usr/lib/x86_64-linux-gnu/"
+    found: "/usr/lib/x86_64-linux-gnu/libGLEW.so"
+    search_context:
+      ENV{PATH}:
+        - "/home/elvis/.local/bin"
+        - "/home/elvis/.local/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/snap/cmake/1479"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+      CMAKE_SYSTEM_LIBRARY_PATH:
+        - "/usr/lib/X11"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/snap/cmake/1479/share/cmake-4.1/Modules/FindPkgConfig.cmake:307 (find_library)"
+      - "/snap/cmake/1479/share/cmake-4.1/Modules/FindPkgConfig.cmake:357 (_pkg_find_libs)"
+      - "/snap/cmake/1479/share/cmake-4.1/Modules/FindPkgConfig.cmake:695 (_pkg_recalculate)"
+      - "/snap/cmake/1479/share/cmake-4.1/Modules/FindPkgConfig.cmake:867 (_pkg_check_modules_internal)"
+      - "CMakeLists.txt:19 (pkg_check_modules)"
+    mode: "library"
+    variable: "pkgcfg_lib_GLEW_GLU"
+    description: "Path to a library."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "GLU"
+    candidate_directories:
+      - "/usr/lib/x86_64-linux-gnu/"
+    found: "/usr/lib/x86_64-linux-gnu/libGLU.so"
+    search_context:
+      ENV{PATH}:
+        - "/home/elvis/.local/bin"
+        - "/home/elvis/.local/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/snap/cmake/1479"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+      CMAKE_SYSTEM_LIBRARY_PATH:
+        - "/usr/lib/X11"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/snap/cmake/1479/share/cmake-4.1/Modules/FindPkgConfig.cmake:307 (find_library)"
+      - "/snap/cmake/1479/share/cmake-4.1/Modules/FindPkgConfig.cmake:357 (_pkg_find_libs)"
+      - "/snap/cmake/1479/share/cmake-4.1/Modules/FindPkgConfig.cmake:695 (_pkg_recalculate)"
+      - "/snap/cmake/1479/share/cmake-4.1/Modules/FindPkgConfig.cmake:867 (_pkg_check_modules_internal)"
+      - "CMakeLists.txt:19 (pkg_check_modules)"
+    mode: "library"
+    variable: "pkgcfg_lib_GLEW_GL"
+    description: "Path to a library."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "GL"
+    candidate_directories:
+      - "/usr/lib/x86_64-linux-gnu/"
+    found: "/usr/lib/x86_64-linux-gnu/libGL.so"
+    search_context:
+      ENV{PATH}:
+        - "/home/elvis/.local/bin"
+        - "/home/elvis/.local/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/elvis/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/snap/cmake/1479"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+      CMAKE_SYSTEM_LIBRARY_PATH:
+        - "/usr/lib/X11"
+...

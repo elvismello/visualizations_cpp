@@ -1,0 +1,26 @@
+[
+{
+  "directory": "/home/elvis/programas/visualizations_cpp/build",
+  "command": "/usr/bin/g++-14  -I/home/elvis/programas/visualizations_cpp/include -std=c++23 -o CMakeFiles/visProject.dir/src/common.cpp.o -c /home/elvis/programas/visualizations_cpp/src/common.cpp",
+  "file": "/home/elvis/programas/visualizations_cpp/src/common.cpp",
+  "output": "CMakeFiles/visProject.dir/src/common.cpp.o"
+},
+{
+  "directory": "/home/elvis/programas/visualizations_cpp/build",
+  "command": "/usr/bin/g++-14  -I/home/elvis/programas/visualizations_cpp/include -std=c++23 -o CMakeFiles/visProject.dir/src/main.cpp.o -c /home/elvis/programas/visualizations_cpp/src/main.cpp",
+  "file": "/home/elvis/programas/visualizations_cpp/src/main.cpp",
+  "output": "CMakeFiles/visProject.dir/src/main.cpp.o"
+},
+{
+  "directory": "/home/elvis/programas/visualizations_cpp/build",
+  "command": "/usr/bin/g++-14  -I/home/elvis/programas/visualizations_cpp/include -std=c++23 -o CMakeFiles/visProject.dir/src/opencl_utils.cpp.o -c /home/elvis/programas/visualizations_cpp/src/opencl_utils.cpp",
+  "file": "/home/elvis/programas/visualizations_cpp/src/opencl_utils.cpp",
+  "output": "CMakeFiles/visProject.dir/src/opencl_utils.cpp.o"
+},
+{
+  "directory": "/home/elvis/programas/visualizations_cpp/build",
+  "command": "/usr/bin/g++-14  -I/home/elvis/programas/visualizations_cpp/include -std=c++23 -o CMakeFiles/visProject.dir/src/renderer.cpp.o -c /home/elvis/programas/visualizations_cpp/src/renderer.cpp",
+  "file": "/home/elvis/programas/visualizations_cpp/src/renderer.cpp",
+  "output": "CMakeFiles/visProject.dir/src/renderer.cpp.o"
+}
+]

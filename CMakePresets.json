@@ -1,0 +1,30 @@
+{
+    "version": 4,
+    "cmakeMinimumRequired": {
+        "major": 3,
+        "minor": 25,
+        "patch": 0
+    },
+    "configurePresets": [
+        {
+            "name": "gcc13",
+            "description": "Using g++-13 as compiler",
+            "generator": "Unix Makefiles",
+            "cacheVariables": {
+                "CMAKE_CXX_COMPILER" : "g++-13",
+                "CMAKE_EXPORT_COMPILE_COMMANDS" : "ON"
+            }
+            
+        },
+        {
+            "name": "gcc14",
+            "description": "Using g++-14 as compiler",
+            "generator": "Unix Makefiles",
+            "cacheVariables": {
+                "CMAKE_CXX_COMPILER" : "g++-14",
+                "CMAKE_EXPORT_COMPILE_COMMANDS" : "ON"
+            }
+            
+        }
+    ]
+}

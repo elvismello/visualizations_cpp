@@ -1,0 +1,24 @@
+MyProject/
+│
+├─ src/
+│   ├─ main.cpp
+│   ├─ renderer.cpp
+│   ├─ renderer.h
+│   ├─ opencl_utils.cpp
+│   └─ opencl_utils.h
+│
+├─ kernels/
+│   ├─ fill_points.cl
+│   ├─ compute_forces.cl
+│   └─ update_particles.cl
+│
+├─ shaders/
+│   ├─ points.vert
+│   └─ points.frag
+│
+├─ include/
+│   └─ common.h
+│
+├─ build/
+│
+└─ CMakeLists.txt
