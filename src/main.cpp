@@ -2,6 +2,7 @@
 #include <iostream>
 //#include <sstream>
 //#include <stdexcept>
+#include <stdexcept>
 #include <threads.h>
 #include <vector>
 #include <chrono>
@@ -10,7 +11,7 @@
 
 #include "common.hpp"
 #include "renderer.hpp"
-#include "opencl_utils.hpp"
+// #include "opencl_utils.hpp"
 
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
@@ -23,15 +24,15 @@
 int main() {
 
     // Getting kernels
-    auto src = loadKernelSource("../kernels/fill_points.cl");
-    const char* kernelOpenCL = src.c_str();
+    auto kernelSrc = loadKernelSource("../kernels/fill_points.cl");
+    const char* kernelOpenCL = kernelSrc.c_str();
 
     // Getting shaders
-    src = loadKernelSource("../shaders/vertex.glsl");
-    const char* vertexShader = src.c_str();
+    auto vertexSrc = loadKernelSource("../shaders/vertex.glsl");
+    const char* vertexShader = vertexSrc.c_str();
 
-    src = loadKernelSource("../shaders/fragment.glsl");
-    const char* fragmentShader = src.c_str();
+    auto fragmentSrc = loadKernelSource("../shaders/fragment.glsl");
+    const char* fragmentShader = fragmentSrc.c_str();
 
 
 
@@ -58,7 +59,7 @@ int main() {
     glEnableVertexAttribArray(0);
     glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, 2 * sizeof(float), (void*)0);
 
-    GLuint prog = makeProgram(vertexShader, fragmentShader);
+    GLuint glProgram = makeProgram(vertexShader, fragmentShader);
 
     // Inicializing OpenCL ////////////////////////////////////////////////////
     cl_int err = 0;
@@ -66,7 +67,6 @@ int main() {
     clGetPlatformIDs(0, nullptr, &numPlatforms);
     std::vector<cl_platform_id> plats(numPlatforms);
     clGetPlatformIDs(numPlatforms, plats.data(), nullptr);
-
 
     checkOrExit(numPlatforms > 0, "No OpenCL platform encountered");
     cl_platform_id chosenPlat = plats[0]; // takes the first platform
@@ -80,23 +80,23 @@ int main() {
     auto clContext = clCreateContext(nullptr, 1, &dev, nullptr, nullptr, &err);
     checkCLError(err, "clCreateContext");
 
-    auto queue = clCreateCommandQueueWithProperties(clContext, dev, nullptr, &err);
+    auto clQueue = clCreateCommandQueueWithProperties(clContext, dev, nullptr, &err);
     checkCLError(err, "clCreateCommandQueueWithProperties");
 
 
     // Building Kernel ////////////////////////////////////////////////////////
-    auto prg = clCreateProgramWithSource(clContext, 1, &kernelOpenCL, nullptr, &err);
+    auto clProgram = clCreateProgramWithSource(clContext, 1, &kernelOpenCL, nullptr, &err);
     checkCLError(err, "clCreateProgramWithSource");
-    err = clBuildProgram(prg, 1, &dev, "", nullptr, nullptr);
+    err = clBuildProgram(clProgram, 1, &dev, "", nullptr, nullptr);
     if (err != CL_SUCCESS) {
         size_t logSize = 0;
-        clGetProgramBuildInfo(prg, dev, CL_PROGRAM_BUILD_LOG, 0, nullptr, &logSize);
+        clGetProgramBuildInfo(clProgram, dev, CL_PROGRAM_BUILD_LOG, 0, nullptr, &logSize);
         std::string log(logSize, '\0');
-        clGetProgramBuildInfo(prg, dev, CL_PROGRAM_BUILD_LOG, logSize, log.data(), nullptr);
+        clGetProgramBuildInfo(clProgram, dev, CL_PROGRAM_BUILD_LOG, logSize, log.data(), nullptr);
         std::cerr << "[OpenCL build log]\n" << log << std::endl;
         std::exit(EXIT_FAILURE);
     }
-    auto krn = clCreateKernel(prg, "fill_points", &err);
+    auto clKernel = clCreateKernel(clProgram, "fill_points", &err);
     checkCLError(err, "clCreateKernel");
 
 
@@ -112,19 +112,27 @@ int main() {
                                       sizeof(cl_float2)*N, cpu_buffer.data(), &err);
         checkCLError(err, "clCreateBuffer");
 
-        clSetKernelArg(krn, 0, sizeof(cl_mem), &clbuf);
-        clSetKernelArg(krn, 1, sizeof(int), &N);
-        clSetKernelArg(krn, 2, sizeof(float), &t);
+        clSetKernelArg(clKernel, 0, sizeof(cl_mem), &clbuf);
+        clSetKernelArg(clKernel, 1, sizeof(int), &N);
+        clSetKernelArg(clKernel, 2, sizeof(float), &t);
         size_t gsz = N;
-        clEnqueueNDRangeKernel(queue, krn, 1, nullptr, &gsz, nullptr, 0, nullptr, nullptr);
-        clFinish(queue);
+        clEnqueueNDRangeKernel(clQueue,
+                               clKernel, 
+                               1, 
+                               nullptr,
+                               &gsz,
+                               nullptr,
+                               0,
+                               nullptr,
+                               nullptr);
+        clFinish(clQueue);
 
         // Copying data for OpenGL
         glBindBuffer(GL_ARRAY_BUFFER, vbo);
         glBufferSubData(GL_ARRAY_BUFFER, 0, sizeof(float)*N*2, cpu_buffer.data());
 
         glClear(GL_COLOR_BUFFER_BIT);
-        glUseProgram(prog);
+        glUseProgram(glProgram);
         glBindVertexArray(vao);
         glDrawArrays(GL_POINTS, 0, N);
         glfwSwapBuffers(win);
