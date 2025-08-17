@@ -1,5 +1,5 @@
-#include <iostream>
-#include <vector>
+//#include <iostream>
+//#include <vector>
 #include <chrono>
 #include <cmath>
 #include <cstdlib>
@@ -16,19 +16,12 @@
 
 
 int main() {
-
-    // Getting kernels
-    // auto kernelSrc = loadKernelSource("../kernels/fill_points.cl");
-    // const char* kernelOpenCL = kernelSrc.c_str();
-
     // Getting shaders
     auto vertexSrc = loadKernelSource("../shaders/vertex_1.glsl");
     const char* vertexShader = vertexSrc.c_str();
 
     auto fragmentSrc = loadKernelSource("../shaders/fragment_1.glsl");
     const char* fragmentShader = fragmentSrc.c_str();
-
-
 
     // Inicialize GLFW e GLEW /////////////////////////////////////////////////
     checkOrExit(glfwInit(), "Failed while initializing GLFW");
@@ -46,29 +39,33 @@ int main() {
     // compute class
 
     OpenCLCompute compute(N);
-    compute.initSharedBuffer();
+    compute.initBuffer();
 
     // Buffers OpenGL
-    GLuint vao = 0;
+    GLuint vao = 0, vbo = 0;
     glGenVertexArrays(1, &vao);
     glBindVertexArray(vao);
-    // glGenBuffers(1, &vbo);
-    glBindBuffer(GL_ARRAY_BUFFER, compute.getVBO());
-    // glBufferData(GL_ARRAY_BUFFER, N * 2 * sizeof(float), nullptr, GL_DYNAMIC_DRAW);
+    glGenBuffers(1, &vbo);
+    glBindBuffer(GL_ARRAY_BUFFER, vbo);
+    glBufferData(GL_ARRAY_BUFFER, N * 2 * sizeof(float), nullptr, GL_DYNAMIC_DRAW);
     glEnableVertexAttribArray(0);
     glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, 2 * sizeof(float), (void*)0);
 
     GLuint glProgram = makeProgram(vertexShader, fragmentShader);
 
     // Buffer OpenCL CPU //////////////////////////////////////////////////////
+    
     bool draw_lines = false;
+    std::vector<cl_float2> tempBuffer (compute.getPointCount());
     auto t0 = std::chrono::steady_clock::now();
     while (!glfwWindowShouldClose(win)) {
         glfwPollEvents();
         auto t = std::chrono::duration<float>(std::chrono::steady_clock::now() - t0).count();
 
         // Updating buffers
-        compute.updateBufferData(t);
+        compute.updateBufferData(t, &tempBuffer);
+        glBindBuffer(GL_ARRAY_BUFFER, vbo);
+        glBufferSubData(GL_ARRAY_BUFFER, 0, sizeof(float) * compute.getPointCount() * 2, tempBuffer.data());
 
         // drawing calls
         glClear(GL_COLOR_BUFFER_BIT);
@@ -85,9 +82,9 @@ int main() {
         }
         
         glfwSwapBuffers(win);
-        //clEnqueueUnmapMemObject(clQueue, clbuf, mapped, 0, nullptr, nullptr);
     }
     // cleaning buffer
-    
+    if (vbo) glDeleteBuffers(1, &vbo);
+
     return 0;
 }

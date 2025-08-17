@@ -2,7 +2,7 @@
 #include "common.hpp"
 #include "renderer.hpp"
 #include <cstddef>
-// #include <vector>
+#include <vector>
 
 // #define CL_TARGET_OPENCL_VERSION 220
 // #include <CL/cl.h>
@@ -16,7 +16,7 @@ class OpenCLCompute {
         cl_program program;
         
         cl_mem clBuffer; // opencl sees this buffer
-        GLuint glVBO; // opengl sees this buffer
+        //GLuint glVBO; // opengl sees this buffer
         
         size_t pointCount;
         bool useSharedBuffer;
@@ -26,12 +26,12 @@ class OpenCLCompute {
         ~OpenCLCompute();
         
         // creates shared buffer after the opengl context
-        void initSharedBuffer();
+        void initBuffer();
 
         // updates points directly in the opengl buffer
-        void updateBufferData(float time);
+        void updateBufferData(float time, std::vector<cl_float2> * tempBuffer);
         
-        GLuint getVBO() const {return glVBO;};
+        //GLuint getVBO() const {return glVBO;};
 
         size_t getPointCount() const {return pointCount;};
 
