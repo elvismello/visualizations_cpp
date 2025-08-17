@@ -37,9 +37,12 @@ OpenCLCompute::OpenCLCompute(size_t numPoints) : pointCount(numPoints)
 
     try{
         cl_context_properties properties[] = {
-            CL_CONTEXT_PLATFORM, (cl_context_properties)allPlatforms[0],
-            CL_GL_CONTEXT_KHR, (cl_context_properties)glfwGetWGLContext(glfwGetCurrentContext()),
-            CL_WGL_HDC_KHR, (cl_context_properties)wglGetCurrentDC(),
+            CL_CONTEXT_PLATFORM,
+            (cl_context_properties)allPlatforms[0],
+            CL_GL_CONTEXT_KHR,
+            (cl_context_properties)glfwGetWGLContext(glfwGetCurrentContext()),
+            CL_WGL_HDC_KHR,
+            (cl_context_properties)wglGetCurrentDC(),
             0
         };
         
