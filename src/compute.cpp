@@ -67,8 +67,8 @@ OpenCLCompute::OpenCLCompute(size_t numPoints) : pointCount(numPoints)
 
 OpenCLCompute::~OpenCLCompute()
 {
-    if (cl_buffer) clReleaseMemObject(cl_buffer);
-    if (gl_vbo) glDeleteBuffers(1, &gl_vbo);
+    if (clBuffer) clReleaseMemObject(clBuffer);
+    if (glVBO) glDeleteBuffers(1, &glVBO);
     clReleaseKernel(kernel);
     clReleaseProgram(program);
     clReleaseCommandQueue(queue);
@@ -79,12 +79,12 @@ OpenCLCompute::~OpenCLCompute()
 
 void OpenCLCompute::initSharedBuffer()
 {
-    glGenBuffers(1, &gl_vbo);
-    glBindBuffer(GL_ARRAY_BUFFER, gl_vbo);
+    glGenBuffers(1, &glVBO);
+    glBindBuffer(GL_ARRAY_BUFFER, glVBO);
     glBufferData(GL_ARRAY_BUFFER, pointCount * 2 * sizeof(float), nullptr, GL_DYNAMIC_DRAW);
 
     cl_int err;
-    cl_buffer = clCreateBuffer(context, CL_MEM_READ_WRITE, sizeof(cl_float2) * pointCount, nullptr, &err);
+    clBuffer = clCreateBuffer(context, CL_MEM_READ_WRITE, sizeof(cl_float2) * pointCount, nullptr, &err);
     checkCLError(err, "clCreateBuffer");
 }
 
@@ -92,28 +92,26 @@ void OpenCLCompute::initSharedBuffer()
 
 void OpenCLCompute::updateBufferData(float time)
 {
+    int N = static_cast<int>(pointCount);
+    std::cout << "Atualizando " << N << " pontos, tempo=" << time << std::endl;
     // configuring kernel parameters
-    clSetKernelArg(kernel, 0, sizeof(cl_mem), &cl_buffer);
+    clSetKernelArg(kernel, 0, sizeof(cl_mem), &clBuffer);
     clSetKernelArg(kernel, 1, sizeof(size_t), &pointCount);
     clSetKernelArg(kernel, 2, sizeof(float), &time);
 
     // executing kernel
     size_t globalSize = pointCount;
-    clEnqueueNDRangeKernel(queue, kernel, 1, nullptr, &globalSize, nullptr, 0, nullptr, nullptr);
+    auto err = clEnqueueNDRangeKernel(queue, kernel, 1, nullptr, &globalSize, nullptr, 0, nullptr, nullptr);
+    checkCLError(err, "clEnqueueNDRangeKernel");
+    clFinish(queue);
 
     // read data back to CPU
     std::vector<cl_float2> tempBuffer(pointCount);
-    clEnqueueReadBuffer(queue, cl_buffer, CL_TRUE, 0, sizeof(cl_float2) * pointCount, tempBuffer.data(), 0, nullptr, nullptr);
+    clEnqueueReadBuffer(queue, clBuffer, CL_TRUE, 0, sizeof(cl_float2) * pointCount, tempBuffer.data(), 0, nullptr, nullptr);
 
     // updating VBO
-    glBindBuffer(GL_ARRAY_BUFFER, gl_vbo);
+    glBindBuffer(GL_ARRAY_BUFFER, glVBO);
     glBufferSubData(GL_ARRAY_BUFFER, 0, sizeof(float) * pointCount * 2, tempBuffer.data());
-}
-
-
-
-size_t OpenCLCompute::getPointCount() const {
-    return pointCount;
 }
 
 

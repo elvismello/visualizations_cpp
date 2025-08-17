@@ -15,8 +15,8 @@ class OpenCLCompute {
         cl_kernel kernel;
         cl_program program;
         
-        cl_mem cl_buffer; // opencl sees this buffer
-        GLuint gl_vbo; // opengl sees this buffer
+        cl_mem clBuffer; // opencl sees this buffer
+        GLuint glVBO; // opengl sees this buffer
         
         size_t pointCount;
 
@@ -30,7 +30,9 @@ class OpenCLCompute {
         // updates points directly in the opengl buffer
         void updateBufferData(float time);
         
-        size_t getPointCount() const;
+        GLuint getVBO() const {return glVBO;};
+
+        size_t getPointCount() const {return pointCount;};
 
 
 };
