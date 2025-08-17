@@ -1,5 +1,4 @@
 #include "compute.hpp"
-#include "renderer.hpp"
 
 #include <cstddef>
 #include <iostream>
@@ -8,7 +7,6 @@
 
 #include <CL/cl.h>
 #include <CL/cl_platform.h>
-#include "CL/cl_gl.h"
 #include <GLFW/glfw3.h>
 //#include <GL/glx.h>
 
