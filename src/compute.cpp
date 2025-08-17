@@ -4,6 +4,7 @@
 #include <cstddef>
 #include <iostream>
 #include <vector>
+#include <print>
 
 #include <CL/cl.h>
 #include <CL/cl_platform.h>
@@ -39,14 +40,27 @@ OpenCLCompute::OpenCLCompute(size_t numPoints) : pointCount(numPoints)
             CL_CONTEXT_PLATFORM, (cl_context_properties)allPlatforms[0],
             CL_GL_CONTEXT_KHR, (cl_context_properties)glfwGetWGLContext(glfwGetCurrentContext()),
             CL_WGL_HDC_KHR, (cl_context_properties)wglGetCurrentDC(),
+            0
         };
-
         
+        context = clCreateContext(properties, 1, &device, nullptr, nullptr, &err);
+        //checkCLError(err, "clCreateContext");
+        if (err == CL_SUCCESS)
+        {
+            useSharedBuffer = true;
+        }
+        else
+        {
+            checkCLError(err, "clCreateContext");
+        }
+
+    }
+    catch (...)
+    {
+        std::print("Using regular OpenCL (no shared buffer)...\n");
         context = clCreateContext(nullptr, 1, &device, nullptr, nullptr, &err);
         checkCLError(err, "clCreateContext");
-
-
-
+        useSharedBuffer = false;
     }
     // creating queue
     queue = clCreateCommandQueueWithProperties(context, device, nullptr, &err);
@@ -79,6 +93,79 @@ OpenCLCompute::OpenCLCompute(size_t numPoints) : pointCount(numPoints)
 
 
 
+void OpenCLCompute::initSharedBuffer()
+{
+    glGenBuffers(1, &glVBO);
+    glBindBuffer(GL_ARRAY_BUFFER, glVBO);
+    glBufferData(GL_ARRAY_BUFFER, pointCount * 2 * sizeof(float), nullptr, GL_DYNAMIC_DRAW);
+
+    cl_int err;
+
+    if (useSharedBuffer)
+    {
+
+        clBuffer = clCreateFromGLBuffer(context, CL_MEM_WRITE_ONLY, glVBO, &err);
+        if (err == CL_SUCCESS)
+            std::print("Shared buffer created\n");
+        else
+        {
+            clBuffer = clCreateBuffer(context, CL_MEM_READ_WRITE, sizeof(cl_float2) * pointCount, nullptr, &err);
+            useSharedBuffer = false;
+        }
+    }
+    else
+    {
+        clBuffer = clCreateBuffer(context, CL_MEM_READ_WRITE, sizeof(cl_float2) * pointCount, nullptr, &err);
+    }
+
+    checkCLError(err, "clCreateBuffer");
+}
+
+
+
+void OpenCLCompute::updateBufferData(float time)
+{
+    int N = static_cast<int>(pointCount);
+    cl_int err;
+    size_t globalSize = pointCount;
+    if (useSharedBuffer)
+    {
+        clEnqueueAcquireGLObjects(queue, 1, &clBuffer, 0, nullptr, nullptr);
+
+        clSetKernelArg(kernel, 0, sizeof(cl_mem), &clBuffer);
+        clSetKernelArg(kernel, 1, sizeof(int), &N);
+        clSetKernelArg(kernel, 2, sizeof(float), &time);
+
+        err = clEnqueueNDRangeKernel(queue, kernel, 1, nullptr, &globalSize, nullptr, 0, nullptr, nullptr);
+        checkCLError(err, "clEnqueueNDRangeKernel");
+        clFinish(queue);
+
+        clEnqueueReleaseGLObjects(queue, 1, &clBuffer, 0, nullptr, nullptr);
+    }
+    else
+    {    
+        // configuring kernel parameters
+        clSetKernelArg(kernel, 0, sizeof(cl_mem), &clBuffer);
+        clSetKernelArg(kernel, 1, sizeof(int), &N);
+        clSetKernelArg(kernel, 2, sizeof(float), &time);
+
+        // executing kernel
+        err = clEnqueueNDRangeKernel(queue, kernel, 1, nullptr, &globalSize, nullptr, 0, nullptr, nullptr);
+        checkCLError(err, "clEnqueueNDRangeKernel");
+        clFinish(queue);
+
+        // read data back to CPU
+        std::vector<cl_float2> tempBuffer(pointCount);
+        clEnqueueReadBuffer(queue, clBuffer, CL_TRUE, 0, sizeof(cl_float2) * pointCount, tempBuffer.data(), 0, nullptr, nullptr);
+
+        // updating VBO
+        glBindBuffer(GL_ARRAY_BUFFER, glVBO);
+        glBufferSubData(GL_ARRAY_BUFFER, 0, sizeof(float) * pointCount * 2, tempBuffer.data());
+    }
+}
+
+
+
 OpenCLCompute::~OpenCLCompute()
 {
     if (clBuffer) clReleaseMemObject(clBuffer);
@@ -88,46 +175,6 @@ OpenCLCompute::~OpenCLCompute()
     clReleaseCommandQueue(queue);
     clReleaseContext(context);
 }
-
-
-
-void OpenCLCompute::initSharedBuffer()
-{
-    glGenBuffers(1, &glVBO);
-    glBindBuffer(GL_ARRAY_BUFFER, glVBO);
-    glBufferData(GL_ARRAY_BUFFER, pointCount * 2 * sizeof(float), nullptr, GL_DYNAMIC_DRAW);
-
-    cl_int err;
-    clBuffer = clCreateBuffer(context, CL_MEM_READ_WRITE, sizeof(cl_float2) * pointCount, nullptr, &err);
-    checkCLError(err, "clCreateBuffer");
-}
-
-
-
-void OpenCLCompute::updateBufferData(float time)
-{
-    int N = static_cast<int>(pointCount);
-    // configuring kernel parameters
-    clSetKernelArg(kernel, 0, sizeof(cl_mem), &clBuffer);
-    clSetKernelArg(kernel, 1, sizeof(int), &N);
-    clSetKernelArg(kernel, 2, sizeof(float), &time);
-
-    // executing kernel
-    size_t globalSize = pointCount;
-    auto err = clEnqueueNDRangeKernel(queue, kernel, 1, nullptr, &globalSize, nullptr, 0, nullptr, nullptr);
-    checkCLError(err, "clEnqueueNDRangeKernel");
-    clFinish(queue);
-
-    // read data back to CPU
-    std::vector<cl_float2> tempBuffer(pointCount);
-    clEnqueueReadBuffer(queue, clBuffer, CL_TRUE, 0, sizeof(cl_float2) * pointCount, tempBuffer.data(), 0, nullptr, nullptr);
-
-    // updating VBO
-    glBindBuffer(GL_ARRAY_BUFFER, glVBO);
-    glBufferSubData(GL_ARRAY_BUFFER, 0, sizeof(float) * pointCount * 2, tempBuffer.data());
-}
-
-
 
 // const float* OpenCLCompute::getBufferData() const {
     // return reinterpret_cast<const float*>(hostBuffer.data());
