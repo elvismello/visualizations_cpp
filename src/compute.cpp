@@ -18,7 +18,7 @@ OpenCLCompute::OpenCLCompute(size_t numPoints) : pointCount(numPoints)
     createContext();
     createQueue();
     createKernel();
-    initBuffer();
+    createBuffer();
 }
 
 
@@ -100,7 +100,7 @@ void OpenCLCompute::createKernel()
 
 
 
-void OpenCLCompute::initBuffer()
+void OpenCLCompute::createBuffer()
 {
     cl_int err;
 

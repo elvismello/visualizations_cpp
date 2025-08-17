@@ -30,7 +30,7 @@ class OpenCLCompute {
         void createContext(); // also selects device
         void createQueue();
         void createKernel();
-        void initBuffer();
+        void createBuffer();
 
 
     public:
