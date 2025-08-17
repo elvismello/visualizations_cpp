@@ -77,11 +77,11 @@ int main() {
         if (draw_lines)
         {
             glLineWidth(2.0f);
-            glDrawArrays(GL_LINE_STRIP, 0, N);
+            glDrawArrays(GL_LINE_STRIP, 0, compute.getPointCount());
         }
         else
         {
-            glDrawArrays(GL_POINTS, 0, N);
+            glDrawArrays(GL_POINTS, 0, compute.getPointCount());
         }
         
         glfwSwapBuffers(win);

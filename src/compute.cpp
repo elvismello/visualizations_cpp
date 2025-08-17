@@ -1,12 +1,14 @@
 #include "compute.hpp"
 #include "renderer.hpp"
-#include <CL/cl.h>
-// #include <CL/cl_platform.h>
-// #include <cstddef>
-#include <CL/cl_platform.h>
+
 #include <cstddef>
 #include <iostream>
 #include <vector>
+
+#include <CL/cl.h>
+#include <CL/cl_platform.h>
+#include "CL/cl_gl.h"
+#include <GLFW/glfw3.h>
 
 
 
@@ -27,13 +29,25 @@ OpenCLCompute::OpenCLCompute(size_t numPoints) : pointCount(numPoints)
     clGetDeviceIDs(allPlatforms[0], CL_DEVICE_TYPE_GPU, numDevices, allDevices.data(), nullptr);
     
     checkOrExit(numDevices > 0, "No OpenCL device encountered");
-    device = allDevices[0];// possible implementation of a automatic device selection
+    device = allDevices[0]; // possible implementation of an automatic device selection
     
     // creating context
     cl_int err = 0;
-    context = clCreateContext(nullptr, 1, &device, nullptr, nullptr, &err);
-    checkCLError(err, "clCreateContext");
 
+    try{
+        cl_context_properties properties[] = {
+            CL_CONTEXT_PLATFORM, (cl_context_properties)allPlatforms[0],
+            CL_GL_CONTEXT_KHR, (cl_context_properties)glfwGetWGLContext(glfwGetCurrentContext()),
+            CL_WGL_HDC_KHR, (cl_context_properties)wglGetCurrentDC(),
+        };
+
+        
+        context = clCreateContext(nullptr, 1, &device, nullptr, nullptr, &err);
+        checkCLError(err, "clCreateContext");
+
+
+
+    }
     // creating queue
     queue = clCreateCommandQueueWithProperties(context, device, nullptr, &err);
     checkCLError(err, "clCreateCommandQueueWithProperties");
@@ -93,10 +107,9 @@ void OpenCLCompute::initSharedBuffer()
 void OpenCLCompute::updateBufferData(float time)
 {
     int N = static_cast<int>(pointCount);
-    std::cout << "Atualizando " << N << " pontos, tempo=" << time << std::endl;
     // configuring kernel parameters
     clSetKernelArg(kernel, 0, sizeof(cl_mem), &clBuffer);
-    clSetKernelArg(kernel, 1, sizeof(size_t), &pointCount);
+    clSetKernelArg(kernel, 1, sizeof(int), &N);
     clSetKernelArg(kernel, 2, sizeof(float), &time);
 
     // executing kernel

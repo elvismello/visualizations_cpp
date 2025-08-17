@@ -2,7 +2,7 @@
 #include "common.hpp"
 #include "renderer.hpp"
 #include <cstddef>
-#include <vector>
+// #include <vector>
 
 // #define CL_TARGET_OPENCL_VERSION 220
 // #include <CL/cl.h>
@@ -19,6 +19,7 @@ class OpenCLCompute {
         GLuint glVBO; // opengl sees this buffer
         
         size_t pointCount;
+        bool useSharedBuffer;
 
     public:
         OpenCLCompute(size_t numPoints);
