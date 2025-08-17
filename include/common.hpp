@@ -11,3 +11,5 @@ void checkCLError(cl_int err, const char* where);
 std::string loadKernelSource(const std::string& path);
 
 constexpr size_t N = 120000; // Point Number
+constexpr size_t WINDOW_WIDTH = 960;
+constexpr size_t WINDOW_HEIGHT = 720;

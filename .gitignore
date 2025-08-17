@@ -1,6 +1,8 @@
 #folders
 build/
 tests/
+.vscode/
+.cache/
 
 # Prerequisites
 *.d
