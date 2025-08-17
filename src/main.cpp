@@ -11,7 +11,7 @@
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
 
-#define CL_TARGET_OPENCL_VERSION 220
+//#define CL_TARGET_OPENCL_VERSION 220
 #include <CL/cl.h>
 
 
@@ -36,10 +36,8 @@ int main() {
     checkOrExit(glewInit() == GLEW_OK, "Failed while initializing GLEW");
 
 
-    // compute class
-
-    OpenCLCompute compute(N);
-    compute.initBuffer();
+    // opencl compute class
+    OpenCLCompute compute(DEFAULT_POINT_COUNT);
 
     // Buffers OpenGL
     GLuint vao = 0, vbo = 0;
@@ -47,7 +45,7 @@ int main() {
     glBindVertexArray(vao);
     glGenBuffers(1, &vbo);
     glBindBuffer(GL_ARRAY_BUFFER, vbo);
-    glBufferData(GL_ARRAY_BUFFER, N * 2 * sizeof(float), nullptr, GL_DYNAMIC_DRAW);
+    glBufferData(GL_ARRAY_BUFFER, DEFAULT_POINT_COUNT * 2 * sizeof(float), nullptr, GL_DYNAMIC_DRAW);
     glEnableVertexAttribArray(0);
     glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, 2 * sizeof(float), (void*)0);
 

@@ -14,14 +14,31 @@
 
 OpenCLCompute::OpenCLCompute(size_t numPoints) : pointCount(numPoints)
 {
+    initializePlatform();
+    createContext();
+    createQueue();
+    createKernel();
+    initBuffer();
+}
+
+
+
+void OpenCLCompute::initializePlatform()
+{
     // finding platform
     cl_uint numPlatforms = 0;
     clGetPlatformIDs(0, nullptr, &numPlatforms);
-    std::vector<cl_platform_id> allPlatforms(numPlatforms);
+    //std::vector<cl_platform_id> allPlatforms(numPlatforms);
+    allPlatforms.resize(numPlatforms);
     clGetPlatformIDs(numPlatforms, allPlatforms.data(), nullptr);
     
     checkOrExit(numPlatforms > 0, "No OpenCL platform encountered");
-    
+}
+
+
+
+void OpenCLCompute::createContext()
+{
     // finding device
     cl_uint numDevices = 0;
     clGetDeviceIDs(allPlatforms[0], CL_DEVICE_TYPE_GPU, 0, nullptr, &numDevices);
@@ -30,7 +47,7 @@ OpenCLCompute::OpenCLCompute(size_t numPoints) : pointCount(numPoints)
     
     checkOrExit(numDevices > 0, "No OpenCL device encountered");
     device = allDevices[0]; // possible implementation of an automatic device selection
-    
+
     // creating context
     cl_int err = 0;
 
@@ -39,11 +56,28 @@ OpenCLCompute::OpenCLCompute(size_t numPoints) : pointCount(numPoints)
     checkCLError(err, "clCreateContext");
     useSharedBuffer = false;
 
+}
+
+
+
+void OpenCLCompute::createQueue()
+{
+    cl_int err = 0;
+
     // creating queue
     queue = clCreateCommandQueueWithProperties(context, device, nullptr, &err);
     checkCLError(err, "clCreateCommandQueueWithProperties");
 
+}
+
+
+
+void OpenCLCompute::createKernel()
+{
     // loading and compiling kernel
+ 
+    cl_int err;
+
     auto kernelSrc = loadKernelSource("../kernels/fill_points.cl");
     const char* kernelCode = kernelSrc.c_str();
 
@@ -62,9 +96,6 @@ OpenCLCompute::OpenCLCompute(size_t numPoints) : pointCount(numPoints)
 
     kernel = clCreateKernel(program, "fill_points", &err);
     checkCLError(err, "clCreateKernel");
-
-    // creating buffer
-    clBuffer = clCreateBuffer(context, CL_MEM_READ_WRITE, sizeof(cl_float2) * pointCount, nullptr, &err);
 }
 
 

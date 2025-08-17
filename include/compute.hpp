@@ -2,6 +2,7 @@
 #include "common.hpp"
 #include "renderer.hpp"
 #include <cstddef>
+#include <utility>
 #include <vector>
 
 // #define CL_TARGET_OPENCL_VERSION 220
@@ -9,6 +10,7 @@
 
 class OpenCLCompute {
     private:
+        std::vector<cl_platform_id> allPlatforms;
         cl_device_id device;
         cl_context context;
         cl_command_queue queue;
@@ -21,12 +23,21 @@ class OpenCLCompute {
         size_t pointCount;
         bool useSharedBuffer;
 
+        //static std::unique_ptr<OpenCLCompute> create()
+        
+        // creates shared buffer after the opengl context
+        void initializePlatform();
+        void createContext(); // also selects device
+        void createQueue();
+        void createKernel();
+        void initBuffer();
+
+
     public:
         OpenCLCompute(size_t numPoints);
         ~OpenCLCompute();
         
-        // creates shared buffer after the opengl context
-        void initBuffer();
+
 
         // updates points directly in the opengl buffer
         void updateBufferData(float time, std::vector<cl_float2> * tempBuffer);
@@ -34,6 +45,5 @@ class OpenCLCompute {
         //GLuint getVBO() const {return glVBO;};
 
         size_t getPointCount() const {return pointCount;};
-
 
 };
