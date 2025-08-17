@@ -1,6 +1,7 @@
 #include "compute.hpp"
 #include "renderer.hpp"
 
+#include <GL/glx.h>
 #include <cstddef>
 #include <iostream>
 #include <vector>
@@ -10,6 +11,7 @@
 #include <CL/cl_platform.h>
 #include "CL/cl_gl.h"
 #include <GLFW/glfw3.h>
+//#include <GL/glx.h>
 
 
 
@@ -40,12 +42,12 @@ OpenCLCompute::OpenCLCompute(size_t numPoints) : pointCount(numPoints)
             CL_CONTEXT_PLATFORM,
             (cl_context_properties)allPlatforms[0],
             CL_GL_CONTEXT_KHR,
-            (cl_context_properties)glfwGetWGLContext(glfwGetCurrentContext()),
+            (cl_context_properties)glXGetCurrentContext(),
             CL_WGL_HDC_KHR,
-            (cl_context_properties)wglGetCurrentDC(),
+            (cl_context_properties)glXGetCurrentDisplay(),
             0
         };
-        
+
         context = clCreateContext(properties, 1, &device, nullptr, nullptr, &err);
         //checkCLError(err, "clCreateContext");
         if (err == CL_SUCCESS)
@@ -141,9 +143,9 @@ void OpenCLCompute::updateBufferData(float time)
 
         err = clEnqueueNDRangeKernel(queue, kernel, 1, nullptr, &globalSize, nullptr, 0, nullptr, nullptr);
         checkCLError(err, "clEnqueueNDRangeKernel");
-        clFinish(queue);
-
+        
         clEnqueueReleaseGLObjects(queue, 1, &clBuffer, 0, nullptr, nullptr);
+        clFinish(queue);
     }
     else
     {    
