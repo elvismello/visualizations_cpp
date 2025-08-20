@@ -4,6 +4,9 @@
 #include <cmath>
 #include <cstdlib>
 
+#include <iostream>
+#include <print>
+
 #include "common.hpp"
 #include "renderer.hpp"
 #include "compute.hpp"
@@ -16,6 +19,8 @@
 
 
 int main() {
+    std::string kernelPath = "../kernels/fill_points.cl";
+
     // Getting shaders
     auto vertexSrc = loadKernelSource("../shaders/vertex_1.glsl");
     const char* vertexShader = vertexSrc.c_str();
@@ -25,50 +30,63 @@ int main() {
 
     // Inicialize GLFW e GLEW /////////////////////////////////////////////////
     checkOrExit(glfwInit(), "Failed while initializing GLFW");
-    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
-    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
-    glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_COMPAT_PROFILE);
+
 
     auto* win = glfwCreateWindow(WINDOW_WIDTH, WINDOW_HEIGHT, "OpenCL + OpenGL GPU copy", nullptr, nullptr);
     checkOrExit(win != nullptr, "Failed while creating window");
     glfwMakeContextCurrent(win);
-    glfwSwapInterval(1); // vsync
+    glfwSwapInterval(0); // vsync
     checkOrExit(glewInit() == GLEW_OK, "Failed while initializing GLEW");
 
 
     // opencl compute class
-    OpenCLCompute compute(DEFAULT_POINT_COUNT);
+    OpenCLCompute compute(DEFAULT_POINT_COUNT, kernelPath);
 
-    // Buffers OpenGL
+    // buffers opengl
     GLuint vao = 0, vbo = 0;
+
+    // vertex array object
     glGenVertexArrays(1, &vao);
     glBindVertexArray(vao);
+
+    // vertex buffer object
     glGenBuffers(1, &vbo);
     glBindBuffer(GL_ARRAY_BUFFER, vbo);
+
     glBufferData(GL_ARRAY_BUFFER, DEFAULT_POINT_COUNT * 2 * sizeof(float), nullptr, GL_DYNAMIC_DRAW);
+
     glEnableVertexAttribArray(0);
     glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, 2 * sizeof(float), (void*)0);
 
     GLuint glProgram = makeProgram(vertexShader, fragmentShader);
+    glUseProgram(glProgram);
 
     // Buffer OpenCL CPU //////////////////////////////////////////////////////
     
     bool draw_lines = false;
     std::vector<cl_float2> tempBuffer (compute.getPointCount());
-    auto t0 = std::chrono::steady_clock::now();
+    auto initialTime = std::chrono::steady_clock::now();
+    auto elapsedTime = std::chrono::duration<float>(std::chrono::steady_clock::now() - initialTime).count();
+    auto lastTime = initialTime;
     while (!glfwWindowShouldClose(win)) {
         glfwPollEvents();
-        auto t = std::chrono::duration<float>(std::chrono::steady_clock::now() - t0).count();
+        auto currentTime = std::chrono::steady_clock::now();
+        auto deltaTime = std::chrono::duration<float>(currentTime - lastTime).count();
+        lastTime = std::chrono::steady_clock::now();
+        
+        elapsedTime = std::chrono::duration<float>(currentTime - initialTime).count();
+
+        std::print("{:6.4f}  {:6.4f}  {:6.4}\r", elapsedTime, deltaTime, 1/deltaTime);
+        std::fflush(stdout);
 
         // Updating buffers
-        compute.updateBufferData(t, &tempBuffer);
-        glBindBuffer(GL_ARRAY_BUFFER, vbo);
+        compute.updateBufferData(elapsedTime, &tempBuffer);
+        //glBindBuffer(GL_ARRAY_BUFFER, vbo);
         glBufferSubData(GL_ARRAY_BUFFER, 0, sizeof(float) * compute.getPointCount() * 2, tempBuffer.data());
 
         // drawing calls
         glClear(GL_COLOR_BUFFER_BIT);
-        glUseProgram(glProgram);
-        glBindVertexArray(vao);
+
         if (draw_lines)
         {
             glLineWidth(2.0f);

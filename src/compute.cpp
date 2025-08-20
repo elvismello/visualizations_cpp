@@ -12,7 +12,7 @@
 
 
 
-OpenCLCompute::OpenCLCompute(size_t numPoints) : pointCount(numPoints)
+OpenCLCompute::OpenCLCompute(size_t numPoints, std::string kernelPath) : pointCount(numPoints), kernelPath(kernelPath)
 {
     initializePlatform();
     createContext();
@@ -78,7 +78,7 @@ void OpenCLCompute::createKernel()
  
     cl_int err;
 
-    auto kernelSrc = loadKernelSource("../kernels/fill_points.cl");
+    auto kernelSrc = loadKernelSource(kernelPath);
     const char* kernelCode = kernelSrc.c_str();
 
     program = clCreateProgramWithSource(context, 1, &kernelCode, nullptr, &err);

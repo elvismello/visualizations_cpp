@@ -2,6 +2,7 @@
 #include "common.hpp"
 #include "renderer.hpp"
 #include <cstddef>
+#include <string>
 #include <utility>
 #include <vector>
 
@@ -10,21 +11,26 @@
 
 class OpenCLCompute {
     private:
+        // opencl variables
         std::vector<cl_platform_id> allPlatforms;
         cl_device_id device;
         cl_context context;
         cl_command_queue queue;
         cl_kernel kernel;
         cl_program program;
+
+        // io data
+        std::string kernelPath;
         
+        // buffers
         cl_mem clBuffer; // opencl sees this buffer
         //GLuint glVBO; // opengl sees this buffer
         
+        // kernel data for computation
         size_t pointCount;
         bool useSharedBuffer;
-
-        //static std::unique_ptr<OpenCLCompute> create()
         
+        // initialization functions
         // creates shared buffer after the opengl context
         void initializePlatform();
         void createContext(); // also selects device
@@ -34,10 +40,9 @@ class OpenCLCompute {
 
 
     public:
-        OpenCLCompute(size_t numPoints);
+        OpenCLCompute(size_t numPoints, std::string kernelPath);
         ~OpenCLCompute();
         
-
 
         // updates points directly in the opengl buffer
         void updateBufferData(float time, std::vector<cl_float2> * tempBuffer);
