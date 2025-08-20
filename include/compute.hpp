@@ -41,14 +41,14 @@ class OpenCLCompute {
 
     public:
         OpenCLCompute(size_t numPoints, std::string kernelPath);
-        ~OpenCLCompute();
         
-
+        
         // updates points directly in the opengl buffer
         void updateBufferData(float time, std::vector<cl_float2> * tempBuffer);
         
         //GLuint getVBO() const {return glVBO;};
-
+        
         size_t getPointCount() const {return pointCount;};
-
+        
+        ~OpenCLCompute();
 };
