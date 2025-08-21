@@ -1,30 +1,30 @@
-#include <GL/glew.h>
-#include <string>
+//#include <string>
+//#include <GL/glew.h>
+//#include <GL/glext.h>
+#include <cstddef>
 #include <stdexcept>
+#include "common.hpp"
+#include "renderer.hpp"
 // #include <string_view>
 
 
-// const std::string_view kVS = R"(
-// #version 330 core
-// layout (location = 0) in vec2 aPos;
-// void main() {
-//     gl_PointSize = 2.5;
-//     gl_Position = vec4(aPos, 0.0, 1.0);
-// }
-// )";
 
-// const std::string_view kFS = R"(
-// #version 330 core
-// out vec4 FragColor;
-// void main() {
-//     FragColor = vec4(0.15, 0.8, 1.0, 1.0);
-// }
-// )";
+Renderer::Renderer(size_t numPoints) : pointCount(numPoints)
+{
+    checkOrExit(glewInit() == GLEW_OK, "Failed while initializing GLEW");
+    glEnable(GL_PROGRAM_POINT_SIZE);
+
+    setupBuffers();
+    setupVertexAttributes();
+
+    // extra configs
+    glClearColor(0, 0, 0, 1.0f);
+}
 
 
 
 // Shader Functions
-GLuint makeShader(GLenum type, const char* src) {
+GLuint Renderer::makeShader(GLenum type, const char* src) {
     GLuint s = glCreateShader(type);
     glShaderSource(s, 1, &src, nullptr);
     glCompileShader(s);
@@ -44,7 +44,7 @@ GLuint makeShader(GLenum type, const char* src) {
 
 
 
-GLuint makeProgram(const char* vs, const char* fs) {
+GLuint Renderer::makeProgram(const char* vs, const char* fs) {
     GLuint v = makeShader(GL_VERTEX_SHADER, vs);
     GLuint f = makeShader(GL_FRAGMENT_SHADER, fs);
     GLuint p = glCreateProgram();
@@ -64,4 +64,74 @@ GLuint makeProgram(const char* vs, const char* fs) {
                                  + log);
     }
     return p;
+}
+
+
+
+void Renderer::setupBuffers()
+{
+    glGenVertexArrays(1, &vao);
+    glBindVertexArray(vao);
+
+    glGenBuffers(1, &vbo);
+    glBindBuffer(GL_ARRAY_BUFFER, vbo);
+
+    glBufferData(GL_ARRAY_BUFFER, pointCount * 2 * sizeof(float), nullptr, GL_DYNAMIC_DRAW);
+}
+
+
+
+void Renderer::setupVertexAttributes()
+{
+    glEnableVertexAttribArray(0);
+    glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, 2 * sizeof(float), nullptr);
+}
+
+
+
+void Renderer::loadAndCompileShaders(const std::string& vertexPath, const std::string& fragmentPath)
+{
+    auto vertexSrc = loadKernelSource(vertexPath);
+    auto fragmentSrc = loadKernelSource(fragmentPath);
+
+    glProgram = makeProgram(vertexSrc.c_str(), fragmentSrc.c_str());
+    glUseProgram(glProgram);
+}
+
+
+
+void Renderer::updateBuffer (const std::vector<cl_float2>& data)
+{
+    glBufferSubData(GL_ARRAY_BUFFER, 0, sizeof(float) * pointCount * 2, data.data());
+}
+
+
+
+//void Renderer::clear(float r, float g, float b)
+void Renderer::clear()
+{
+    glClear(GL_COLOR_BUFFER_BIT);
+}
+
+
+
+void Renderer::render(bool drawLines){
+    if (drawLines)
+    {
+        glLineWidth(2.0f);
+        glDrawArrays(GL_LINE_STRIP, 0, pointCount);
+    }
+    else
+    {
+        glDrawArrays(GL_POINTS, 0, pointCount);
+    }
+}
+
+
+
+Renderer::~Renderer()
+{
+    if (vbo) glDeleteBuffers(1, &vbo);
+    if (vao) glDeleteVertexArrays(1, &vao);
+    if (glProgram) glDeleteProgram(glProgram);
 }

@@ -4,8 +4,9 @@
 #include <stdexcept>
 #include <print>
 
-#define CL_TARGET_OPENCL_VERSION 220
-#include <CL/cl.h>
+#include "common.hpp"
+//#define CL_TARGET_OPENCL_VERSION 220
+//#include <CL/cl.h>
 
 
 // Exception handling
@@ -50,3 +51,6 @@ std::string loadKernelSource(const std::string& path){
 
     return source;
 }
+
+
+
