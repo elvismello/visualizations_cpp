@@ -31,7 +31,7 @@ class Renderer {
         void updateBuffer(const std::vector<cl_float2>& data);
         
         // Rendering
-        //void clear(float r = 0.0f, float g = 0.0f, float b = 0.0f);
+        // void clear(float r = 0.0f, float g = 0.0f, float b = 0.0f);
         void clear();
         void render(bool drawLines = false);
         

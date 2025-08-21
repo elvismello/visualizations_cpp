@@ -1,10 +1,11 @@
 #pragma once
-#include "common.hpp"
-#include "renderer.hpp"
 #include <cstddef>
 #include <string>
-#include <utility>
 #include <vector>
+
+#include "common.hpp"
+// #include "renderer.hpp"
+
 
 // #define CL_TARGET_OPENCL_VERSION 220
 // #include <CL/cl.h>

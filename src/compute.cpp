@@ -1,13 +1,12 @@
-#include "compute.hpp"
-
 #include <cstddef>
 #include <iostream>
-#include <vector>
+//#include <vector>
 #include <print>
 
-#include <CL/cl.h>
-#include <CL/cl_platform.h>
-#include <GLFW/glfw3.h>
+#include "compute.hpp"
+//#include <CL/cl.h>
+//#include <CL/cl_platform.h>
+//#include <GLFW/glfw3.h>
 //#include <GL/glx.h>
 
 

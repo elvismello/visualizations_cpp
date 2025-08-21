@@ -8,22 +8,17 @@
 // #include <string_view>
 
 
-// const std::string_view kVS = R"(
-// #version 330 core
-// layout (location = 0) in vec2 aPos;
-// void main() {
-//     gl_PointSize = 2.5;
-//     gl_Position = vec4(aPos, 0.0, 1.0);
-// }
-// )";
 
-// const std::string_view kFS = R"(
-// #version 330 core
-// out vec4 FragColor;
-// void main() {
-//     FragColor = vec4(0.15, 0.8, 1.0, 1.0);
-// }
-// )";
+Renderer::Renderer(size_t numPoints) : pointCount(numPoints)
+{
+    checkOrExit(glewInit() == GLEW_OK, "Failed while initializing GLEW");
+
+    setupBuffers();
+    setupVertexAttributes();
+
+    // extra configs
+    glClearColor(0, 0, 0, 1.0f);
+}
 
 
 
@@ -72,14 +67,6 @@ GLuint Renderer::makeProgram(const char* vs, const char* fs) {
 
 
 
-Renderer::Renderer(size_t numPoints) : pointCount(numPoints)
-{
-    setupBuffers();
-    setupVertexAttributes();
-}
-
-
-
 void Renderer::setupBuffers()
 {
     glGenVertexArrays(1, &vao);
@@ -96,7 +83,7 @@ void Renderer::setupBuffers()
 void Renderer::setupVertexAttributes()
 {
     glEnableVertexAttribArray(0);
-    glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, 2 * sizeof(float), (void*)0);
+    glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, 2 * sizeof(float), nullptr);
 }
 
 
@@ -122,7 +109,6 @@ void Renderer::updateBuffer (const std::vector<cl_float2>& data)
 //void Renderer::clear(float r, float g, float b)
 void Renderer::clear()
 {
-    //glClearColor(r, g, b, 1.0f);
     glClear(GL_COLOR_BUFFER_BIT);
 }
 
