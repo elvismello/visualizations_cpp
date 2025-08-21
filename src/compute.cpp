@@ -141,7 +141,7 @@ OpenCLCompute::~OpenCLCompute()
     clReleaseProgram(program);
     clReleaseCommandQueue(queue);
     clReleaseContext(context);
-    clReleaseDevice(device);
+    // clReleaseDevice(device); // Removed: device was not retained or created via clCreateSubDevices
 }
 
 
