@@ -11,7 +11,7 @@ void checkOrExit(bool condition, const char* msg);
 void checkCLError(cl_int err, const char* where);
 std::string loadKernelSource(const std::string& path);
 
-constexpr size_t DEFAULT_POINT_COUNT = 120000; // Point Number
+constexpr size_t DEFAULT_POINT_COUNT = 1200000; // Point Number
 constexpr size_t WINDOW_WIDTH = 1366;
 constexpr size_t WINDOW_HEIGHT = 768;
 //constexpr vec2 SCREEN_CENTER = vec2(WINDOW_WIDTH/2, WINDOW_HEIGHT/2);

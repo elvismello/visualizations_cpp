@@ -12,6 +12,7 @@
 Renderer::Renderer(size_t numPoints) : pointCount(numPoints)
 {
     checkOrExit(glewInit() == GLEW_OK, "Failed while initializing GLEW");
+    glEnable(GL_PROGRAM_POINT_SIZE);
 
     setupBuffers();
     setupVertexAttributes();

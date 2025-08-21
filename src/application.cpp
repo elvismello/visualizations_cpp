@@ -36,8 +36,8 @@ void Application::initialize()
 void Application::updateTiming()
 {
     auto currentTime = std::chrono::steady_clock::now();
-    deltaTime = std::chrono::duration(currentTime - lastTime).count();
-    elapsedTime = std::chrono::duration(currentTime - startTime).count();
+    deltaTime = std::chrono::duration<float>(currentTime - lastTime).count();
+    elapsedTime = std::chrono::duration<float>(currentTime - startTime).count();
     lastTime = currentTime;
 }
 
@@ -85,7 +85,7 @@ void Application::run()
         
         window->swapBuffers();
 
-        // printStats();
+        printStats();
     }
 }
 

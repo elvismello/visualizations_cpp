@@ -1,3 +1,4 @@
+#include <CL/cl.h>
 #include <cstddef>
 #include <iostream>
 //#include <vector>
@@ -140,6 +141,7 @@ OpenCLCompute::~OpenCLCompute()
     clReleaseProgram(program);
     clReleaseCommandQueue(queue);
     clReleaseContext(context);
+    clReleaseDevice(device);
 }
 
 
