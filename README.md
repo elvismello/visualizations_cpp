@@ -8,63 +8,146 @@ This project demonstrates the integration between OpenCL (for parallel computing
 
 ## 🏗️ System Architecture
 
+### High-Level Overview
+
+```mermaid
+flowchart LR
+    A["🚀 main.cpp<br/>Entry Point"] --> B["🎮 Application<br/>Main Controller"]
+    B --> C["🪟 Window<br/>GLFW + OpenGL"]
+    B --> D["⚡ OpenCLCompute<br/>GPU Computing"]
+    B --> E["🎨 Renderer<br/>OpenGL Graphics"]
+    
+    classDef entry fill:#e3f2fd,stroke:#1976d2,stroke-width:2px,color:#000
+    classDef app fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px,color:#000
+    classDef window fill:#e8f5e8,stroke:#388e3c,stroke-width:2px,color:#000
+    classDef compute fill:#fff3e0,stroke:#f57c00,stroke-width:2px,color:#000
+    classDef render fill:#fce4ec,stroke:#c2185b,stroke-width:2px,color:#000
+    
+    class A entry
+    class B app
+    class C window
+    class D compute
+    class E render
+```
+
+### Application Main Loop
+
 ```mermaid
 flowchart TD
-    A[main.cpp] --> B[Application]
-    B --> C[Window]
-    B --> D[OpenCLCompute]
-    B --> E[Renderer]
+    A["🔄 Start Main Loop"] --> B["📡 Poll Window Events"]
+    B --> C["⏱️ Update Timing<br/>(deltaTime, elapsedTime)"]
+    C --> D["⚡ Execute OpenCL Kernel<br/>(Calculate Point Positions)"]
+    D --> E["📤 Transfer Data<br/>(OpenCL → OpenGL Buffer)"]
+    E --> F["🎨 Render Points<br/>(OpenGL Pipeline)"]
+    F --> G["🔄 Swap Buffers<br/>(Display Frame)"]
+    G --> H["📊 Print Performance Stats<br/>(FPS, Frame Time)"]
+    H --> I{"🚪 Should Close?"}
+    I -->|No| B
+    I -->|Yes| J["🛑 Exit"]
     
-    C --> F[GLFW Window Creation]
-    C --> G[OpenGL Context]
+    classDef loop fill:#e8f5e8,stroke:#388e3c,stroke-width:2px,color:#000
+    classDef process fill:#fff3e0,stroke:#f57c00,stroke-width:2px,color:#000
+    classDef render fill:#fce4ec,stroke:#c2185b,stroke-width:2px,color:#000
+    classDef decision fill:#e3f2fd,stroke:#1976d2,stroke-width:2px,color:#000
     
-    D --> H[OpenCL Platform Init]
-    D --> I[OpenCL Context]
-    D --> J[OpenCL Kernel]
-    D --> K[Buffer Management]
+    class A,B,G,H loop
+    class C,D,E process
+    class F render
+    class I,J decision
+```
+
+### OpenCL Compute Pipeline
+
+```mermaid
+flowchart TD
+    A["🔧 OpenCL Initialization"] --> B["🔍 Find Platform & Device"]
+    B --> C["🎯 Create Context"]
+    C --> D["📋 Create Command Queue"]
+    D --> E["📝 Load & Compile Kernel<br/>(fill_points.cl)"]
+    E --> F["💾 Create Buffer<br/>(Point Data)"]
     
-    E --> L[OpenGL Buffers]
-    E --> M[Vertex/Fragment Shaders]
-    E --> N[Rendering Pipeline]
+    F --> G["⏰ Runtime Loop"]
+    G --> H["📊 Execute Kernel<br/>Global Size: pointCount"]
+    H --> I["🧮 Kernel Processing"]
+    I --> J["📤 Read Buffer Results"]
+    J --> G
     
-    subgraph "Main Loop"
-        O[Poll Events] --> P[Update Timing]
-        P --> Q[OpenCL Compute]
-        Q --> R[Update GL Buffer]
-        R --> S[Render Points]
-        S --> T[Swap Buffers]
-        T --> U[Print Stats]
-        U --> O
+    subgraph "Kernel Math (fill_points.cl)"
+        K["📍 Calculate u = i/N"]
+        K --> L["🌊 x = 0.8 × cos(4π(au + 0.1t))"]
+        L --> M["🌊 y = 0.8 × sin(2π(bu + 0.2t))"]
+        M --> N["📦 Output: float2(x,y)"]
     end
     
-    B --> O
+    I --> K
     
-    subgraph "OpenCL Kernel"
-        V[fill_points.cl]
-        V --> W[Calculate Parametric Position]
-        W --> X[Apply Time Animation]
-        X --> Y[Output float2 Points]
+    classDef init fill:#e8f5e8,stroke:#388e3c,stroke-width:2px,color:#000
+    classDef runtime fill:#fff3e0,stroke:#f57c00,stroke-width:2px,color:#000
+    classDef kernel fill:#fce4ec,stroke:#c2185b,stroke-width:2px,color:#000
+    
+    class A,B,C,D,E,F init
+    class G,H,J runtime
+    class I,K,L,M,N kernel
+```
+
+### OpenGL Rendering Pipeline
+
+```mermaid
+flowchart TD
+    A["🎨 Renderer Initialization"] --> B["🔧 Initialize GLEW"]
+    B --> C["📦 Setup Vertex Buffers<br/>(VBO, VAO)"]
+    C --> D["📜 Load & Compile Shaders<br/>(vertex_1.glsl, fragment_1.glsl)"]
+    D --> E["🎯 Setup Vertex Attributes"]
+    
+    E --> F["🔄 Render Loop"]
+    F --> G["📥 Update Buffer Data<br/>(from OpenCL)"]
+    G --> H["🧹 Clear Screen<br/>(glClear)"]
+    H --> I["🎨 Bind Shader Program"]
+    I --> J["📐 Draw Points<br/>(glDrawArrays)"]
+    J --> F
+    
+    subgraph "Shader Pipeline"
+        K["📍 Vertex Shader<br/>(Position Transform)"]
+        K --> L["🎨 Fragment Shader<br/>(Color Output)"]
     end
     
-    J --> V
+    I --> K
     
-    subgraph "Shaders"
-        Z[vertex_1.glsl]
-        AA[fragment_1.glsl]
-    end
+    classDef init fill:#e3f2fd,stroke:#1976d2,stroke-width:2px,color:#000
+    classDef runtime fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px,color:#000
+    classDef shader fill:#fff3e0,stroke:#f57c00,stroke-width:2px,color:#000
     
-    M --> Z
-    M --> AA
+    class A,B,C,D,E init
+    class F,G,H,I,J runtime
+    class K,L shader
+```
+
+### Window Management (GLFW)
+
+```mermaid
+flowchart LR
+    A["🪟 Window Creation"] --> B["🔧 GLFW Init"]
+    B --> C["📏 Create Window<br/>(Width × Height)"]
+    C --> D["🎯 Make Context Current"]
+    D --> E["⚡ Enable VSync"]
     
-    style A fill:#e1f5fe
-    style B fill:#f3e5f5
-    style D fill:#fff3e0
-    style E fill:#e8f5e8
-    style V fill:#ffebee
+    E --> F["🔄 Event Loop"]
+    F --> G["📡 Poll Events<br/>(glfwPollEvents)"]
+    G --> H{"🚪 Should Close?"}
+    H -->|No| I["🔄 Swap Buffers"]
+    I --> F
+    H -->|Yes| J["🛑 Cleanup & Exit"]
+    
+    classDef init fill:#e8f5e8,stroke:#388e3c,stroke-width:2px,color:#000
+    classDef loop fill:#fff3e0,stroke:#f57c00,stroke-width:2px,color:#000
+    classDef decision fill:#fce4ec,stroke:#c2185b,stroke-width:2px,color:#000
+    
+    class A,B,C,D,E init
+    class F,G,I loop
+    class H,J decision
 ```
 
 ## 🔧 Main Components
-
 ### 1. **Application** (Main Controller)
 - Manages application lifecycle
 - Coordinates Window, OpenCLCompute and Renderer

@@ -1,11 +1,8 @@
-//#include <string>
-//#include <GL/glew.h>
-//#include <GL/glext.h>
 #include <cstddef>
 #include <stdexcept>
 #include "common.hpp"
 #include "renderer.hpp"
-// #include <string_view>
+
 
 
 
