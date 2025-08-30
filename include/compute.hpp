@@ -26,6 +26,9 @@ class OpenCLCompute {
         // buffers
         cl_mem clBuffer; // opencl sees this buffer
         //GLuint glVBO; // opengl sees this buffer
+
+        cl_mem velocityBuffer; // for gravity computation
+        cl_mem positionOutputBuffer;
         
         // kernel data for computation
         size_t pointCount;
@@ -37,7 +40,8 @@ class OpenCLCompute {
         void createContext(); // also selects device
         void createQueue();
         void createKernel();
-        void createBuffer();
+        void createBuffers();
+        void setInitialConditions();
 
 
     public:

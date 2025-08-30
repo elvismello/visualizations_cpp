@@ -1,10 +1,14 @@
 #include <CL/cl.h>
+#include <CL/cl_platform.h>
 #include <cstddef>
+//#include <exception>
 #include <iostream>
 //#include <vector>
+#include <math.h>
 #include <print>
 
 #include "compute.hpp"
+#include "common.hpp"
 //#include <CL/cl.h>
 //#include <CL/cl_platform.h>
 //#include <GLFW/glfw3.h>
@@ -18,7 +22,8 @@ OpenCLCompute::OpenCLCompute(size_t numPoints, std::string kernelPath) : pointCo
     createContext();
     createQueue();
     createKernel();
-    createBuffer();
+    createBuffers();
+    setInitialConditions();
 }
 
 
@@ -94,20 +99,74 @@ void OpenCLCompute::createKernel()
         throw std::runtime_error("OpenCL build failed");
     }
 
-    kernel = clCreateKernel(program, "fill_points", &err);
+    kernel = clCreateKernel(program, "direct_sum_gravity", &err);
     checkCLError(err, "clCreateKernel");
 }
 
 
 
-void OpenCLCompute::createBuffer()
+void OpenCLCompute::createBuffers()
 {
     cl_int err;
 
     clBuffer = clCreateBuffer(context, CL_MEM_READ_WRITE, sizeof(cl_float2) * pointCount, nullptr, &err);
 
+    velocityBuffer = clCreateBuffer(context, CL_MEM_READ_WRITE, sizeof(cl_float2) * pointCount, nullptr, &err);
+
+    positionOutputBuffer = clCreateBuffer(context, CL_MEM_READ_WRITE, sizeof(cl_float2) * pointCount, nullptr, &err);
+
     checkCLError(err, "clCreateBuffer");
 }
+
+
+
+void OpenCLCompute::setInitialConditions()
+{
+    std::vector<cl_float2> initialPositions(pointCount);
+    std::vector<cl_float2> initialVelocities(pointCount);
+
+
+    // create vector values
+
+    for (size_t i = 0; i < pointCount; ++i)
+    {        
+        initialVelocities[i].s[0] = 0.0f;
+        initialVelocities[i].s[1] = 0.0f;
+    }
+
+    float current_x = -0.5f;
+    float current_y = -0.5f;
+    for (size_t i = 0; i < pointCount; i++)
+    {
+
+        initialPositions[i].s[0] = i * 1.0f / pointCount - 0.5;
+        initialPositions[i].s[1] = pow(-1, i) * 0.2f;
+
+        // for (size_t j = 0; j < (pointCount / 10); j++)
+        // {
+            // size_t current_index = i * 10 + j;
+            // if (current_index > pointCount) break;
+// 
+            // initialPositions[current_index].s[0] = current_x;
+            // initialPositions[current_index].s[1] = current_y;
+// 
+            // current_y += 1.0f / (pointCount / 10);
+        // }
+        // current_x += 1.0f / 10.0f;
+    }
+
+    // writing buffers
+    cl_int err;
+    err = clEnqueueWriteBuffer(queue, clBuffer, CL_TRUE, 0, sizeof(cl_float2) * pointCount, initialPositions.data(), 0, nullptr, nullptr);
+    checkCLError(err, "clEnqueueWriteBuffer (positions)");
+
+    err = clEnqueueWriteBuffer(queue, velocityBuffer, CL_TRUE, 0, sizeof(cl_float2) * pointCount, initialVelocities.data(), 0, nullptr, nullptr);
+    checkCLError(err, "clEnqueueWriteBuffer (velocities)");
+
+    // ensuring that write was done
+    clFinish(queue);
+}
+
 
 
 
@@ -119,13 +178,17 @@ void OpenCLCompute::updateBufferData(float time, std::vector<cl_float2> * tempBu
     
     // configuring kernel parameters
     clSetKernelArg(kernel, 0, sizeof(cl_mem), &clBuffer);
-    clSetKernelArg(kernel, 1, sizeof(int), &N);
-    clSetKernelArg(kernel, 2, sizeof(float), &time);
+    clSetKernelArg(kernel, 1, sizeof(cl_mem), &velocityBuffer);
+    clSetKernelArg(kernel, 2, sizeof(cl_mem), &positionOutputBuffer);
+    clSetKernelArg(kernel, 3, sizeof(int), &N);
+    clSetKernelArg(kernel, 4, sizeof(float), &time);
 
     // executing kernel
     err = clEnqueueNDRangeKernel(queue, kernel, 1, nullptr, &globalSize, nullptr, 0, nullptr, nullptr);
     checkCLError(err, "clEnqueueNDRangeKernel");
     clFinish(queue);
+
+    std::swap(clBuffer, positionOutputBuffer);
 
     // read data back to CPU
     clEnqueueReadBuffer(queue, clBuffer, CL_TRUE, 0, sizeof(cl_float2) * pointCount, (*tempBuffer).data(), 0, nullptr, nullptr);

@@ -8,12 +8,13 @@ int main() {
     config.windowWidth = WINDOW_WIDTH;
     config.windowHeight = WINDOW_HEIGHT;
     config.windowTitle = "visProject";
-    config.pointCount = DEFAULT_POINT_COUNT;
+    // config.pointCount = DEFAULT_POINT_COUNT;
+    config.pointCount = 50;
     // config.pointCount = D;
     config.vsync = true;
-    config.kernelPath = "../kernels/fill_points.cl";    
-    config.vertexPath = "../shaders/vertex_1.glsl";
-    config.fragmentPath = "../shaders/fragment_1.glsl";
+    config.kernelPath = "../kernels/gravity.cl";    
+    config.vertexPath = "../shaders/vertex.glsl";
+    config.fragmentPath = "../shaders/fragment.glsl";
 
     Application app(config);
     

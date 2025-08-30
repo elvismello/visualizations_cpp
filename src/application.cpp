@@ -77,7 +77,8 @@ void Application::run()
         // handleInput();
         updateTiming();
 
-        compute->updateBufferData(elapsedTime, &tempBuffer);
+        //compute->updateBufferData(elapsedTime, &tempBuffer);
+        compute->updateBufferData(deltaTime, &tempBuffer);
         renderer->updateBuffer(tempBuffer);
 
         renderer->clear();

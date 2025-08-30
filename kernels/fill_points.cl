@@ -8,7 +8,5 @@ __kernel void fill_points(global float2* points, const int N, const float t) {
     float x = 0.8f * cos(4.0f * 3.1415926f * (a*u + 0.10f*t));
     // float y = 0.8f * sin(2.0f * 3.1415926f * (b*u + 0.13f*t));
     float y = 0.8f * sin(2.0f * 3.1415926f * (b*u + 0.2f*t));
-    float nx = x;
-    float ny = y;
-    points[i] = (float2)(nx, ny);
+    points[i] = (float2)(x, y);
 }

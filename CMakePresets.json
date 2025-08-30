@@ -10,6 +10,7 @@
             "name": "gcc13",
             "description": "Using g++-13 as compiler",
             "generator": "Unix Makefiles",
+            "binaryDir": "${sourceDir}/build",
             "cacheVariables": {
                 "CMAKE_CXX_COMPILER" : "g++-13",
                 "CMAKE_EXPORT_COMPILE_COMMANDS" : "ON"
@@ -20,6 +21,7 @@
             "name": "gcc14",
             "description": "Using g++-14 as compiler",
             "generator": "Unix Makefiles",
+            "binaryDir": "${sourceDir}/build",
             "cacheVariables": {
                 "CMAKE_CXX_COMPILER" : "g++-14",
                 "CMAKE_EXPORT_COMPILE_COMMANDS" : "ON"
