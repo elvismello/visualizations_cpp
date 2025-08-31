@@ -170,9 +170,8 @@ void OpenCLCompute::setInitialConditions()
     float current_y = -0.5f;
     for (size_t i = 0; i < pointCount; i++)
     {
-
-        initialPositions[i].s[0] = i * 1.0f / pointCount - 0.5;
-        initialPositions[i].s[1] = pow(-1, i) * 0.2f;
+        initialPositions[i].s[0] = i * 1.0f / pointCount * 1.8f - 0.9f;
+        initialPositions[i].s[1] = i % 100 / 100.0f * 1.8f - 0.9f;
 
         // for (size_t j = 0; j < (pointCount / 10); j++)
         // {
