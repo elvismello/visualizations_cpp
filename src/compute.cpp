@@ -56,7 +56,7 @@ void OpenCLCompute::createContext()
     
     // simple estimation of the most capable device
     std::print("Finding best device and listing FLOPS estimatimation...\n\n");
-    std::print("{:<10s} {:<50s}\n", "FLOPS", "Device name");
+    std::print("{:<10s} {:<50s}\n", "TFLOPS", "Device name");
     for (int i = 0; i < 60; i++)
     {
         std::print("-");
@@ -69,15 +69,21 @@ void OpenCLCompute::createContext()
     {
         cl_uint computeUnits = 0;
         cl_uint clockFreq = 0;
+        cl_uint deviceType = 0;
+        char name[256];
+
+        // TODO add way to identify cores per computation unit for GPUs
+        // https://github.com/ProjectPhysX/OpenCL-Wrapper does it
 
         clGetDeviceInfo(dev, CL_DEVICE_MAX_COMPUTE_UNITS, sizeof(cl_uint), &computeUnits, nullptr);
         clGetDeviceInfo(dev, CL_DEVICE_MAX_CLOCK_FREQUENCY, sizeof(cl_uint), &clockFreq, nullptr);
-
-        char name[256];
+        clGetDeviceInfo(dev, CL_DEVICE_TYPE, sizeof(cl_uint), &deviceType, nullptr);
         clGetDeviceInfo(dev, CL_DEVICE_NAME, sizeof(name), name, nullptr);
         
-        auto flops = computeUnits * clockFreq;
-        std::print("{:<10d} {:<50s}\n", flops, name);
+
+        cl_uint ipc = deviceType == CL_DEVICE_TYPE_GPU ? 2u : 32u; // instructions per cycle
+        auto flops = computeUnits * clockFreq * ipc;
+        std::print("{:<10.6f} {:<50s}\n", (float)flops * 1e-6, name);
         if (flops > maxFlops)
         {
             maxFlops = flops;
