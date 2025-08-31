@@ -55,8 +55,13 @@ void OpenCLCompute::createContext()
     checkOrExit(numDevices > 0, "No OpenCL device encountered");
     
     // simple estimation of the most capable device
-    std::print("Finding best device and listing FLOPS estimatimation...\n");
-    std::print("{:<10s} {:<50s}", "FLOPS", "Device name\n");
+    std::print("Finding best device and listing FLOPS estimatimation...\n\n");
+    std::print("{:<10s} {:<50s}\n", "FLOPS", "Device name");
+    for (int i = 0; i < 60; i++)
+    {
+        std::print("-");
+    }
+    std::print("\n");
     cl_device_id bestDevice = allDevices[0];
     std::string bestDeviceName;
     int maxFlops = 0;
@@ -70,8 +75,6 @@ void OpenCLCompute::createContext()
 
         char name[256];
         clGetDeviceInfo(dev, CL_DEVICE_NAME, sizeof(name), name, nullptr);
-
-        
         
         auto flops = computeUnits * clockFreq;
         std::print("{:<10d} {:<50s}\n", flops, name);
@@ -82,6 +85,11 @@ void OpenCLCompute::createContext()
             bestDeviceName = name;
         }
     }
+    for (int i = 0; i < 60; i++)
+    {
+        std::print("-");
+    }
+    std::print("\n\n");
     device = bestDevice;
 
     std::print("Best device is {}\n", bestDeviceName);
@@ -172,18 +180,6 @@ void OpenCLCompute::setInitialConditions()
     {
         initialPositions[i].s[0] = i * 1.0f / pointCount * 1.8f - 0.9f;
         initialPositions[i].s[1] = i % 100 / 100.0f * 1.8f - 0.9f;
-
-        // for (size_t j = 0; j < (pointCount / 10); j++)
-        // {
-            // size_t current_index = i * 10 + j;
-            // if (current_index > pointCount) break;
-// 
-            // initialPositions[current_index].s[0] = current_x;
-            // initialPositions[current_index].s[1] = current_y;
-// 
-            // current_y += 1.0f / (pointCount / 10);
-        // }
-        // current_x += 1.0f / 10.0f;
     }
 
     // writing buffers
