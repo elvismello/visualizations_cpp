@@ -2,6 +2,7 @@
 #include "compute.hpp"
 #include <chrono>
 #include <memory>
+#include <print>
 
 
 
@@ -95,4 +96,7 @@ void Application::run()
 
 
 
-Application::~Application(){}
+Application::~Application()
+{
+    std::print("\nBye!\n");
+}

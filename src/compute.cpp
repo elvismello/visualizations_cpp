@@ -1,3 +1,4 @@
+#define CL_TARGET_OPENCL_VERSION 220
 #include <CL/cl.h>
 #include <CL/cl_platform.h>
 #include <cstddef>
@@ -6,6 +7,7 @@
 //#include <vector>
 #include <math.h>
 #include <print>
+#include <string>
 
 #include "compute.hpp"
 #include "common.hpp"
@@ -46,17 +48,47 @@ void OpenCLCompute::createContext()
 {
     // finding device
     cl_uint numDevices = 0;
-    clGetDeviceIDs(allPlatforms[0], CL_DEVICE_TYPE_GPU, 0, nullptr, &numDevices);
+    clGetDeviceIDs(allPlatforms[0], CL_DEVICE_TYPE_ALL, 0, nullptr, &numDevices);
     std::vector<cl_device_id> allDevices(numDevices);
-    clGetDeviceIDs(allPlatforms[0], CL_DEVICE_TYPE_GPU, numDevices, allDevices.data(), nullptr);
+    clGetDeviceIDs(allPlatforms[0], CL_DEVICE_TYPE_ALL, numDevices, allDevices.data(), nullptr);
     
     checkOrExit(numDevices > 0, "No OpenCL device encountered");
-    device = allDevices[0]; // possible implementation of an automatic device selection
+    
+    // simple estimation of the most capable device
+    std::print("Finding best device and listing FLOPS estimatimation...\n");
+    std::print("{:<10s} {:<50s}", "FLOPS", "Device name\n");
+    cl_device_id bestDevice = allDevices[0];
+    std::string bestDeviceName;
+    int maxFlops = 0;
+    for (auto dev: allDevices)
+    {
+        cl_uint computeUnits = 0;
+        cl_uint clockFreq = 0;
+
+        clGetDeviceInfo(dev, CL_DEVICE_MAX_COMPUTE_UNITS, sizeof(cl_uint), &computeUnits, nullptr);
+        clGetDeviceInfo(dev, CL_DEVICE_MAX_CLOCK_FREQUENCY, sizeof(cl_uint), &clockFreq, nullptr);
+
+        char name[256];
+        clGetDeviceInfo(dev, CL_DEVICE_NAME, sizeof(name), name, nullptr);
+
+        
+        
+        auto flops = computeUnits * clockFreq;
+        std::print("{:<10d} {:<50s}\n", flops, name);
+        if (flops > maxFlops)
+        {
+            maxFlops = flops;
+            bestDevice = dev;
+            bestDeviceName = name;
+        }
+    }
+    device = bestDevice;
+
+    std::print("Best device is {}\n", bestDeviceName);
+    
 
     // creating context
     cl_int err = 0;
-
-    std::print("Using regular OpenCL (no shared buffer)...\n");
     context = clCreateContext(nullptr, 1, &device, nullptr, nullptr, &err);
     checkCLError(err, "clCreateContext");
     useSharedBuffer = false;

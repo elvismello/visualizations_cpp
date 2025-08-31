@@ -1,4 +1,4 @@
-#include <opencl-c-base.h>
+// #include <opencl-c-base.h>
 __kernel void direct_sum_gravity(global float2* points,
                                  global float2* pointsVel,
                                  global float2* pointsOutput,

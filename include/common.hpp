@@ -1,6 +1,6 @@
 #pragma once
 //#include <CL/cl_platform.h>
-#define CL_TARGET_OPENCL_VERSION 300
+#define CL_TARGET_OPENCL_VERSION 220
 #include <CL/cl.h>
 #include <string>
 
