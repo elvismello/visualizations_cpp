@@ -3,14 +3,14 @@
 // #include <GLFW/glfw3.h>
 
 
-Window::Window (int w, int h, const std::string& title) : width(w), height(h)
+Window::Window (int w, int h, bool vsync, const std::string& title) : width(w), height(h), vsync(vsync)
 {
     glfwInit();
     window = glfwCreateWindow(width, height, title.c_str(), nullptr, nullptr);
     checkOrExit(window != nullptr, "Failed while creating window");
 
     glfwMakeContextCurrent(window);
-    glfwSwapInterval(1); // vsync
+    glfwSwapInterval(vsync); // vsync
 }
 
 

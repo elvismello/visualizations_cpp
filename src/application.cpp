@@ -18,6 +18,7 @@ void Application::initialize()
     // create window
     window = std::make_unique<Window>(config.windowWidth,
                                       config.windowHeight,
+                                      config.vsync,
                                       config.windowTitle);
 
     // create opencl compute object

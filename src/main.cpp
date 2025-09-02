@@ -11,7 +11,7 @@ int main() {
     // config.pointCount = DEFAULT_POINT_COUNT;
     config.pointCount = 10000;
     // config.pointCount = D;
-    config.vsync = true;
+    config.vsync = false;
     config.kernelPath = "../kernels/gravity.cl";    
     config.vertexPath = "../shaders/vertex.glsl";
     config.fragmentPath = "../shaders/fragment.glsl";
