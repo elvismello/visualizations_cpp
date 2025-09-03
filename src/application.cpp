@@ -22,7 +22,7 @@ void Application::initialize()
                                       config.windowTitle);
 
     // create opencl compute object
-    compute = std::make_unique<OpenCLCompute>(config.pointCount,
+    compute = std::make_unique<Compute>(config.pointCount,
                                               config.kernelPath);
 
     // renderer

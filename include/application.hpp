@@ -17,7 +17,7 @@ class Application {
     private:
         std::unique_ptr<Window> window;
         std::unique_ptr<Renderer> renderer;
-        std::unique_ptr<OpenCLCompute> compute;
+        std::unique_ptr<Compute> compute;
         
 
         // Timing

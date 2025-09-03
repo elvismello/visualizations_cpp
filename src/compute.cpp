@@ -18,7 +18,7 @@
 
 
 
-OpenCLCompute::OpenCLCompute(size_t numPoints, std::string kernelPath) : pointCount(numPoints), kernelPath(kernelPath)
+Compute::Compute(size_t numPoints, std::string kernelPath) : pointCount(numPoints), kernelPath(kernelPath)
 {
     initializePlatform();
     createContext();
@@ -30,7 +30,7 @@ OpenCLCompute::OpenCLCompute(size_t numPoints, std::string kernelPath) : pointCo
 
 
 
-void OpenCLCompute::initializePlatform()
+void Compute::initializePlatform()
 {
     // finding platform
     cl_uint numPlatforms = 0;
@@ -44,7 +44,7 @@ void OpenCLCompute::initializePlatform()
 
 
 
-void OpenCLCompute::createContext()
+void Compute::createContext()
 {
     // finding device
     cl_uint numDevices = 0;
@@ -111,7 +111,7 @@ void OpenCLCompute::createContext()
 
 
 
-void OpenCLCompute::createQueue()
+void Compute::createQueue()
 {
     cl_int err = 0;
 
@@ -123,7 +123,7 @@ void OpenCLCompute::createQueue()
 
 
 
-void OpenCLCompute::createKernel()
+void Compute::createKernel()
 {
     // loading and compiling kernel
  
@@ -151,7 +151,7 @@ void OpenCLCompute::createKernel()
 
 
 
-void OpenCLCompute::createBuffers()
+void Compute::createBuffers()
 {
     cl_int err;
 
@@ -166,7 +166,7 @@ void OpenCLCompute::createBuffers()
 
 
 
-void OpenCLCompute::setInitialConditions()
+void Compute::setInitialConditions()
 {
     std::vector<cl_float2> initialPositions(pointCount);
     std::vector<cl_float2> initialVelocities(pointCount);
@@ -203,11 +203,15 @@ void OpenCLCompute::setInitialConditions()
 
 
 
-void OpenCLCompute::updateBufferData(float time, std::vector<cl_float2> * tempBuffer)
+void Compute::updateBufferData(float time, std::vector<cl_float2> * tempBuffer)
 {
     int N = static_cast<int>(pointCount);
     cl_int err;
     size_t globalSize = pointCount;
+
+    // Tree computation
+
+
     
     // configuring kernel parameters
     clSetKernelArg(kernel, 0, sizeof(cl_mem), &clBuffer);
@@ -229,7 +233,7 @@ void OpenCLCompute::updateBufferData(float time, std::vector<cl_float2> * tempBu
 
 
 
-OpenCLCompute::~OpenCLCompute()
+Compute::~Compute()
 {
     if (clBuffer) clReleaseMemObject(clBuffer);
     //if (glVBO) glDeleteBuffers(1, &glVBO);

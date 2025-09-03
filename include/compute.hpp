@@ -10,7 +10,7 @@
 // #define CL_TARGET_OPENCL_VERSION 220
 // #include <CL/cl.h>
 
-class OpenCLCompute {
+class Compute {
     private:
         // opencl variables
         std::vector<cl_platform_id> allPlatforms;
@@ -45,7 +45,7 @@ class OpenCLCompute {
 
 
     public:
-        OpenCLCompute(size_t numPoints, std::string kernelPath);
+        Compute(size_t numPoints, std::string kernelPath);
         
         
         // updates points directly in the opengl buffer
@@ -55,5 +55,5 @@ class OpenCLCompute {
         
         size_t getPointCount() const {return pointCount;};
         
-        ~OpenCLCompute();
+        ~Compute();
 };
