@@ -4,17 +4,17 @@
 
 
 class Window {
-    private:
-        GLFWwindow* window;
-        int width, height;
-        bool vsync;
+private:
+    GLFWwindow* window;
+    int width, height;
+    bool vsync;
 
-    public:
-        Window(int w, int h, bool vsync, const std::string& title);
-        bool shouldClose() const;
-        void pollEvents();
-        void swapBuffers();
+public:
+    Window(int w, int h, bool vsync, const std::string& title);
+    bool shouldClose() const;
+    void pollEvents();
+    void swapBuffers();
 
-        ~Window();
+    ~Window();
 
 };

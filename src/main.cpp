@@ -9,7 +9,7 @@ int main() {
     config.windowHeight = WINDOW_HEIGHT;
     config.windowTitle = "visProject";
     // config.pointCount = DEFAULT_POINT_COUNT;
-    config.pointCount = 10000;
+    config.pointCount = 30000;
     // config.pointCount = D;
     config.vsync = false;
     config.kernelPath = "../kernels/gravity.cl";    

@@ -14,44 +14,44 @@
 
 
 class Application {
-    private:
-        std::unique_ptr<Window> window;
-        std::unique_ptr<Renderer> renderer;
-        std::unique_ptr<Compute> compute;
-        
+private:
+    std::unique_ptr<Window> window;
+    std::unique_ptr<Renderer> renderer;
+    std::unique_ptr<Compute> compute;
+    
 
-        // Timing
-        std::chrono::steady_clock::time_point startTime;
-        std::chrono::steady_clock::time_point lastTime;
+    // Timing
+    std::chrono::steady_clock::time_point startTime;
+    std::chrono::steady_clock::time_point lastTime;
 
-        float deltaTime;
-        float elapsedTime;
-
-
-        // Methods
-        void initialize();
-        void updateTiming();
-        void printStats();
+    float deltaTime;
+    float elapsedTime;
 
 
-    public:
-        
-        // Configuration
-        struct Config {
-            int windowWidth;
-            int windowHeight;
-            std::string windowTitle;
-            size_t pointCount;
-            bool vsync;
-            std::string kernelPath;
-            std::string vertexPath;
-            std::string fragmentPath;
-        } config;
+    // Methods
+    void initialize();
+    void updateTiming();
+    void printStats();
 
 
-        Application(const Config& cfg);
-        void run(); // main loop
-        ~Application();
+public:
+    
+    // Configuration
+    struct Config {
+        int windowWidth;
+        int windowHeight;
+        std::string windowTitle;
+        size_t pointCount;
+        bool vsync;
+        std::string kernelPath;
+        std::string vertexPath;
+        std::string fragmentPath;
+    } config;
+
+
+    Application(const Config& cfg);
+    void run(); // main loop
+    ~Application();
 };
 
 

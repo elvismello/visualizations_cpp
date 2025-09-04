@@ -23,22 +23,22 @@ __kernel void direct_sum_gravity(global float2* points,
     // needs another float2 vec for the previous accel
     float2 velHalf = pointsVel[i] + accel * dt / 2; // use previous accel
     pointsOutput[i] = points[i] + velHalf * dt;
-    if (pointsOutput[i].x < -1.0f) {
-        pointsOutput[i].x = -1.0f;
-        velHalf.x = -velHalf.x;
-    }
-    if (pointsOutput[i].x > 1.0f) {
-        pointsOutput[i].x = 1.0f;
-        velHalf.x = -velHalf.x;
-    }
-    if (pointsOutput[i].y < -1.0f) {
-        pointsOutput[i].y = -1.0f;
-        velHalf.y = -velHalf.y;
-    }
-    if (pointsOutput[i].y > 1.0f) {
-        pointsOutput[i].y = 1.0f;
-        velHalf.y = -velHalf.y;
-    }
+    // if (pointsOutput[i].x < -1.0f) {
+        // pointsOutput[i].x = -1.0f;
+        // velHalf.x = -velHalf.x;
+    // }
+    // if (pointsOutput[i].x > 1.0f) {
+        // pointsOutput[i].x = 1.0f;
+        // velHalf.x = -velHalf.x;
+    // }
+    // if (pointsOutput[i].y < -1.0f) {
+        // pointsOutput[i].y = -1.0f;
+        // velHalf.y = -velHalf.y;
+    // }
+    // if (pointsOutput[i].y > 1.0f) {
+        // pointsOutput[i].y = 1.0f;
+        // velHalf.y = -velHalf.y;
+    // }
 
     if (length(pointsVel[i]) > 100)
     {
