@@ -56,97 +56,6 @@ flowchart TD
     class I,J decision
 ```
 
-### OpenCL Compute Pipeline
-
-```mermaid
-flowchart TD
-    A["🔧 OpenCL Initialization"] --> B["🔍 Find Platform & Device"]
-    B --> C["🎯 Create Context"]
-    C --> D["📋 Create Command Queue"]
-    D --> E["📝 Load & Compile Kernel<br/>(fill_points.cl)"]
-    E --> F["💾 Create Buffer<br/>(Point Data)"]
-    
-    F --> G["⏰ Runtime Loop"]
-    G --> H["📊 Execute Kernel<br/>Global Size: pointCount"]
-    H --> I["🧮 Kernel Processing"]
-    I --> J["📤 Read Buffer Results"]
-    J --> G
-    
-    subgraph "Kernel Math (fill_points.cl)"
-        K["📍 Calculate u = i/N"]
-        K --> L["🌊 x = 0.8 × cos(4π(au + 0.1t))"]
-        L --> M["🌊 y = 0.8 × sin(2π(bu + 0.2t))"]
-        M --> N["📦 Output: float2(x,y)"]
-    end
-    
-    I --> K
-    
-    classDef init fill:#e8f5e8,stroke:#388e3c,stroke-width:2px,color:#000
-    classDef runtime fill:#fff3e0,stroke:#f57c00,stroke-width:2px,color:#000
-    classDef kernel fill:#fce4ec,stroke:#c2185b,stroke-width:2px,color:#000
-    
-    class A,B,C,D,E,F init
-    class G,H,J runtime
-    class I,K,L,M,N kernel
-```
-
-### OpenGL Rendering Pipeline
-
-```mermaid
-flowchart TD
-    A["🎨 Renderer Initialization"] --> B["🔧 Initialize GLEW"]
-    B --> C["📦 Setup Vertex Buffers<br/>(VBO, VAO)"]
-    C --> D["📜 Load & Compile Shaders<br/>(vertex_1.glsl, fragment_1.glsl)"]
-    D --> E["🎯 Setup Vertex Attributes"]
-    
-    E --> F["🔄 Render Loop"]
-    F --> G["📥 Update Buffer Data<br/>(from OpenCL)"]
-    G --> H["🧹 Clear Screen<br/>(glClear)"]
-    H --> I["🎨 Bind Shader Program"]
-    I --> J["📐 Draw Points<br/>(glDrawArrays)"]
-    J --> F
-    
-    subgraph "Shader Pipeline"
-        K["📍 Vertex Shader<br/>(Position Transform)"]
-        K --> L["🎨 Fragment Shader<br/>(Color Output)"]
-    end
-    
-    I --> K
-    
-    classDef init fill:#e3f2fd,stroke:#1976d2,stroke-width:2px,color:#000
-    classDef runtime fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px,color:#000
-    classDef shader fill:#fff3e0,stroke:#f57c00,stroke-width:2px,color:#000
-    
-    class A,B,C,D,E init
-    class F,G,H,I,J runtime
-    class K,L shader
-```
-
-### Window Management (GLFW)
-
-```mermaid
-flowchart LR
-    A["🪟 Window Creation"] --> B["🔧 GLFW Init"]
-    B --> C["📏 Create Window<br/>(Width × Height)"]
-    C --> D["🎯 Make Context Current"]
-    D --> E["⚡ Enable VSync"]
-    
-    E --> F["🔄 Event Loop"]
-    F --> G["📡 Poll Events<br/>(glfwPollEvents)"]
-    G --> H{"🚪 Should Close?"}
-    H -->|No| I["🔄 Swap Buffers"]
-    I --> F
-    H -->|Yes| J["🛑 Cleanup & Exit"]
-    
-    classDef init fill:#e8f5e8,stroke:#388e3c,stroke-width:2px,color:#000
-    classDef loop fill:#fff3e0,stroke:#f57c00,stroke-width:2px,color:#000
-    classDef decision fill:#fce4ec,stroke:#c2185b,stroke-width:2px,color:#000
-    
-    class A,B,C,D,E init
-    class F,G,I loop
-    class H,J decision
-```
-
 ## 🔧 Main Components
 ### 1. **Application** (Main Controller)
 - Manages application lifecycle
@@ -263,7 +172,7 @@ The system monitors and displays in real-time:
 
 ## 🎯 Technical Features
 
-- **Parallel Computing**: Up to 1.2M points calculated simultaneously on GPU
+- **Parallel Computing**: Up to 1.2M gravitational interactions calculated simultaneously per second on GPU (using current kernel with direct sumation)
 - **Efficient Rendering**: Direct use of OpenGL vertex buffers
 - **Synchronization**: Optimized transfer between OpenCL and OpenGL
-- **Real-time**: 60+ FPS with smooth visualization
+- **Real-time**: 60+ FPS with smooth visualization using $10^5$ points with medium grade GPUs
